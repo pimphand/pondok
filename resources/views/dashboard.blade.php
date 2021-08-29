@@ -39,6 +39,9 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>
+                {!! QrCode::generate(route('login')); !!}
+            </td>
+            <td>
                 <button onClick="Delete(this.id)" class="btn btn-sm btn-danger" id="{{ $user->id }}">
                     <i class="fa fa-trash"></i>
                 </button>

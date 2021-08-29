@@ -18,10 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'admin'])->middleware(['auth'])->name('dashboard');
-Route::post('/dashboard', [DashboardController::class, 'store'])->middleware(['auth'])->name('dashboard.store');
-Route::post('/dasdhboard/{id}', [DashboardController::class, 'delete'])->middleware(['auth'])->name('delete');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
-// Route::resource('asd',DashboardController::class);
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+        Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+
+        
+});
 
 require __DIR__.'/auth.php';
