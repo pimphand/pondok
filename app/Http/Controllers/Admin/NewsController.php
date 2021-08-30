@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\FileController;
 use App\Models\News;
+use App\Models\NewsCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -18,7 +19,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $news = News::all();
+        $categories = NewsCategory::all();
+        return view('admin.news.index',compact('news','categories'));
     }
 
     /**
