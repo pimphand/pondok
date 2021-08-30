@@ -13,4 +13,9 @@ class Hostel extends Model
     protected $fillable = ['name'];
 
     protected $hidden = ['deleted_at'];
+
+    public function build()
+    {
+        return $this->hasMany(Building::class);
+    }
 }

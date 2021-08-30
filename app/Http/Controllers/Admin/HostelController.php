@@ -14,7 +14,7 @@ class HostelController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.hostel.index');
     }
 
     /**
@@ -35,7 +35,9 @@ class HostelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "name" => "required|string",
+        ]);
     }
 
     /**

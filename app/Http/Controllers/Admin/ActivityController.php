@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\FileController;
 use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 
@@ -104,6 +105,10 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $activity = Activity::find($id);
+        Activity::destroy($id);
+        Storage::delete('public/activity/' . $activity->image);
+
+        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
     }
 }

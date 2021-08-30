@@ -75,6 +75,11 @@ class ProfilController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            "description" => "required|string",
+            "image" => "required|mimes:jpg,png|max:2048"
+        ]);
+
         $profil = Profile::findOrFail($id);
         $profil->description = $request->description;
         if ($request->hasFile("image")) {
