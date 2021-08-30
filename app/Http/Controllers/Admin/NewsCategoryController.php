@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\NewsCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewsCategoryController extends Controller
 {
@@ -98,7 +99,10 @@ class NewsCategoryController extends Controller
      */
     public function destroy($id)
     {
+        $data = NewsCategory::find($id);
+        $data->deleted_by = Auth::id();
+        $data->save();
         NewsCategory::destroy($id);
-        return back()->withToastSuccess('Data berhasil di Hapus');
+        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
     }
 }

@@ -93,7 +93,27 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "name" => "required|string",
+            "image" => "required|",
+            "categories" => "required|",
+            "description" => "required|string",
+        ]);
+
+        $new = News::findOrFail($id);
+        $new->name = $request->name;
+        $new->slug = Str::slug($request->name);
+        $new->news_categories = $request->categories;
+        $new->description = $request->description;
+
+        if ($request->hasFile("image")) {
+            $imageName = Str::uuid();
+            FileController::news($request->file("image"), $imageName, $new->url);
+            $new->image = $imageName;
+        }
+
+        $new->save();
+        return back()->withToastSuccess('Data berhasil simpan');
     }
 
     /**
