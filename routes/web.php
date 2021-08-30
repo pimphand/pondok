@@ -23,13 +23,12 @@ Route::get('/test', function () {
     return view('dashboard');
 });
 
-// Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::get('/', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('/kategori-berita', NewsCategoryController::class);
 
-        Route::resource('berita',NewsController::class);
-        Route::resource('kategory-berita',NewsCategoryController::class);
 });
 
 require __DIR__.'/auth.php';

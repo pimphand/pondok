@@ -15,7 +15,8 @@ class NewsCategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.berita.index');
+        $category = NewsCategory::all();
+        return view('admin.berita.index', compact('category'));
     }
 
     /**

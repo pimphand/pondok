@@ -4,7 +4,7 @@
 <script src="{{ asset('admin') }}/assets/libs/metismenu/metisMenu.min.js"></script>
 <script src="{{ asset('admin') }}/assets/libs/simplebar/simplebar.min.js"></script>
 <script src="{{ asset('admin') }}/assets/libs/node-waves/waves.min.js"></script>
-
+@include('sweetalert::alert')
 
 <script src="{{ asset('admin') }}/assets/js/app.js"></script>
 
