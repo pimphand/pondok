@@ -79,7 +79,15 @@ class NewsCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "name" => "required|string",
+        ]);
+
+        NewsCategory::findOrFail($id)->update([
+            'name' => $request->name,
+        ]);
+
+        return back()->withToastSuccess('Data Berhasil di Edit');
     }
 
     /**

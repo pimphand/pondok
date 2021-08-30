@@ -9,12 +9,13 @@
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('kategori-berita.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('kategori-berita.update',['kategori_beritum'=>$item->id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                     <div class="mb-12">
                         <label class="form-label">Name</label>
                         <div>
-                            <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                            <input type="text" name="name" class="form-control" value="{{$item->name}}">
                             <div class="text-danger">
                                 @error('name')
                                     {{$message}}
