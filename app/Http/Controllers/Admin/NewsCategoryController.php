@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\NewsCategory;
 use Illuminate\Http\Request;
 
 class NewsCategoryController extends Controller
@@ -35,7 +36,15 @@ class NewsCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        "name" => "required|string",
+        ]);
+
+        NewsCategory::create([
+         "name" => $request->name,
+        ]);
+
+        return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 
     /**

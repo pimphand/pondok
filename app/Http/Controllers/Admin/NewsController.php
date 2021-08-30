@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
@@ -35,7 +37,23 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "name" => "required|string",
+            "image" => "required|file|mimes:jpg,png,svg",
+            "categories" => "required|file|exist:news_categories",
+            "description" => "required|string",
+        ]);
+
+        News::create([
+            "name" => $request->name,
+            "slug" => $request->name,
+            "image" => $request->image,
+            "categories" => $request->categories,
+            "description" => $request->description,
+            "create_by" => Auth::id(),
+        ]);
+
+        return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 
     /**
