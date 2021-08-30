@@ -23,6 +23,8 @@ Route::get('/test', function () {
     return view('dashboard');
 });
 
+// Auth::routes(['register' => false]);
+
 Route::get('/', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {

@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+                <a href="{{ route('dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('admin') }}/assets/images/logo-sm.png" alt="" height="22">
                     </span>
@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="{{ route('dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('admin') }}/assets/images/logo-sm.png" alt="" height="22">
                     </span>
@@ -22,12 +22,12 @@
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+            <button type="button" class="px-3 btn btn-sm font-size-24 header-item waves-effect" id="vertical-menu-btn">
                 <i class="mdi mdi-menu"></i>
             </button>
 
             <div class="d-none d-sm-block">
-                <div class="dropdown pt-3 d-inline-block">
+                <div class="pt-3 dropdown d-inline-block">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Create <i class="mdi mdi-chevron-down"></i>
@@ -58,11 +58,11 @@
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="mdi mdi-magnify"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                <div class="p-0 dropdown-menu dropdown-menu-lg dropdown-menu-end"
                     aria-labelledby="page-header-search-dropdown">
 
                     <form class="p-3">
-                        <div class="form-group m-0">
+                        <div class="m-0 form-group">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search ..."
                                     aria-label="Recipient's username">
@@ -132,7 +132,7 @@
                     <i class="mdi mdi-bell-outline"></i>
                     <span class="badge bg-danger rounded-pill">3</span>
                 </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                <div class="p-0 dropdown-menu dropdown-menu-lg dropdown-menu-end"
                     aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
@@ -234,7 +234,7 @@
                     </div>
                     <div class="p-2 border-top">
                         <div class="d-grid">
-                            <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                            <a class="text-center btn btn-sm btn-link font-size-14" href="javascript:void(0)">
                                 View all
                             </a>
                         </div>
@@ -251,18 +251,25 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
                     <a class="dropdown-item" href="#"><i
-                            class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My
+                            class="align-middle mdi mdi-account-circle font-size-17 me-1"></i> Profile</a>
+                    <a class="dropdown-item" href="#"><i class="align-middle mdi mdi-wallet font-size-17 me-1"></i> My
                         Wallet</a>
                     <a class="dropdown-item d-flex align-items-center" href="#"><i
-                            class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span
+                            class="align-middle mdi mdi-cog font-size-17 me-1"></i> Settings<span
                             class="badge bg-success ms-auto">11</span></a>
                     <a class="dropdown-item" href="#"><i
-                            class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock
+                            class="align-middle mdi mdi-lock-open-outline font-size-17 me-1"></i> Lock
                         screen</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i
-                            class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a class="dropdown-item text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            this.closest('form').submit();"><i
+                            class="align-middle bx bx-power-off font-size-17 me-1 text-danger"></i> Logout</a>
+
+                    </form>
+
                 </div>
             </div>
 

@@ -19,8 +19,15 @@
 
                 <li>
                     <a href="{{route('kategori-berita.index')}}" class=" waves-effect">
-                        <i class="ti-calendar"></i>
+                        <i class="dripicons-duplicate"></i>
                         <span>Kategori</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class=" waves-effect">
+                        <i class="dripicons-document-new"></i>
+                        <span>Berita</span>
                     </a>
                 </li>
 

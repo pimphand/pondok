@@ -90,6 +90,7 @@ class NewsCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        NewsCategory::destroy($id);
+        return back()->withToastSuccess('Data berhasil di Hapus');
     }
 }
