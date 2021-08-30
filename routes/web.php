@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\NewsCategoryController;
+use App\Http\Controllers\Admin\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
-        
+        Route::resource('berita',NewsController::class);
+        Route::resource('kategory-berita',NewsCategoryController::class);
 });
 
 require __DIR__.'/auth.php';
