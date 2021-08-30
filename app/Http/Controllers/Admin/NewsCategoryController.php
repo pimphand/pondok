@@ -37,11 +37,11 @@ class NewsCategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-        "name" => "required|string",
+            "name" => "required|string",
         ]);
 
         NewsCategory::create([
-         "name" => $request->name,
+            "name" => $request->name,
         ]);
 
         return back()->withToastSuccess('Data berhasil ditambahkan');

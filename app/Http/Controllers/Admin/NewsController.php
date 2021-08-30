@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\FileController;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -39,20 +41,24 @@ class NewsController extends Controller
     {
         $request->validate([
             "name" => "required|string",
-            "image" => "required|file|mimes:jpg,png,svg",
-            "categories" => "required|file|exist:news_categories",
+            "image" => "required|",
+            "categories" => "required|",
             "description" => "required|string",
         ]);
+        $new = new News();
+        $new->name = $request->name;
+        $new->slug = Str::slug($request->name);
+        $new->news_categories = $request->categories;
+        $new->description = $request->description;
+        $new->create_by = Auth::id();
 
-        News::create([
-            "name" => $request->name,
-            "slug" => $request->name,
-            "image" => $request->image,
-            "categories" => $request->categories,
-            "description" => $request->description,
-            "create_by" => Auth::id(),
-        ]);
+        if ($request->hasFile("image")) {
+            $imageName = Str::uuid();
+            FileController::news($request->file("image"), $imageName, $new->url);
+            $new->image = $imageName;
+        }
 
+        $new->save();
         return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 

@@ -33,37 +33,29 @@
             <th>Email</th>
             <th width="280px">Actions</th>
         </tr>
-        @foreach ($users as $user)
-        <tr>
-            <td>{{ $user->id }}</td>
-            <td>{{ $user->name }}</td>
-            <td>{{ $user->email }}</td>
-            <td>
-                {!! QrCode::generate(route('login')); !!}
-            </td>
-            <td>
-                <button onClick="Delete(this.id)" class="btn btn-sm btn-danger" id="{{ $user->id }}">
-                    <i class="fa fa-trash"></i>
-                </button>
-            </td>
-        </tr>
-        @endforeach
+
     </table>
 
-    {{-- @if ($errors->any())
+    @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
-    @endforeach
-    </ul>
+            @endforeach
+        </ul>
     </div>
-    @endif --}}
-    <form action="{{ route('dashboard.store') }}" method="post">
+    @endif
+    <form action="{{ route('berita.store') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf
-        <input type="text" name="username">
-        <input type="text" name="email">
+        <label for="">news_categories</label>
+        <input type="text" name="categories">
+        <label for="">name</label>
+        <input type="text" name="name">
+        <label for="">image</label>
+        <input type="file" name="image">
+        <label for="">description</label>
+        <input type="text" name="description">
 
         <button type="submit">ksrsr</button>
     </form>
