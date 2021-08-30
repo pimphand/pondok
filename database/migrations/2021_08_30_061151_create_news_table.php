@@ -18,6 +18,7 @@ class CreateNewsTable extends Migration
             $table->foreignId('news_categories')->constrained();
             $table->string('name');
             $table->string('image');
+            $table->string('slug');
             $table->text('description');
             $table->timestamps();
             $table->softDeletes();
