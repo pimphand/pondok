@@ -25,10 +25,11 @@ Route::get('/test', function () {
 
 // Auth::routes(['register' => false]);
 
-Route::get('/', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+// Route::get('/', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+
         Route::resource('/kategori-berita', NewsCategoryController::class);
         Route::resource('/news', NewsController::class);
 

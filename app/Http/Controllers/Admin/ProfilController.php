@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\FileController;
+use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProfilController extends Controller
 {
@@ -14,7 +17,10 @@ class ProfilController extends Controller
      */
     public function index()
     {
-        //
+        $data = Profile::first();
+        return view('admin.profil.index', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -69,7 +75,22 @@ class ProfilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "description" => "required|string",
+            "image" => "required|mimes:jpg,png|max:2048"
+        ]);
+
+        $profil = Profile::findOrFail($id);
+        $profil->description = $request->description;
+        if ($request->hasFile("image")) {
+            $imageName = Str::uuid();
+            FileController::profil($request->file("image"), $imageName, $profil->image);
+            $profil->image = $imageName;
+        }
+        $profil->save();
+
+        return back()->withToastSuccess('Data berhasil disimpan');
+
     }
 
     /**

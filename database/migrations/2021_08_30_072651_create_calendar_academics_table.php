@@ -15,7 +15,11 @@ class CreateCalendarAcademicsTable extends Migration
     {
         Schema::create('calendar_academics', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image');
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreignId('created_by')->constrained('users');
         });
     }
 

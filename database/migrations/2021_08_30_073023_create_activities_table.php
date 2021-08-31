@@ -15,7 +15,13 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->text('description');
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreignId('created_by')->constrained('users');
+            $table->integer('deleted_by')->constrained('users')->nullable();
         });
     }
 
