@@ -63,6 +63,8 @@ class NewsController extends Controller
         }
 
         $new->save();
+        // return $request;
+
         return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 

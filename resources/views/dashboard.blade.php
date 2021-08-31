@@ -45,7 +45,7 @@
         </ul>
     </div>
     @endif
-    <form action="{{ route('berita.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf
         <label for="">news_categories</label>
