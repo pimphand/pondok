@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\NewsCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class NewsController extends Controller
@@ -98,7 +99,6 @@ class NewsController extends Controller
     {
         $request->validate([
             "name" => "required|string",
-            "image" => "required|",
             "categories" => "required|",
             "description" => "required|string",
         ]);
@@ -127,6 +127,9 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $image = News::findOrfail($id);
+        Storage::delete(['public/news/'. $image->image]);
+        News::destroy($id);
+        return back()->withToastSuccess('Data Berhasil di Hapus');
     }
 }

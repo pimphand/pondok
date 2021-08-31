@@ -18,7 +18,7 @@ class ProfilController extends Controller
     public function index()
     {
         $data = Profile::first();
-        return view('admin.profil.index', [
+        return view('admin.profile.index', [
             'data' => $data
         ]);
     }
@@ -77,7 +77,8 @@ class ProfilController extends Controller
     {
         $request->validate([
             "description" => "required|string",
-            "image" => "required|mimes:jpg,png|max:2048"
+            "image" => "required|mimes:jpg,png|max:2048",
+            "logo" => "required|mimes:jpg,png|max:2048",
         ]);
 
         $profil = Profile::findOrFail($id);
@@ -86,6 +87,11 @@ class ProfilController extends Controller
             $imageName = Str::uuid();
             FileController::profil($request->file("image"), $imageName, $profil->image);
             $profil->image = $imageName;
+        }
+        if ($request->hasFile("logo")) {
+            $imageName = Str::uuid();
+            FileController::profil($request->file("logo"), $imageName, $profil->logo);
+            $profil->logo = $imageName;
         }
         $profil->save();
 

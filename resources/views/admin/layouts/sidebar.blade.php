@@ -16,20 +16,65 @@
                     </a>
                 </li>
                 <li class="menu-title">Berita</li>
-
                 <li>
                     <a href="{{route('kategori-berita.index')}}" class=" waves-effect">
                         <i class="dripicons-duplicate"></i>
                         <span>Category</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{route('news.index')}}" class=" waves-effect">
                         <i class="dripicons-document-new"></i>
                         <span>News</span>
                     </a>
                 </li>
+
+                <li class="menu-title">Website</li>
+                <li>
+                    <a href="{{route('profile.index')}}" class=" waves-effect">
+                        <i class="fas fa-baby"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Visi & Misi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Guru & Karyawan</span>
+                    </a>
+                </li>
+
+                <li class="menu-title">Santri</li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Fasilitas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Kegiatan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('news.index')}}" class=" waves-effect">
+                        <i class="ion ion-md-call"></i>
+                        <span>Pendaftaran</span>
+                    </a>
+                </li>
+
 
             </ul>
         </div>

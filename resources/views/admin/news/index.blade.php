@@ -2,20 +2,25 @@
 
 @section('css')
     <!-- DataTables -->
-    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin') }}/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
 
     <!-- Responsive datatable examples -->
-    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
 @endsection
 @section('script')
-<!-- Required datatable js -->
-<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Required datatable js -->
+    <script src="{{ asset('admin') }}/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('admin') }}/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
 
-<!-- Datatable init js -->
-<script src="assets/js/pages/datatables.init.js"></script>
-@endsection
+    <!-- Datatable init js -->
+    <script src="{{ asset('admin') }}/assets/js/pages/datatables.init.js"></script>
+     <!--tinymce js-->
+     <script src="{{ asset('admin') }}/assets/libs/tinymce/tinymce.min.js"></script>
+
+     <!-- init js -->
+     <script src="{{ asset('admin') }}/assets/js/pages/form-editor.init.js"></script>
+    @endsection
 @section('content')
     <div class="page-content">
         <div class="container-fluid">
@@ -34,37 +39,37 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Table News</h4><br>
-                            <a href="/news/create" class="btn btn-danger btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                            <a href="/news/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
                             <hr>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Category</th>
-                                    <th>Slug</th>
-                                    <th>Description</th>
-                                    <th>Action</th>
+                                    <th class="text-center">Name</th>
+                                    <th class="text-center">Image</th>
+                                    <th class="text-center">Category</th>
+                                    <th class="text-center">Slug</th>
+                                    <th class="text-center">Description</th>
+                                    <th class="text-center">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach ($news as $item)
                                     <tr>
-                                        <td>{{$item->name}}</td>
+                                        <td class="text-center">{{$item->name}}</td>
                                         <td class="text-center"><img src="{{ asset('storage/news') }}/{{ $item->image }}" width="150px"></td>
-                                        <td>{{$item->news_categories}}</td>
-                                        <td>{{$item->slug}}</td>
-                                        <td>{{$item->description}}</td>
-                                        <td>
+                                        <td class="text-center">{{$item->news_categories}}</td>
+                                        <td class="text-center">{{$item->slug}}</td>
+                                        <td class="text-center">{!!$item->description!!}</td>
+                                        <td class="text-center">
                                             <form action="{{route('news.destroy',['news' => $item->id])}}" method="POST">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Update{{$item->id}}" >Update</button>
+                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateNews{{$item->id}}" >Update</button>
                                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                             </form>
                                         </td>
-                                        @include('admin.berita.modal')
+                                        @include('admin.news.modal')
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -79,7 +84,7 @@
 
 
     <div class="modal fade" id="CreateAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Add Catagory
@@ -131,7 +136,7 @@
                         <div class="mb-12">
                             <label class="form-label">Description</label>
                             <div>
-                                <input type="text" name="description" class="form-control" placeholder="Enter Description">
+                                <textarea type="text" id="elm1" name="description" class="form-control" placeholder="Enter Description"></textarea>
                                 <div class="text-danger">
                                     @error('description')
                                         {{$message}}
@@ -150,5 +155,6 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
+
 @endsection
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
         Route::resource('/kategori-berita', NewsCategoryController::class);
         Route::resource('/news', NewsController::class);
+        Route::resource('/profile', ProfilController::class);
 
 });
 
