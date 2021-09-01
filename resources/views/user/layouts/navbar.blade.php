@@ -1,27 +1,4 @@
 <div class="kingster-header-background-transparent">
-    <div class="kingster-top-bar">
-        <div class="kingster-top-bar-background"></div>
-        <div class="kingster-top-bar-container kingster-container">
-            <div class="kingster-top-bar-container-inner clearfix">
-                <div class="kingster-top-bar-left kingster-item-pdlr">
-                    <a href="#" style="margin-right: 30px;">Campus</a><a href="#"
-                        style="margin-right: 30px;">Documentation</a><a href="#" style="margin-right: 30px;">Login</a>
-                </div>
-                <div class="kingster-top-bar-right kingster-item-pdlr">
-                    <div class="kingster-top-bar-right-text"><span style="color: #8dd7e5; margin-right: 30px;">Phone: +1
-                            212 946 2707</span><a href="#" style="margin-right: 0px;">Help Center</a></div>
-                    <div class="kingster-top-bar-right-social">
-                        <a href="#" target="_blank" class="kingster-top-bar-social-icon" title="facebook"><i
-                                class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank" class="kingster-top-bar-social-icon" title="twitter"><i
-                                class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="kingster-top-bar-social-icon" title="instagram"><i
-                                class="fa fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <header
         class="kingster-header-wrap kingster-header-style-plain kingster-style-splitted-menu kingster-sticky-navigation kingster-style-slide clearfix"
         data-navigation-offset="75px">
@@ -150,7 +127,7 @@
                                         </li>
                                         <li class="menu-item " data-size="15">
                                             <div class="kingster-mega-menu-section-content">
-                                                <img src="{{asset('user') }}/upload/menu-logo.png"
+                                                <img src="{{ asset('storage/profil/'. $logo) }}" width="200"
                                                     style="margin-bottom: 13px;" alt="" /><br />
                                                 <span style="font-size: 14px; font-weight: 500;">Academic
                                                     offerings include 95 majors, 86 minors, and more than
@@ -182,7 +159,7 @@
                                 <div class="kingster-logo kingster-item-pdlr">
                                     <div class="kingster-logo-inner">
                                         <a class="" href="{{ route('home') }}"><img
-                                                src="{{asset('user') }}/upload/logo-HP.png" alt="" width="200"
+                                                src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200"
                                                 height="200" title="logo HP" /></a>
                                     </div>
                                 </div>

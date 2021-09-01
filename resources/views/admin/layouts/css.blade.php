@@ -1,5 +1,5 @@
 <!-- App favicon -->
-<link rel="shortcut icon" href="{{ asset('admin') }}/assets/images/favicon.ico">
+<link rel="shortcut icon" href="{{ asset('storage/profil/'. $logo->logo) }}">
 
 <!-- Bootstrap Css -->
 <link href="{{ asset('admin') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">

@@ -30,8 +30,8 @@
                             <div class="p-4 text-center text-primary">
                                 <h5 class="text-white font-size-20">Welcome Back !</h5>
                                 <p class="text-white-50">Sign in to continue to Veltrix.</p>
-                                <a href="#" class="logo logo-admin">
-                                    <img src="{{ asset('admin') }}/assets/images/logo-sm.png" height="24" alt="logo">
+                                <a href="#" class="logo-admin logo">
+                                    <img src="{{ asset('storage/profil/'. $logo->logo) }}" height="70" alt="logo">
                                 </a>
                             </div>
                         </div>

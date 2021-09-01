@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 
-
-<!-- Mirrored from max-themes.net/demos/kingster/college/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Aug 2021 16:44:35 GMT -->
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Kingster &#8211; College &#8211; HTML Template</title>
+    <title>Pondok Nashrus Sunnah Madiun | {{ $title ?? "Beranda"  }}</title>
 
+    <link rel="shortcut icon" href="{{ asset('storage/profil/'. $logo->logo) }}">
     <link rel="stylesheet" href="{{asset('user')}}/css/common-skeleton.mind41d.css?" type="text/css" media="all" />
     <link rel="stylesheet" href="{{asset('user')}}/css/tooltip.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="{{asset('user')}}/css/font-awesome.css" type="text/css" media="all" />
@@ -189,7 +187,5 @@
     </script>
 
 </body>
-
-<!-- Mirrored from max-themes.net/demos/kingster/college/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Aug 2021 16:48:42 GMT -->
 
 </html>
