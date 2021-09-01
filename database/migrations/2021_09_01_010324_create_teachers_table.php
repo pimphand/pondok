@@ -21,6 +21,7 @@ class CreateTeachersTable extends Migration
             $table->string('image');
             $table->string('teach');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Hostel;
 use Illuminate\Http\Request;
 
-class HostelController extends Controller
+class FacilityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class HostelController extends Controller
      */
     public function index()
     {
-        return view('admin.hostel.index');
+        return view('admin.facility.index');
     }
 
     /**
@@ -36,9 +35,7 @@ class HostelController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "name" => "required|string",
-        ]);
+        //
     }
 
     /**
@@ -85,5 +82,4 @@ class HostelController extends Controller
     {
         //
     }
-
 }
