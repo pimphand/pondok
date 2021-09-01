@@ -28,12 +28,16 @@
     </div>
     <table class="table table-bordered">
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th width="280px">Actions</th>
+            <th>Gambar</th>
         </tr>
-
+        <tr>
+            @foreach ($data as $item)
+            <td>
+                {{ $item->building_id }}
+                <img src="{{ asset('storage/gallery/'. $item->image) }}" alt="" width="300px">
+            </td>
+            @endforeach
+        </tr>
     </table>
 
     @if ($errors->any())

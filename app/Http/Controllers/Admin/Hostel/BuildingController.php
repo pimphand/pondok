@@ -56,11 +56,10 @@ class BuildingController extends Controller
 
             foreach($images as $image) {
                 $name = $image->getClientOriginalName();
-                $path = $image->storeAs('gallery', $name, 'public');
-
+                $image->storeAs('gallery', $name, 'public');
                 Gallery::create([
                     'building_id' => $hostel->id,
-                    'image' => '/storage/'.$path
+                    'image' => $name
                   ]);
             }
          }

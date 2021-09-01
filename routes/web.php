@@ -6,7 +6,8 @@ use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
-use App\Models\Hostel;
+use App\Http\Controllers\FrontendController;
+use App\Models\Gallery;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,10 @@ use App\Models\Hostel;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontendController::class, "home"])->name('home');
+
 Route::get('/test', function () {
-    $data = Hostel::where("id", 1)->get();
+    $data = Gallery::all();
     return view('dashboard', compact('data'));
 });
 
