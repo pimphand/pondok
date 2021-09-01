@@ -13,7 +13,7 @@ class Teacher extends Model
     protected $fillable = [
         "name",
         "fullname",
-        "slug",
+        "slug", 
         "image",
         "teach",
     ];
