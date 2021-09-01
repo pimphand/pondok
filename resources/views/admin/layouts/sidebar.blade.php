@@ -37,40 +37,40 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
+                    <a href="{{route('contact.index')}}" class=" waves-effect">
                         <i class="ion ion-md-call"></i>
                         <span>Contact</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
+                    <a href="{{route('vision.index')}}" class=" waves-effect">
+                        <i class="fab fa-invision"></i>
                         <span>Visi & Misi</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
-                        <span>Guru & Karyawan</span>
+                    <a href="{{route('teacher.index')}}" class=" waves-effect">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Teacher</span>
                     </a>
                 </li>
 
                 <li class="menu-title">Santri</li>
                 <li>
                     <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
+                        <i class="fas fa-book-reader"></i>
                         <span>Fasilitas</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
+                        <i class="fas fa-images"></i>
                         <span>Kegiatan</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
+                        <i class="fas fa-list-alt"></i>
                         <span>Pendaftaran</span>
                     </a>
                 </li>

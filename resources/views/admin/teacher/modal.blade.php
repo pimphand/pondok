@@ -8,7 +8,7 @@
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('news.update', ['news'=>$item->id])}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('teacher.update', ['teacher'=>$item->id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('put')
                     <div class="mb-12">
@@ -23,6 +23,17 @@
                         </div>
                     </div>
                     <div class="mb-12">
+                        <label class="form-label">FullName</label>
+                        <div>
+                            <input type="text" name="fullname" class="form-control" value="{{$item->fullname}}">
+                            <div class="text-danger">
+                                @error('fullname')
+                                    {{$message}}
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12">
                         <label class="form-label">Image</label>
                         <div>
                             <input type="file" name="image" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg" value="{{$item->image}}">
@@ -31,31 +42,15 @@
                                     {{$message}}
                                 @enderror
                             </div><br>
-                            <img src="{{asset('storage/news')}}/{{$item->image}}" width="300px">
+                            <img src="{{asset('storage/teacher')}}/{{$item->image}}" width="300px">
                         </div><br>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Categories</label>
+                        <label class="form-label">Teach</label>
                         <div>
-                            <select name="categories" class="form-control">
-                                <option value="">--Select Categories--</option>
-                                @foreach ($categories as $category)
-                                    <option {{ $category->id == $item->news_categories ? "selected" : ''}} value="{{$category->id}}">{{$category->name}}</option>
-                                @endforeach
-                            </select>
+                            <input type="text" name="teach" class="form-control" value="{{$item->teach}}">
                             <div class="text-danger">
-                                @error('name')
-                                    {{$message}}
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-12">
-                        <label class="form-label">Description</label>
-                        <div>
-                            <textarea type="text" id="elm1" name="description" class="form-control" placeholder="Enter Description">{{$item->description}}</textarea>
-                            <div class="text-danger">
-                                @error('description')
+                                @error('teach')
                                     {{$message}}
                                 @enderror
                             </div>

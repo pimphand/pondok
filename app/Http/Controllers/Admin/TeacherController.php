@@ -18,7 +18,10 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('admin.teacher.index');
+        $teacher = Teacher::all();
+        return view('admin.teacher.index',[
+            "data" => $teacher
+        ]);
     }
 
     /**
@@ -96,7 +99,7 @@ class TeacherController extends Controller
         $request->validate([
             "name" => "required|string",
             "fullname" => "required|string",
-            "image" => "required|mimes:jpg,png|max:2048",
+            "image" => "mimes:jpg,png|max:2048",
             "teach" => "required|",
         ]);
         $data = Teacher::findOrFail($id);

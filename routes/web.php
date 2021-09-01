@@ -4,6 +4,9 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Hostel\BuildingController;
 use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\VisionMisionController;
+use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
 use App\Models\Hostel;
@@ -37,6 +40,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::resource('/kategori-berita', NewsCategoryController::class);
         Route::resource('/news', NewsController::class);
         Route::resource('/profile', ProfilController::class);
+        Route::resource('/contact', ContactController::class);
+        Route::resource('/vision', VisionMisionController::class);
+        Route::resource('/teacher', TeacherController::class);
 
 });
 
