@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Login | Veltrix - Admin & Dashboard Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-        <meta content="Themesbrand" name="author">
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('admin') }}/assets/images/favicon.ico">
 
-        <!-- Bootstrap Css -->
-        <link href="{{ asset('admin') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
-        <!-- Icons Css -->
-        <link href="{{ asset('admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-        <!-- App Css-->
-        <link href="{{ asset('admin') }}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="utf-8">
+    <title>Login | Veltrix - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('admin') }}/assets/images/favicon.ico">
 
-    </head>
+    <!-- Bootstrap Css -->
+    <link href="{{ asset('admin') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet"
+        type="text/css">
+    <!-- Icons Css -->
+    <link href="{{ asset('admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="{{ asset('admin') }}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+</head>
 
 <body>
     <div class="pt-5 my-5 account-pages">
@@ -41,25 +43,29 @@
 
                                     <div class="mb-3">
                                         <label class="form-label" for="username">Username</label>
-                                        <input id="username" class="form-control" type="text" name="username" :value="old('email')"
-                                        required autofocus placeholder="Enter username">
+                                        <input id="username" class="form-control" type="text" name="username"
+                                            value="admin" required autofocus placeholder="Enter username">
                                     </div>
 
                                     <div class="mb-3">
                                         <label class="form-label" for="userpassword">Password</label>
-                                        <input id="password" class="form-control" type="password" name="password" required
-                                        autocomplete="current-password" placeholder="Enter password">
+                                        <input id="password" class="form-control" type="password" name="password"
+                                            value="admin" required autocomplete="current-password"
+                                            placeholder="Enter password">
                                     </div>
 
                                     <div class="mb-3 row">
                                         <div class="col-sm-6">
                                             <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="customControlInline">
-                                                <label class="form-check-label" for="customControlInline">Remember me</label>
+                                                <input type="checkbox" class="form-check-input"
+                                                    id="customControlInline">
+                                                <label class="form-check-label" for="customControlInline">Remember
+                                                    me</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 text-end">
-                                            <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
+                                            <button class="btn btn-primary w-md waves-effect waves-light"
+                                                type="submit">Log In</button>
                                         </div>
                                     </div>
                                 </form>
@@ -67,7 +73,9 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Veltrix. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                        <p class="mb-0">© <script>
+                                document.write(new Date().getFullYear())
+                            </script> Veltrix. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                     </div>
                 </div>
             </div>
@@ -86,4 +94,3 @@
 </body>
 
 </html>
-

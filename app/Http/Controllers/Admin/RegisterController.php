@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\NewsCategory;
+use App\Models\Register;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class NewsCategoryController extends Controller
+class RegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,15 @@ class NewsCategoryController extends Controller
      */
     public function index()
     {
-        $category = NewsCategory::all();
-        return view('admin.berita.index', compact('category'));
+        $count = [
+            "tk" => Register::where('education', "Tk")->where('status', false)->count,
+            "mi" => Register::where('education', "Mi")->where('status', false)->count,
+            "smp" => Register::where('education', "Smp")->where('status', false)->count,
+            "sma" => Register::where('education', "Sma")->where('status', false)->count,
+        ];
+        return view('admin.register.index', [
+            "count" => $count
+        ]);
     }
 
     /**
@@ -38,15 +44,7 @@ class NewsCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "name" => "required|string",
-        ]);
-
-        NewsCategory::create([
-            "name" => $request->name,
-        ]);
-
-        return back()->withToastSuccess('Data berhasil ditambahkan');
+        //
     }
 
     /**
@@ -80,15 +78,7 @@ class NewsCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            "name" => "required|string",
-        ]);
-
-        NewsCategory::findOrFail($id)->update([
-            'name' => $request->name,
-        ]);
-
-        return back()->withToastSuccess('Data Berhasil di Edit')->autoClose(5000);
+        //
     }
 
     /**
@@ -99,10 +89,6 @@ class NewsCategoryController extends Controller
      */
     public function destroy($id)
     {
-        $data = NewsCategory::find($id);
-        $data->deleted_by = Auth::id();
-        $data->save();
-        NewsCategory::destroy($id);
-        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
+        //
     }
 }
