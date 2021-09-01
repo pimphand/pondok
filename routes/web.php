@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Hostel\BuildingController;
 use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
+use App\Models\Hostel;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +23,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test', function () {
-    return view('dashboard');
+    $data = Hostel::where("id", 1)->get();
+    return view('dashboard', compact('data'));
 });
 
 // Auth::routes(['register' => false]);
 
-// Route::get('/', [DashboardController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::post('/test', [BuildingController::class, 'store'])->name('test');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');

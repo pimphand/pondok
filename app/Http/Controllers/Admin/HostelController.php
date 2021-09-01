@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Hostel;
 use Illuminate\Http\Request;
 
 class HostelController extends Controller
@@ -84,4 +85,5 @@ class HostelController extends Controller
     {
         //
     }
+
 }

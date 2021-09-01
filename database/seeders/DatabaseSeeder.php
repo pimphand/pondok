@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             HostelSeeder::class,
             BuildingSeeder::class,
             GallerySeeder::class,
+            ProfilSeeder::class,
+            ContactSeeder::class,
         ]);
     }
 }

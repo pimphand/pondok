@@ -3,15 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\FileController;
-use App\Models\Activity;
+use App\Models\Profile;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
-
-class ActivityController extends Controller
+class VisionMisionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +15,10 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return view('admin.activity.index');
+        $data = Profile::first();
+        return view('admin.vision.index', [
+            "data" => $data
+        ]);
     }
 
     /**
@@ -41,20 +39,7 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $activity = new Activity();
-        $activity->description = $request->description;
-        $activity->name = $request->name;
-
-        if ($request->hasFile("image")) {
-            $imageName = Str::uuid();
-            FileController::activity($request->file("image"), $imageName,
-   $activity->image);
-            $activity->image = $imageName;
-        }
-        
-        $activity->save();
-
-        return back()->withToastSuccess('Data berhasil ditambahkan');
+        //
     }
 
     /**
@@ -88,16 +73,16 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $activity = Activity::findOrFail($id);
-        $activity->description = $request->description;
-        $activity->name = $request->name;
-        if ($request->hasFile("image")) {
-            $imageName = Str::uuid();
-            FileController::activity($request->file("image"), $imageName, $activity->image);
-            $activity->image = $imageName;
-        }
-        // $activity->create_by = Auth::id();
-        $activity->save();
+        $request->validate([
+            'vision' => "required",
+            'mission' => "required",
+        ]);
+
+        $profil = Profile::findOrFail($id);
+        $profil->vision = $request->vision;
+        $profil->mission = $request->mission;
+
+        $profil->save();
 
         return back()->withToastSuccess('Data berhasil disimpan');
     }
@@ -110,10 +95,6 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        $activity = Activity::find($id);
-        Activity::destroy($id);
-        Storage::delete('public/activity/' . $activity->image);
-
-        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
+        //
     }
 }

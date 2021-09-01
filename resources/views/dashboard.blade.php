@@ -45,17 +45,18 @@
         </ul>
     </div>
     @endif
-    <form action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('test') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf
-        <label for="">news_categories</label>
-        <input type="text" name="categories">
-        <label for="">name</label>
+        <select name="hostel" id="">
+            <option value="1">Putra</option>
+            <option value="2">Putri</option>
+        </select>
+        <label for="">name</label><br>
         <input type="text" name="name">
-        <label for="">image</label>
-        <input type="file" name="image">
-        <label for="">description</label>
-        <input type="text" name="description">
+        <label for="">image</label><br>
+        <input type="file" name="image[]">
+        <input type="file" name="image[]">
 
         <button type="submit">ksrsr</button>
     </form>

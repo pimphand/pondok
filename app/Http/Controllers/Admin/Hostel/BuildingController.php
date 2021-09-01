@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Hostel;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\FileController;
-use App\Models\Activity;
+use App\Models\Building;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-
-class ActivityController extends Controller
+class BuildingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +18,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return view('admin.activity.index');
+        //
     }
 
     /**
@@ -41,20 +39,34 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $activity = new Activity();
-        $activity->description = $request->description;
-        $activity->name = $request->name;
-
-        if ($request->hasFile("image")) {
-            $imageName = Str::uuid();
-            FileController::activity($request->file("image"), $imageName,
-   $activity->image);
-            $activity->image = $imageName;
-        }
+        $request->validate([
+            "name" => "required|string",
+            "hostel" => "required",
+            "image" => "required",
+            "image.*" => "mimes:png,jpg|max:2048",
+        ]);
         
-        $activity->save();
+
+        $hostel = Building::create([
+            'name' => $request->name,
+            'hostel_id' => $request->hostel
+        ]);
+        if ($request->hasfile('image')) {
+            $images = $request->file('image');
+
+            foreach($images as $image) {
+                $name = $image->getClientOriginalName();
+                $path = $image->storeAs('gallery', $name, 'public');
+
+                Gallery::create([
+                    'building_id' => $hostel->id,
+                    'image' => '/storage/'.$path
+                  ]);
+            }
+         }
 
         return back()->withToastSuccess('Data berhasil ditambahkan');
+
     }
 
     /**
@@ -88,18 +100,7 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $activity = Activity::findOrFail($id);
-        $activity->description = $request->description;
-        $activity->name = $request->name;
-        if ($request->hasFile("image")) {
-            $imageName = Str::uuid();
-            FileController::activity($request->file("image"), $imageName, $activity->image);
-            $activity->image = $imageName;
-        }
-        // $activity->create_by = Auth::id();
-        $activity->save();
-
-        return back()->withToastSuccess('Data berhasil disimpan');
+        //
     }
 
     /**
@@ -110,10 +111,6 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        $activity = Activity::find($id);
-        Activity::destroy($id);
-        Storage::delete('public/activity/' . $activity->image);
-
-        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
+        //
     }
 }
