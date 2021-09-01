@@ -4,8 +4,8 @@
         <div class="kingster-mobile-header-container kingster-container clearfix">
             <div class="kingster-logo kingster-item-pdlr kingster-mobile-logo-center">
                 <div class="kingster-logo-inner">
-                    <a class="" href="index.html"><img src="{{asset('user') }}/upload/logo-HP.png" alt="" width="200"
-                            height="200" title="logo HP" /></a>
+                    <a class="" href="{{ route('home') }}"><img src="{{asset('user') }}/upload/logo-HP.png" alt=""
+                            width="200" height="200" title="logo HP" /></a>
                 </div>
             </div>
             <div class="kingster-mobile-menu-right">
@@ -38,7 +38,7 @@
                         <ul id="menu-main-navigation" class="m-menu">
                             <li
                                 class="menu-itemmenu-item-home current-menu-item page_item page-item-6208 current_page_item ">
-                                <a href="index.html" aria-current="page">Home</a>
+                                <a href="{{ route('home') }}" aria-current="page">Beranda</a>
                             </li>
                             <li class="menu-item menu-item-has-children ">
                                 <a href="#">Pages</a>

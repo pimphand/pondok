@@ -33,7 +33,7 @@
                         <ul id="menu-main-navigation-1" class="sf-menu">
                             <li
                                 class="menu-itemmenu-item-home current-menu-item page_item page-item-6208 current_page_item  kingster-normal-menu">
-                                <a href="index.html">Home</a>
+                                <a href="{{ route('home') }}">beranda</a>
                             </li>
                             <li class="menu-item menu-item-has-children  kingster-normal-menu">
                                 <a href="#" class="sf-with-ul-pre">Pages</a>
@@ -181,8 +181,9 @@
                             <li class="kingster-center-nav-menu-item">
                                 <div class="kingster-logo kingster-item-pdlr">
                                     <div class="kingster-logo-inner">
-                                        <a class="" href="index.html"><img src="{{asset('user') }}/upload/logo-HP.png"
-                                                alt="" width="200" height="200" title="logo HP" /></a>
+                                        <a class="" href="{{ route('home') }}"><img
+                                                src="{{asset('user') }}/upload/logo-HP.png" alt="" width="200"
+                                                height="200" title="logo HP" /></a>
                                     </div>
                                 </div>
                             </li>
