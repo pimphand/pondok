@@ -48,7 +48,6 @@
                                     <th class="text-center">Name</th>
                                     <th class="text-center">Image</th>
                                     <th class="text-center">Category</th>
-                                    <th class="text-center">Slug</th>
                                     <th class="text-center">Description</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -59,7 +58,6 @@
                                         <td class="text-center">{{$item->name}}</td>
                                         <td class="text-center"><img src="{{ asset('storage/news') }}/{{ $item->image }}" width="150px"></td>
                                         <td class="text-center">{{$item->news_categories}}</td>
-                                        <td class="text-center">{{$item->slug}}</td>
                                         <td class="text-center">{!!$item->description!!}</td>
                                         <td class="text-center">
                                             <form action="{{route('news.destroy',['news' => $item->id])}}" method="POST">
@@ -87,7 +85,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Catagory
+                    <h5 class="modal-title" id="staticBackdropLabel">Add NEWS
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>

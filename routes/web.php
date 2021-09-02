@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\VisionMisionController;
 use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
+use App\Http\Controllers\Admin\FacilityController;
+use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\FrontendController;
 use App\Models\Gallery;
 
@@ -43,6 +45,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::resource('/contact', ContactController::class);
         Route::resource('/vision', VisionMisionController::class);
         Route::resource('/teacher', TeacherController::class);
+        Route::resource('/calender', CalendarAcademicController::class);
+        Route::resource('/facility', BuildingController::class);
 
 });
 

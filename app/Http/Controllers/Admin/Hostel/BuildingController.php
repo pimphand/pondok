@@ -18,7 +18,10 @@ class BuildingController extends Controller
      */
     public function index()
     {
-        //
+        $facility = Gallery::all();
+        return view('admin.facility.index',[
+            "data" => $facility
+        ]);
     }
 
     /**
@@ -45,7 +48,7 @@ class BuildingController extends Controller
             "image" => "required",
             "image.*" => "mimes:png,jpg|max:2048",
         ]);
-        
+
 
         $hostel = Building::create([
             'name' => $request->name,

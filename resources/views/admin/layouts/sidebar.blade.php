@@ -80,7 +80,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('teacher.index')}}" class=" waves-effect">
+                            <a href="{{route('calender.index')}}" class=" waves-effect">
                                 <span>Kalender Akademik</span>
                             </a>
                         </li>
@@ -94,7 +94,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('news.index')}}" class=" waves-effect">
+                            <a href="{{route('facility.index')}}" class=" waves-effect">
                                 <i class="fas fa-book-reader"></i>
                                 <span>Fasilitas</span>
                             </a>
@@ -114,7 +114,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('news.index')}}" class=" waves-effect">
+                            <a href="{{route('facility.index')}}" class=" waves-effect">
                                 <i class="fas fa-book-reader"></i>
                                 <span>Fasilitas</span>
                             </a>

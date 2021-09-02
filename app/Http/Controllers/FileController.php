@@ -29,7 +29,7 @@ class FileController extends Controller
         }
              Storage::putFileAs("public/activity", $image, $name);
     }
-    
+
     public static function gallery($image, $name, $oldName = null): void
     {
         if ($oldName) {
@@ -37,12 +37,20 @@ class FileController extends Controller
         }
              Storage::putFileAs("public/gallery", $image, $name);
     }
-    
+
     public static function teacher($image, $name, $oldName = null): void
     {
           if ($oldName) {
           Storage::delete('public/teacher/' . $oldName);
           }
           Storage::putFileAs("public/teacher", $image, $name);
+    }
+
+    public static function calenders($image, $name, $oldName = null): void
+    {
+        if ($oldName) {
+            Storage::delete('public/calenders/' . $oldName);
+        }
+        Storage::putFileAs("public/calenders/", $image, $name);
     }
 }
