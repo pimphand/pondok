@@ -14,68 +14,119 @@
                         <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end"></span>
                         <span>Dashboard</span>
                     </a>
-                </li>
-                <li class="menu-title">Berita</li>
-                <li>
-                    <a href="{{route('kategori-berita.index')}}" class=" waves-effect">
-                        <i class="dripicons-duplicate"></i>
-                        <span>Category</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="dripicons-document-new"></i>
-                        <span>News</span>
-                    </a>
-                </li>
-
-                <li class="menu-title">Website</li>
-                <li>
-                    <a href="{{route('profile.index')}}" class=" waves-effect">
-                        <i class="fas fa-baby"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('contact.index')}}" class=" waves-effect">
-                        <i class="ion ion-md-call"></i>
-                        <span>Contact</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('vision.index')}}" class=" waves-effect">
-                        <i class="fab fa-invision"></i>
-                        <span>Visi & Misi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('teacher.index')}}" class=" waves-effect">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Teacher</span>
-                    </a>
-                </li>
-
-                <li class="menu-title">Santri</li>
-                <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="fas fa-book-reader"></i>
-                        <span>Fasilitas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="fas fa-images"></i>
-                        <span>Kegiatan</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('news.index')}}" class=" waves-effect">
-                        <i class="fas fa-list-alt"></i>
+                    <a href="{{ route('dashboard') }}" class="waves-effect">
+                        <i class="fas fa-clipboard-list"></i><span
+                            class="badge rounded-pill bg-primary float-end"></span>
                         <span>Pendaftaran</span>
                     </a>
                 </li>
+                <li class="menu-title">Informasi</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Berita</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('kategori-berita.index')}}" class=" waves-effect">
+                                Kategori
+                            </a>
+                        </li>
+                        <li><a href="{{ route('news.index') }}">List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <i class="ti-face-smile"></i>
+                            <span>Icons</span>
+                        </a>
 
-
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-atlas"></i>
+                        <span>Website</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('profile.index')}}" class=" waves-effect">
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('contact.index')}}" class=" waves-effect">
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('vision.index')}}" class=" waves-effect">
+                                <span>Visi & Misi</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-title">Akademik</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-book-open"></i>
+                        <span>Akademik</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('teacher.index')}}" class=" waves-effect">
+                                <span>Guru</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('teacher.index')}}" class=" waves-effect">
+                                <span>Kalender Akademik</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-title">Santri</li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-female"></i>
+                        <span>Santri Putri</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('news.index')}}" class=" waves-effect">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Fasilitas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('news.index')}}" class=" waves-effect">
+                                <i class="fas fa-images"></i>
+                                <span>Kegiatan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-male"></i>
+                        <span>Santri Putra</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('news.index')}}" class=" waves-effect">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Fasilitas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('news.index')}}" class=" waves-effect">
+                                <i class="fas fa-images"></i>
+                                <span>Kegiatan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

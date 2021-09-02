@@ -17,7 +17,7 @@ class ProfilSeeder extends Seeder
         Profile::create([
             "description" => "description",
             "image" => "image",
-            "logo" => "logo",
+            "logo" => "55f67a64-0d40-4758-9770-8e50dcc1449b",
             "mission" => "mission",
             "vision" => "vision",
         ]);

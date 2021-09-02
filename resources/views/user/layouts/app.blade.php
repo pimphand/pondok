@@ -25,6 +25,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400%2C700%7CRoboto:400" rel="stylesheet"
         property="stylesheet" media="all" type="text/css" />
 
+    @livewireStyles
+
 </head>
 
 <body class="home page-template-default page page-id-6208 gdlr-core-body tribe-no-js kingster-body 
@@ -186,6 +188,7 @@
         }
     </script>
 
+    @livewireScripts
 </body>
 
 </html>

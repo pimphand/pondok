@@ -15,7 +15,37 @@ class CreateRegistersTable extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             $table->id();
+            $table->string('nik');
+            $table->string('nik_kk');
+            $table->string('fullname');
+            $table->string('slug');
+            $table->string('gender');
+            $table->string('place_birth');
+            $table->date('date_birth');
+            $table->integer('child_to');
+            $table->integer('child_from');
+            $table->string('status_family');
+            $table->string('country');
+            $table->string('province');
+            $table->string('city');
+            $table->string('district');
+            $table->string('Ward');
+            $table->string('address');
+            $table->string('place_address');
+            $table->string('student_address');
+            $table->string('phone');
+            $table->string('distance_to_school');
+            $table->string('vehicle');
+            $table->string('hobby');
+            $table->integer('spp');
+            $table->text('statement');
+            $table->string('goals');
+            $table->string('school_from');
+            $table->string('school_address');
+            $table->string('semester_move');
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
