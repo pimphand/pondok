@@ -77,8 +77,8 @@ class ProfilController extends Controller
     {
         $request->validate([
             "description" => "required|string",
-            "image" => "required|mimes:jpg,png|max:2048",
-            "logo" => "required|mimes:jpg,png|max:2048",
+            "image" => "image|mimes:jpg,png|max:2048",
+            "logo" => "image|mimes:jpg,png|max:2048",
         ]);
 
         $profil = Profile::findOrFail($id);

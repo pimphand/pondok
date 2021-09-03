@@ -64,18 +64,21 @@
                                 <div>
                                     <input type="text" name="instagram" class="form-control" required ata-parsley-maxlength="6" placeholder="Enter Instagram" value="{{$data->instagram}}">
                                 </div>
+                                <small>Masukkan Link Instagram contoh <b class="text-danger">https://www.instagram.com/nashrus/</b></small>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Facebook</label>
                                 <div>
                                     <input type="text" name="facebook" class="form-control" required ata-parsley-maxlength="6" placeholder="Enter Facebook" value="{{$data->facebook}}">
                                 </div>
+                                <small>Masukkan Link Facebook contoh <b class="text-danger">https://www.facebook.com/profile.php?id=123333</b></small>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Youtube</label>
                                 <div>
                                     <input type="text" name="youtube" class="form-control" required ata-parsley-maxlength="6" placeholder="Enter Youtube" value="{{$data->youtube}}">
                                 </div>
+                                <small>Masukkan Embed Youtube contoh <b class="text-danger">https://www.youtube.com/embed/c74kMCOmP80</b></small>
                             </div>
                         </form>
                     </div>

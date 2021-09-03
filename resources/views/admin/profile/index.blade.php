@@ -37,19 +37,19 @@
                             </div>
                             <br><br>
                             <div class="row">
-                                <div class="col-6 mb-3">
+                                <div class="mb-3 col-6">
                                     <label class="form-label">Image</label>
                                     <div>
-                                        <input type="file" name="image" class="form-control" required
+                                        <input type="file" name="image" class="form-control"
                                             data-parsley-minlength="6" placeholder="Min 6 chars.">
                                         <br>
                                         <img src="{{asset('storage/profil')}}/{{$data->image}}" width="200">
                                     </div>
                                 </div>
-                                <div class="col-6 mb-3">
+                                <div class="mb-3 col-6">
                                     <label class="form-label">Logo</label>
                                     <div>
-                                        <input type="file" name="logo" class="form-control" required
+                                        <input type="file" name="logo" class="form-control"
                                             ata-parsley-maxlength="6" placeholder="Max 6 chars.">
                                         <br>
                                         <img src="{{asset('storage/profil')}}/{{$data->logo}}" width="200">

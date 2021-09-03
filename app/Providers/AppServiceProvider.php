@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Hostel;
+use App\Models\Contact;
 use App\Models\Profile;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -26,14 +26,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $logo = Profile::select('logo')->first();
-        $m = Hostel::where('id' ,1)->select('name')->get();
-        $w = Hostel::where('id' ,2)->select('name')->get();
-        // dd($w);
+        $logo   = Profile::select('logo')->first();
+        $image  = Profile::select('image')->first();
+        $contact= Contact::first();
+        $profil = Profile::first();
+        // dd($logo);
         View::share([
-        'logo' => $logo,
-        'w' => $w,
-        'm' => $m,
+        'logo'      => $logo,
+        'contact'   => $contact,
+        'profil'    => $profil,
+        'image'     => $image,
         ]);
+
     }
 }

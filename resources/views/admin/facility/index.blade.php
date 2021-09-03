@@ -48,7 +48,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add Catagory
+                <h5 class="modal-title" id="staticBackdropLabel">Add Fasility
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="records mb-2 mt-2">
+                    <div class="mt-2 mb-2 records">
                         <label class="form-label">Gambar</label>
                         <div>
                             <input type="file" name="image[]" class="form-control" placeholder="Enter Name">
@@ -76,7 +76,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <a class="extra-fields btn btn-info btn-sm mt-2" href="#">Tambah Foto</a>
+                        <a class="mt-2 extra-fields btn btn-info btn-sm" href="#">Tambah Foto</a>
                     </div>
                     <div class="records_dynamic form-group"></div>
                     <div class="modal-footer">
@@ -104,7 +104,7 @@
             $('.records').clone().appendTo('.records_dynamic');
             $('.records_dynamic .records').addClass('single remove');
             $('.single .extra-fields').remove();
-            $('.single').append('<a href="#" class="remove-field btn btn-info btn-sm mt-2">Hapus</a>');
+            $('.single').append('<a href="#" class="mt-2 remove-field btn btn-info btn-sm">Hapus</a>');
             $('.records_dynamic > .single').attr("class", "remove");
 
             $('.records_dynamic input').each(function() {

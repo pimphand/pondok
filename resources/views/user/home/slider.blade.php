@@ -1,7 +1,7 @@
 <div class="gdlr-core-pbf-wrapper" style="padding: 0px 0px 0px 0px;">
     <div class="gdlr-core-pbf-background-wrap"></div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
+        <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-pbf-wrapper-full-no-space">
             <div class="gdlr-core-pbf-element">
                 <div class="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb"
                     style="padding-bottom: 0px;">
@@ -23,7 +23,7 @@
                                         data-dim="w:616px,616px,616px,301px;" data-frame_1="st:250;sR:250;"
                                         data-frame_999="o:0;st:w;sR:8450;"
                                         style="z-index: 10; font-family: Verdana, Geneva, sans-serif;">
-                                        Kingster College
+                                        Nashrus Sunnah
                                     </rs-layer>
                                     <!--                        -->
                                     <rs-layer id="slider-1-slide-1-layer-5" class="lebeaune-font" data-type="text"
@@ -40,7 +40,7 @@
                                         data-dim="w:505px,505px,505px,358px;h:40px,40px,40px,auto;"
                                         data-frame_1="st:620;sR:620;" data-frame_999="o:0;st:w;sR:8080;"
                                         style="z-index: 9; font-family: Jost;">
-                                        We aim to create an extraordinary school
+                                        Pondok Pesantren Nashrus Sunnah
                                     </rs-layer>
                                     <!--                        -->
                                     <a id="slider-1-slide-1-layer-14" class="rs-layer lebeaune-font" href="#"
@@ -80,12 +80,12 @@
     </div>
 </div>
 <div class="gdlr-core-pbf-section">
-    <div class="gdlr-core-pbf-section-container gdlr-core-container clearfix">
+    <div class="clearfix gdlr-core-pbf-section-container gdlr-core-container">
         <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first gdlr-core-hide-in-mobile"
             id="gdlr-core-column-35275" style="z-index: 9;">
             <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: 0px 0px 0px 0px;">
                 <div class="gdlr-core-pbf-background-wrap"></div>
-                <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                     <div class="gdlr-core-pbf-element">
                         <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align gdlr-core-style-vertical"
                             style="margin-bottom: 50px;">

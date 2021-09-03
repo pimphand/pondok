@@ -1,11 +1,11 @@
 <div class="kingster-mobile-header-wrap">
-    <div class="kingster-mobile-header kingster-header-background kingster-style-slide
-         kingster-sticky-mobile-navigation" id="kingster-mobile-header">
-        <div class="kingster-mobile-header-container kingster-container clearfix">
+    <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation" id="kingster-mobile-header">
+        <div class="clearfix kingster-mobile-header-container kingster-container">
             <div class="kingster-logo kingster-item-pdlr kingster-mobile-logo-center">
                 <div class="kingster-logo-inner">
-                    <a class="" href="{{ route('home') }}"><img src="{{asset('user') }}/upload/logo-HP.png" alt=""
-                            width="200" height="200" title="logo HP" /></a>
+                    <a class="" href="{{ route('home') }}"><img
+                        src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200"
+                        height="200" title="logo HP" /></a>
                 </div>
             </div>
             <div class="kingster-mobile-menu-right">

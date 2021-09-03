@@ -26,6 +26,9 @@ use App\Models\Gallery;
 */
 
 Route::get('/', [FrontendController::class, "home"])->name('home');
+Route::get('/profil',[FrontendController::class, "profil"])->name('profil');
+Route::get('/contact', [FrontendController::class, "contact"])->name('contact');
+Route::get('/visionmission', [FrontendController::class, "visionmission"])->name('visionmission');
 
 Route::get('/test', function () {
     $data = Gallery::all();
