@@ -33,8 +33,8 @@
                             <li class="menu-item menu-item-has-children kingster-normal-menu">
                                 <a href="course-list-1.html" class="sf-with-ul-pre">Fasilitas</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item" data-size="60"><a href="course-list-1.html">Asrama Putra</a></li>
-                                    <li class="menu-item" data-size="60"><a href="course-list-2.html">Asrama Putri</a></li>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('male') }}">Asrama Putra</a></li>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('female') }}">Asrama Putri</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item kingster-normal-menu"><a href="university-life.html">Pendaftaran</a></li>

@@ -26,4 +26,14 @@ class FrontendController extends Controller
     {
         return view('user.visionmission.index');
     }
+
+    public function female()
+    {
+        return view('user.facility.female');
+    }
+
+    public function male()
+    {
+        return view('user.facility.man');
+    }
 }

@@ -29,6 +29,8 @@ Route::get('/', [FrontendController::class, "home"])->name('home');
 Route::get('/profil',[FrontendController::class, "profil"])->name('profil');
 Route::get('/contact', [FrontendController::class, "contact"])->name('contact');
 Route::get('/visionmission', [FrontendController::class, "visionmission"])->name('visionmission');
+Route::get('female', [FrontendController::class, "female"])->name('female');
+Route::get('/male', [FrontendController::class, "male"])->name('male');
 
 Route::get('/test', function () {
     $data = Gallery::all();
@@ -48,12 +50,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/vision', VisionMisionController::class);
     Route::resource('/teacher', TeacherController::class);
     Route::resource('/calender', CalendarAcademicController::class);
-    
+
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);
         Route::get('/putra', [BuildingController::class, 'man'])->name('facility.man');
     });
-        
+
 
 });
 

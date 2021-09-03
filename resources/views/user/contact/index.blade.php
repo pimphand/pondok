@@ -9,8 +9,8 @@
                 <div
                     class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
                     style="background-image: url({{asset('user')}}/upload/image-bg-1.jpg); background-size: cover; background-position: center;"
-                    data-parallax-speed="0.3"
-                ></div>
+                    data-parallax-speed="0.3">
+                </div>
             </div>
             <div class="gdlr-core-pbf-wrapper-content gdlr-core-js" data-gdlr-animation="fadeInUp" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                 <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
