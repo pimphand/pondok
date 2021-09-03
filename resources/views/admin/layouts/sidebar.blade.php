@@ -94,7 +94,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('facility.index')}}" class=" waves-effect">
+                            <a href="{{route('putri.index')}}" class=" waves-effect">
                                 <i class="fas fa-book-reader"></i>
                                 <span>Fasilitas</span>
                             </a>
@@ -114,7 +114,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('facility.index')}}" class=" waves-effect">
+                            <a href="{{route('facility.man')}}" class=" waves-effect">
                                 <i class="fas fa-book-reader"></i>
                                 <span>Fasilitas</span>
                             </a>

@@ -37,16 +37,20 @@ Route::get('/test', function () {
 Route::post('/test', [BuildingController::class, 'store'])->name('test');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
-        Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
-
-        Route::resource('/kategori-berita', NewsCategoryController::class);
-        Route::resource('/news', NewsController::class);
-        Route::resource('/profile', ProfilController::class);
-        Route::resource('/contact', ContactController::class);
-        Route::resource('/vision', VisionMisionController::class);
-        Route::resource('/teacher', TeacherController::class);
-        Route::resource('/calender', CalendarAcademicController::class);
-        Route::resource('/facility', BuildingController::class);
+    Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/kategori-berita', NewsCategoryController::class);
+    Route::resource('/news', NewsController::class);
+    Route::resource('/profile', ProfilController::class);
+    Route::resource('/contact', ContactController::class);
+    Route::resource('/vision', VisionMisionController::class);
+    Route::resource('/teacher', TeacherController::class);
+    Route::resource('/calender', CalendarAcademicController::class);
+    
+    Route::prefix('santri')->group( function(){
+        Route::resource('/putri', BuildingController::class);
+        Route::get('/putra', [BuildingController::class, 'man'])->name('facility.man');
+    });
+        
 
 });
 

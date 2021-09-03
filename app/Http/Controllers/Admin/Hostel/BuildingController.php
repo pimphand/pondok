@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin\Hostel;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\FileController;
 use App\Models\Building;
 use App\Models\Gallery;
+use App\Models\Hostel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -18,8 +18,13 @@ class BuildingController extends Controller
      */
     public function index()
     {
-        $facility = Gallery::all();
-        return view('admin.facility.index',[
+        return view('admin.facility.index');
+    }
+
+    public function man()
+    {
+        $facility = Building::where("id", 1)->get();
+        return view('admin.facility.man',[
             "data" => $facility
         ]);
     }
@@ -43,7 +48,7 @@ class BuildingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" => "required|string",
+            "name" => "required",
             "hostel" => "required",
             "image" => "required",
             "image.*" => "mimes:png,jpg|max:2048",
@@ -66,7 +71,7 @@ class BuildingController extends Controller
                   ]);
             }
          }
-
+        //  return $request;
         return back()->withToastSuccess('Data berhasil ditambahkan');
 
     }

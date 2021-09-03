@@ -12,4 +12,9 @@ class Gallery extends Model
 
     protected $fillable = ['name', 'image','building_id'];
     protected $hidden = ['deleted_at'];
+
+    public function building()
+    {
+        return $this->belongsTo(Building::class);
+    }
 }

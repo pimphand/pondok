@@ -2,11 +2,14 @@
 
 @section('css')
 <!-- DataTables -->
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+    type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+    type="text/css">
 
 <!-- Responsive datatable examples -->
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+    rel="stylesheet" type="text/css">
 
 @endsection
 @section('content')
@@ -31,37 +34,7 @@
                                 class="fas fa-plus-circle"></i> Add
                             Data </a>
                         <hr>
-
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($data as $item)
-                                <tr>
-                                    <td>{{$item->building_id}}</td>
-                                    <td><img src="{{asset('storage/gallery')}}/{{$item->name}}" width="600px"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#Update{{$item->id}}">Update</button>
-                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#delete{{ $item->id }}">
-                                            Delete
-                                        </button>
-                                        @include('admin.facility.modal')
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
+                        <livewire:admin.facility.modal />
                     </div>
                 </div>
             </div> <!-- end col -->
@@ -72,59 +45,42 @@
 <!-- Create -->
 <div class="modal fade" id="CreateAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add Facility
+                <h5 class="modal-title" id="staticBackdropLabel">Add Catagory
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('calender.store')}}" method="POST" class="outer-repeater" enctype="multipart/form-data">
+                <form action="{{route('putri.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div data-repeater-list="outer-group" class="outer">
-                        <div data-repeater-item class="outer">
-                            <div class="mb-3">
-                                <label class="form-label" for="formname">Name</label>
-                                <input type="text" class="form-control" name="name" id="formname" placeholder="Enter Name">
-                                <div class="text-danger">
-                                    @error('name')
-                                        {{$message}}
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="mb-4 inner-repeater">
-                                <div data-repeater-list="inner-group" class="mb-3 inner">
-                                    <label class="form-label">Image</label>
-                                    <div data-repeater-item class="mb-3 inner row">
-                                        <div class="col-md-7 col-sm-8">
-                                            <input type="file" name="image" class="inner form-control" placeholder="Enter your phone no..."/>
-                                        </div>
-                                        <div class="col-md-3 col-sm-2">
-                                            <div class="d-grid">
-                                                <input data-repeater-create type="button" class="btn btn-success inner" value="Add Image"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-2">
-                                            <div class="d-grid">
-                                                <input data-repeater-delete type="button" class="mt-2 btn btn-primary inner mt-sm-0" value="Delete"/>
-                                            </div>
-                                        </div>
-                                        <div class="text-danger">
-                                            @error('image')
-                                                {{$message}}
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
+                    <div class="mb-12">
+                        <label class="form-label">Name</label>
+                        <div>
+                            <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                            <div class="text-danger">
+                                @error('name')
+                                {{$message}}
+                                @enderror
                             </div>
                         </div>
                     </div>
-
+                    <div class="records mb-2 mt-2">
+                        <label class="form-label">Gambar</label>
+                        <div>
+                            <input type="file" name="image[]" class="form-control" placeholder="Enter Name">
+                            <div class="text-danger">
+                                @error('image')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </div>
+                        <a class="extra-fields btn btn-info btn-sm mt-2" href="#">Tambah Foto</a>
+                    </div>
+                    <div class="records_dynamic form-group"></div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" name="hostel" value="2" class="btn btn-primary">Save</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </form>
@@ -143,10 +99,26 @@
 
 <!-- Datatable init js -->
 <script src="{{ asset('admin') }}/assets/js/pages/datatables.init.js"></script>
+<script>
+    $('.extra-fields').click(function() {
+            $('.records').clone().appendTo('.records_dynamic');
+            $('.records_dynamic .records').addClass('single remove');
+            $('.single .extra-fields').remove();
+            $('.single').append('<a href="#" class="remove-field btn btn-info btn-sm mt-2">Hapus</a>');
+            $('.records_dynamic > .single').attr("class", "remove");
 
- <!-- form repeater js -->
- <script src="{{ asset('admin') }}/assets/libs/jquery.repeater/jquery.repeater.min.js"></script>
+            $('.records_dynamic input').each(function() {
+                var count = [];
+                var fieldname = $(this).attr("name");
+                $(this).attr('name', fieldname + count);
+                count++;
+            });
 
- <script src="{{ asset('admin') }}/assets/js/pages/form-repeater.int.js"></script>
+        });
 
+        $(document).on('click', '.remove-field', function(e) {
+            $(this).parent('.remove').remove();
+            e.preventDefault();
+        });
+</script>
 @endsection

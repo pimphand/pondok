@@ -12,7 +12,7 @@ class Register extends Component
     // Register
     public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,$date_birth,$child_to,$child_from,$status_family,$country,$province,$city,$district,$Ward,$address,$place_address,$student_address,$phone,$distance_to_school,$vehicle,$hobby,$spp,$statement,$goals,$school_from,$school_address,$semester_move;
     // Parent
-    public $register_id,$address,$phone,$kps_no;
+    public $p_register_id,$p_address,$p_phone,$p_kps_no;
     // father 
     public $f_parent_id,$f_name,$f_country,$f_birth_date,$f_birth_place,$f_nik,$f_education,$f_work,$f_income;
     // mother
