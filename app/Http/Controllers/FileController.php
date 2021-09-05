@@ -14,6 +14,15 @@ class FileController extends Controller
         }
              Storage::putFileAs("public/news", $image, $name);
     }
+
+    public static function video($image, $name, $oldName = null): void
+    {
+        if ($oldName) {
+             Storage::delete('public/video/' . $oldName);
+        }
+             Storage::putFileAs("public/video", $image, $name);
+    }
+    
     public static function profil($image, $name, $oldName = null): void
     {
         if ($oldName) {
