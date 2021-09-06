@@ -43,7 +43,8 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" => "required"
+            "name" => "required",
+            "video"=> "mimes:mp4|max:2000"
         ]);
 
         $video = new Video();

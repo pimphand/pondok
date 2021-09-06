@@ -36,4 +36,9 @@ class FrontendController extends Controller
     {
         return view('user.facility.man');
     }
+
+    public function galery()
+    {
+        return view('user.galery.index');
+    }
 }

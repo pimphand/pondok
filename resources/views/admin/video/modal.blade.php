@@ -33,6 +33,42 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="Updatevideo{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Update News
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{route('video.update', ['video'=>$item->id])}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('put')
+                    <div class="mb-12">
+                        <label class="form-label">Name</label>
+                        <div>
+                            <input type="text" name="name" class="form-control" value="{{$item->name}}">
+                            <div class="text-danger">
+                                @error('name')
+                                    {{$message}}
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
                     <div class="mb-12">
                         <label class="form-label">Video</label>
                         <div>
@@ -56,3 +92,4 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+

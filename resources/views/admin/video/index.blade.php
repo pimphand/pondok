@@ -48,28 +48,32 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center">Name</th>
-                                            <th class="text-center">Link Video</th>
                                             <th class="text-center">Video</th>
                                             <th class="text-center">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
+                                        @if ($item->video)
                                         <tr>
                                             <td class="text-center">{{$item->name}}</td>
-                                            <td class="text-center">{{$item->link}}</td>
-                                            <td class="text-center"><img src="{{ asset('storage/video') }}/{{ $item->video }}" width="150px"></td>
+                                            <td class="text-center">
+                                                <video width="150px" height="150px" controls>
+                                                    <source src="{{ asset('storage/video') }}/{{ $item->video }}" type="video/mp4">
+                                                </video>
+                                            </td>
                                             <td class="text-center">
                                                 <form action="{{route('video.destroy',['video' => $item->id])}}" method="POST">
                                                     @csrf
                                                     @method('delete')
                                                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                                        data-bs-target="#UpdateNews{{$item->id}}">Update</button>
+                                                        data-bs-target="#Updatevideo{{$item->id}}">Update</button>
                                                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                                 </form>
                                             </td>
                                             @include('admin.video.modal')
                                         </tr>
+                                        @endif
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -80,7 +84,7 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                                    <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAddLink"><i class="fas fa-plus-square">Add Data</i></a>
                                     <hr>
                                     <table id="video" class="table table-bordered dt-responsive nowrap"
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -89,16 +93,18 @@
                                             <tr>
                                                 <th class="text-center">Name</th>
                                                 <th class="text-center">Link Video</th>
-                                                <th class="text-center">Video</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($data as $item)
+                                            @if ($item->link)
                                             <tr>
                                                 <td class="text-center">{{$item->name}}</td>
-                                                <td class="text-center">{{$item->link}}</td>
-                                                <td class="text-center"><img src="{{ asset('storage/video') }}/{{ $item->video }}" width="150px"></td>
+                                                <td class="text-center">
+                                                    <iframe width="150" height="150" src="https://www.youtube.com/embed/{{$item->link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                                    </iframe>
+                                                </td>
                                                 <td class="text-center">
                                                     <form action="{{route('video.destroy',['video' => $item->id])}}" method="POST">
                                                         @csrf
@@ -110,6 +116,7 @@
                                                 </td>
                                                 @include('admin.video.modal')
                                             </tr>
+                                            @endif
                                             @endforeach
                                         </tbody>
                                     </table>
@@ -196,17 +203,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-12">
-                            <label class="form-label">Link Video</label>
-                            <div>
-                                <input type="text" name="link" class="form-control" placeholder="Enter Link Video">
-                                <div class="text-danger">
-                                    @error('link')
-                                        {{$message}}
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="mb-12">
                             <label class="form-label">Video</label>
                             <div>
@@ -229,6 +226,53 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
+
+    <div class="modal fade" id="CreateAddLink" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Video
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{route('video.store')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                        <div class="mb-12">
+                            <label class="form-label">Name</label>
+                            <div>
+                                <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                                <div class="text-danger">
+                                    @error('name')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-12">
+                            <label class="form-label">Link Video</label>
+                            <div>
+                                <input type="text" name="link" class="form-control" placeholder="Enter Link Video">
+                                <div class="text-danger">
+                                    @error('link')
+                                        {{$message}}
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
 
 @endsection
 

@@ -20,7 +20,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item kingster-normal-menu"><a href="university-life.html">Galery</a></li>
+                        <li class="menu-item kingster-normal-menu"><a href="{{ route('galery') }}">Galery</a></li>
                         <li class="kingster-center-nav-menu-item">
                             <div class="kingster-logo kingster-item-pdlr">
                                 <div class="kingster-logo-inner">

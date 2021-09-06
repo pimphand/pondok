@@ -22,7 +22,7 @@
             <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                 <div id="gdlr-core-custom-menu-widget-2"
                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                    <h3 class="kingster-widget-title">Our Campus</h3>
+                    <h3 class="kingster-widget-title">Pengumuman</h3>
                     <span class="clear"></span>
                     <div class="menu-our-campus-container">
                         <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
@@ -42,7 +42,7 @@
             <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                 <div id="gdlr-core-custom-menu-widget-4"
                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                    <h3 class="kingster-widget-title">Academics</h3>
+                    <h3 class="kingster-widget-title">Fasilitas</h3>
                     <span class="clear"></span>
                     <div class="menu-academics-container">
                         <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
@@ -53,24 +53,6 @@
                             <li class="menu-item kingster-normal-menu"><a href="#">Apply For Admissions</a>
                             </li>
                             <li class="menu-item kingster-normal-menu"><a href="#">Pay My Tuition</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                <div id="gdlr-core-custom-menu-widget-3"
-                    class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                    <h3 class="kingster-widget-title">Campus Life</h3>
-                    <span class="clear"></span>
-                    <div class="menu-campus-life-container">
-                        <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                            <li class="menu-item kingster-normal-menu"><a href="#">Accessibility</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Financial Aid</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Food Services</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Housing</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Information
-                                    Technologies</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Student Life</a></li>
                         </ul>
                     </div>
                 </div>

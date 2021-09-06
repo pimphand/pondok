@@ -33,6 +33,7 @@ Route::get('/contact', [FrontendController::class, "contact"])->name('contact');
 Route::get('/visionmission', [FrontendController::class, "visionmission"])->name('visionmission');
 Route::get('female', [FrontendController::class, "female"])->name('female');
 Route::get('/male', [FrontendController::class, "male"])->name('male');
+Route::get('/galery', [FrontendController::class, "galery"])->name('galery');
 
 Route::get('/test', function () {
     $data = Gallery::all();
