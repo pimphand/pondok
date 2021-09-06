@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin\Hostel;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\FileController;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class GalleryController extends Controller
 {
@@ -35,7 +38,16 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gallery = new Gallery();
+        $gallery->building_id = $request->id;
+          if ($request->hasFile("image")) {
+          $imageName = Str::uuid();
+          FileController::gallery($request->file("image"), $imageName, $gallery->url);
+          $gallery->image = $imageName;
+          }
+        $gallery->save();
+
+        return back()->withToastSuccess('Data berhasil disimpan');
     }
 
     /**
@@ -69,7 +81,7 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

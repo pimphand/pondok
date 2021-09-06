@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
-use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\Hostel\GalleryController;
 use App\Http\Controllers\FrontendController;
 use App\Models\Gallery;
 
@@ -56,6 +56,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);
         Route::get('/putra', [BuildingController::class, 'man'])->name('facility.man');
+        Route::resource('image', GalleryController::class);
     });
 
 

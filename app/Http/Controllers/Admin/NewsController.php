@@ -113,7 +113,7 @@ class NewsController extends Controller
 
         if ($request->hasFile("image")) {
             $imageName = Str::uuid();
-            FileController::news($request->file("image"), $imageName, $new->url);
+            FileController::news($request->file("image"), $imageName, $new->image);
             $new->image = $imageName;
         }
 

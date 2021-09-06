@@ -26,29 +26,7 @@
             </div>
         </div>
     </div>
-    <table class="table table-bordered">
-        <tr>
-            <th>Gambar</th>
-        </tr>
-        <tr>
-            @foreach ($data as $item)
-            <td>
-                {{ $item->building_id }}
-                <img src="{{ asset('storage/gallery/'. $item->image) }}" alt="" width="300px">
-            </td>
-            @endforeach
-        </tr>
-    </table>
-
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+   
     <form action="{{ route('test') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf

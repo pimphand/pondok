@@ -18,13 +18,16 @@ class BuildingController extends Controller
      */
     public function index()
     {
-        return view('admin.facility.index');
+        $facility = Building::where("hostel_id", 2)->get();
+        return view('admin.facility.index',[
+            "data" => $facility
+        ]);
     }
 
     public function man()
     {
-        $facility = Building::where("id", 1)->get();
-        return view('admin.facility.man',[
+        $facility = Building::where("hostel_id", 1)->get();
+        return view('admin.facility.index',[
             "data" => $facility
         ]);
     }

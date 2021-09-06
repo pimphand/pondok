@@ -77,6 +77,23 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mt-2 mb-2 records">
+                        <label class="form-label">Gambar</label>
+                        <div>
+                            <input type="file" name="image" class="form-control" placeholder="Enter Name">
+                            <div class="text-danger">
+                                @error('image')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-2 records">
+                        <button name="id" value="{{ $item->id }}" class="btn btn-primary btn-sm">tambah</button>
+                    </div>
+                </form>
                 <table id="datatable" class="table table-bordered dt-responsive nowrap"
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
