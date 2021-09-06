@@ -21,54 +21,23 @@
                 <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-pbf-wrapper-full">
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px;">
-                            <div class="clearfix gdlr-core-title-item-title-wrap"><h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="text-transform: none;">Horizontal Scrolling</h3></div>
-                            <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption">Hover With Center Caption</span>
                         </div>
                     </div>
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-gallery-item gdlr-core-item-pdb gdlr-core-gallery-item-style-scroll gdlr-core-item-pdlr">
                             <div class="gdlr-core-sly-slider gdlr-core-js-2">
                                 <ul class="slides">
-                                    <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                        <div class="gdlr-core-media-image" style="height: 500px;">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js" href="{{asset('user')}}/upload/shutterstock_160526219.jpg" data-lightbox-group="gdlr-core-img-group-3">
-                                                <img src="{{asset('user')}}/upload/shutterstock_160526219.jpg" alt="" width="1280" height="853" title="shutterstock_160526219" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                        <div class="gdlr-core-media-image" style="height: 500px;">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js" href="{{asset('user')}}/upload/shutterstock_106223549.jpg" data-lightbox-group="gdlr-core-img-group-3">
-                                                <img src="{{asset('user')}}/upload/shutterstock_106223549.jpg" alt="" width="1280" height="919" title="shutterstock_106223549" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                        <div class="gdlr-core-media-image" style="height: 500px;">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js" href="{{asset('user')}}/upload/shutterstock_294489926.jpg" data-lightbox-group="gdlr-core-img-group-3">
-                                                <img src="{{asset('user')}}/upload/shutterstock_294489926.jpg" alt="" width="1800" height="1200" title="shutterstock_294489926" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                        <div class="gdlr-core-media-image" style="height: 500px;">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js" href="{{asset('user')}}/upload/shutterstock_481869205.jpg" data-lightbox-group="gdlr-core-img-group-3">
-                                                <img src="{{asset('user')}}/upload/shutterstock_481869205.jpg" alt="" width="2000" height="1013" title="shutterstock_481869205" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                        <div class="gdlr-core-media-image" style="height: 500px;">
-                                            <a class="gdlr-core-lightgallery gdlr-core-js" href="{{asset('user')}}/upload/shutterstock_734589535.jpg" data-lightbox-group="gdlr-core-img-group-3">
-                                                <img src="{{asset('user')}}/upload/shutterstock_734589535.jpg" alt="" width="2000" height="1335" title="shutterstock_734589535" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                            </a>
-                                        </div>
-                                    </li>
+                                    @foreach ($female as $item)
+                                        <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
+                                            <div class="gdlr-core-media-image" style="height: 500px;">
+                                                <a class="gdlr-core-lightgallery gdlr-core-js" href="{{ asset('storage/gallery/'. $item->image) }}" data-lightbox-group="gdlr-core-img-group-3">
+                                                    <img src="{{ asset('storage/gallery/'. $item->image) }}" alt="" width="1280" height="853" />
+                                                    <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-center-align"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                    {{--  --}}
                                 </ul>
                             </div>
                             <div class="gdlr-core-sly-scroll"><div class="gdlr-core-sly-scroll-handle"></div></div>
@@ -89,23 +58,21 @@
                 <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px;">
-                            <div class="clearfix gdlr-core-title-item-title-wrap"><h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="text-transform: none;">Gallery Plain Carousel</h3></div>
-                            <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption">Hover With Left Title & Caption</span>
                         </div>
                     </div>
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-gallery-item gdlr-core-item-pdb gdlr-core-gallery-item-style-slider gdlr-core-item-pdlr">
                             <div class="gdlr-core-flexslider flexslider gdlr-core-js-2" data-type="slider" data-effect="default" data-nav="navigation">
                                 <ul class="slides">
-                                    <li>
+                                    @foreach ($female as $item)
+                                        <li>
                                         <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                             <a
                                                 class="gdlr-core-lightgallery gdlr-core-js"
-                                                href="{{asset('user')}}/upload/shutterstock_218235004.jpg"
+                                                href="{{ asset('storage/gallery/'. $item->image) }}"
                                                 data-sub-html="Studying"
-                                                data-lightbox-group="gdlr-core-img-group-4"
-                                            >
-                                                <img src="{{asset('user')}}/upload/shutterstock_218235004-1500x1000.jpg" alt="" width="1500" height="1000" title="Student" />
+                                                data-lightbox-group="gdlr-core-img-group-4">
+                                                <img src="{{ asset('storage/gallery/'. $item->image) }}" alt="" width="1500" height="1000" title="Student" />
                                                 <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-left-align">
                                                     <span class="gdlr-core-image-overlay-content">
                                                         <span class="gdlr-core-image-overlay-title gdlr-core-title-font">Student</span><span class="gdlr-core-image-overlay-caption gdlr-core-info-font">Studying</span>
@@ -113,58 +80,8 @@
                                                 </span>
                                             </a>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                            <a
-                                                class="gdlr-core-lightgallery gdlr-core-js"
-                                                href="{{asset('user')}}/upload/shutterstock_381527992.jpg"
-                                                data-sub-html="Subject"
-                                                data-lightbox-group="gdlr-core-img-group-4"
-                                            >
-                                                <img src="{{asset('user')}}/upload/shutterstock_381527992-1500x1000.jpg" alt="" width="1500" height="1000" title="Mathematic" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-left-align">
-                                                    <span class="gdlr-core-image-overlay-content">
-                                                        <span class="gdlr-core-image-overlay-title gdlr-core-title-font">Mathematic</span><span class="gdlr-core-image-overlay-caption gdlr-core-info-font">Subject</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                            <a
-                                                class="gdlr-core-lightgallery gdlr-core-js"
-                                                href="{{asset('user')}}/upload/shutterstock_450689383.jpg"
-                                                data-sub-html="Women"
-                                                data-lightbox-group="gdlr-core-img-group-4"
-                                            >
-                                                <img src="{{asset('user')}}/upload/shutterstock_450689383-1500x1000.jpg" alt="" width="1500" height="1000" title="Portrait" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-left-align">
-                                                    <span class="gdlr-core-image-overlay-content">
-                                                        <span class="gdlr-core-image-overlay-title gdlr-core-title-font">Portrait</span><span class="gdlr-core-image-overlay-caption gdlr-core-info-font">Women</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                            <a
-                                                class="gdlr-core-lightgallery gdlr-core-js"
-                                                href="{{asset('user')}}/upload/shutterstock_284650220.jpg"
-                                                data-sub-html="Group"
-                                                data-lightbox-group="gdlr-core-img-group-4"
-                                            >
-                                                <img src="{{asset('user')}}/upload/shutterstock_284650220-1500x1000.jpg" alt="" width="1500" height="1000" title="Brainstorm" />
-                                                <span class="gdlr-core-image-overlay gdlr-core-gallery-image-overlay gdlr-core-left-align">
-                                                    <span class="gdlr-core-image-overlay-content">
-                                                        <span class="gdlr-core-image-overlay-title gdlr-core-title-font">Brainstorm</span><span class="gdlr-core-image-overlay-caption gdlr-core-info-font">Group</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </li>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -179,69 +96,26 @@
                 <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px;">
-                            <div class="clearfix gdlr-core-title-item-title-wrap"><h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="text-transform: none;">Gallery Vertical</h3></div>
-                            <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption">Caption Underneath, Hover With Icon</span>
                         </div>
                     </div>
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-gallery-item gdlr-core-item-pdb gdlr-core-gallery-item-style-stack-image gdlr-core-item-pdlr">
                             <div class="gdlr-core-gallery-item-holder gdlr-core-js-2">
+
+                                @foreach ($female as $item)
                                 <div class="gdlr-core-item-list gdlr-core-item-mgb">
                                     <div class="gdlr-core-gallery-list gdlr-core-media-image">
                                         <a
                                             class="gdlr-core-lightgallery gdlr-core-js"
-                                            href="{{asset('user')}}/upload/shutterstock_450689383.jpg"
-                                            data-sub-html="Women"
-                                            data-lightbox-group="gdlr-core-img-group-6"
-                                        >
-                                            <img src="{{asset('user')}}/upload/shutterstock_450689383.jpg" alt="" width="2000" height="1000" title="Portrait" />
+                                            href="{{ asset('storage/gallery/'. $item->image) }}"
+                                            data-lightbox-group="gdlr-core-img-group-6">
+                                            <img src="{{ asset('storage/gallery/'. $item->image) }}" alt="" width="2000" height="1335" title="Building" />
                                             <span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
                                         </a>
+
                                     </div>
-                                    <div class="gdlr-core-gallery-caption gdlr-core-info-font">Women</div>
                                 </div>
-                                <div class="gdlr-core-item-list gdlr-core-item-mgb">
-                                    <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                        <a
-                                            class="gdlr-core-lightgallery gdlr-core-js"
-                                            href="{{asset('user')}}/upload/shutterstock_685407757.jpg"
-                                            data-sub-html="University"
-                                            data-lightbox-group="gdlr-core-img-group-6"
-                                        >
-                                            <img src="{{asset('user')}}/upload/shutterstock_685407757.jpg" alt="" width="2000" height="1335" title="Building" />
-                                            <span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                        </a>
-                                    </div>
-                                    <div class="gdlr-core-gallery-caption gdlr-core-info-font">University</div>
-                                </div>
-                                <div class="gdlr-core-item-list gdlr-core-item-mgb">
-                                    <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                        <a
-                                            class="gdlr-core-lightgallery gdlr-core-js"
-                                            href="{{asset('user')}}/upload/shutterstock_381527992.jpg"
-                                            data-sub-html="Subject"
-                                            data-lightbox-group="gdlr-core-img-group-6"
-                                        >
-                                            <img src="{{asset('user')}}/upload/shutterstock_381527992.jpg" alt="" width="2000" height="1333" title="Mathematic" />
-                                            <span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                        </a>
-                                    </div>
-                                    <div class="gdlr-core-gallery-caption gdlr-core-info-font">Subject</div>
-                                </div>
-                                <div class="gdlr-core-item-list gdlr-core-item-mgb">
-                                    <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                        <a
-                                            class="gdlr-core-lightgallery gdlr-core-js"
-                                            href="{{asset('user')}}/upload/shutterstock_218235004.jpg"
-                                            data-sub-html="Studying"
-                                            data-lightbox-group="gdlr-core-img-group-6"
-                                        >
-                                            <img src="{{asset('user')}}/upload/shutterstock_218235004.jpg" alt="" width="2000" height="1334" title="Student" />
-                                            <span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                        </a>
-                                    </div>
-                                    <div class="gdlr-core-gallery-caption gdlr-core-info-font">Studying</div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

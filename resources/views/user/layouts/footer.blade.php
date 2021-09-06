@@ -1,11 +1,11 @@
 <footer class="kingster-no-title-divider">
     <div class="kingster-footer-wrapper">
         <div class="clearfix kingster-footer-container kingster-container">
-            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-20">
                 <div id="text-2" class="widget widget_text kingster-widget">
                     <div class="textwidget">
                         <p>
-                            <img src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="90" /><br />
+                            <img src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200" /><br />
                             <span class="gdlr-core-space-shortcode" style="margin-top: 0px;"></span><br />
                             {{$contact->address}}
                         </p>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+            <div class="kingster-footer-column kingster-item-pdlr kingster-column-20">
                 <div id="gdlr-core-custom-menu-widget-2"
                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
                     <h3 class="kingster-widget-title">Pengumuman</h3>
@@ -46,13 +46,8 @@
                     <span class="clear"></span>
                     <div class="menu-academics-container">
                         <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                            <li class="menu-item kingster-normal-menu"><a href="#">Canvas</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Catalyst</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Library</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Time Schedule</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Apply For Admissions</a>
-                            </li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Pay My Tuition</a></li>
+                            <li class="menu-item kingster-normal-menu"><a href="{{ route('male') }}">Asrama Putra</a></li>
+                            <li class="menu-item kingster-normal-menu"><a href="{{ route('female') }}">Asrama Putri</a></li>
                         </ul>
                     </div>
                 </div>
