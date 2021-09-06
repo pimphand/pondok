@@ -20,7 +20,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = News::all();
+        $news = News::with('category')->get();
+        // dd($news);
         $categories = NewsCategory::all();
         return view('admin.news.index',compact('news','categories'));
     }

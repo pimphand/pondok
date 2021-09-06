@@ -29,10 +29,10 @@ use App\Models\Gallery;
 
 Route::get('/', [FrontendController::class, "home"])->name('home');
 Route::get('/profil',[FrontendController::class, "profil"])->name('profil');
-Route::get('/contact', [FrontendController::class, "contact"])->name('contact');
-Route::get('/visionmission', [FrontendController::class, "visionmission"])->name('visionmission');
-Route::get('female', [FrontendController::class, "female"])->name('female');
-Route::get('/male', [FrontendController::class, "male"])->name('male');
+Route::get('/kontak', [FrontendController::class, "contact"])->name('contact');
+Route::get('/visi-dan-misi', [FrontendController::class, "visionmission"])->name('visionmission');
+Route::get('/asrama-putri', [FrontendController::class, "female"])->name('female');
+Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
 Route::get('/galery', [FrontendController::class, "galery"])->name('galery');
 
 Route::get('/test', function () {

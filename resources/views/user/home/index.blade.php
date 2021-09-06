@@ -351,3 +351,11 @@
     </div>
 </div>
 @endsection
+@section('css')
+<style>
+    .img {
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+</style>
+@endsection

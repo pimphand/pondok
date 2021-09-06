@@ -8,36 +8,40 @@
                 <div class="clearfix kingster-navigation kingster-item-pdlr">
                     <div class="kingster-main-menu" id="kingster-main-menu">
                         <ul id="menu-main-navigation-1" class="sf-menu">
-                            <li
-                            class="menu-item kingster-normal-menu">
-                            <a href="{{ route('home') }}">Beranda</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children kingster-normal-menu">
-                            <a href="#" class="sf-with-ul-pre">Menu</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item" data-size="60"><a href="{{ route('profil') }}">Profile</a></li>
-                                <li class="menu-item" data-size="60"><a href="{{ route('visionmission') }}">Vision & Mision</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item kingster-normal-menu"><a href="{{ route('galery') }}">Galery</a></li>
-                        <li class="kingster-center-nav-menu-item">
-                            <div class="kingster-logo kingster-item-pdlr">
-                                <div class="kingster-logo-inner">
-                                    <a class="" href="{{ route('home') }}"><img
-                                        src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200"
-                                        height="200" title="logo HP" /></a>
+                            <li class="menu-item kingster-normal-menu">
+                                <a href="{{ route('home') }}">Beranda</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children kingster-normal-menu">
+                                <a href="#" class="sf-with-ul-pre">Menu</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item" data-size="60"><a href="{{ route('profil') }}">Profile</a>
+                                    </li>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('visionmission') }}">Vision &
+                                            Mision</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item kingster-normal-menu"><a href="{{ route('galery') }}">Galery</a></li>
+                            <li class="kingster-center-nav-menu-item">
+                                <div class="kingster-logo kingster-item-pdlr">
+                                    <div class="kingster-logo-inner">
+                                        <a class="" href="{{ route('home') }}"><img
+                                                src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200"
+                                                height="200" title="logo HP" /></a>
                                     </div>
                                 </div>
                             </li>
                             <li class="menu-item menu-item-has-children kingster-normal-menu">
                                 <a href="course-list-1.html" class="sf-with-ul-pre">Fasilitas</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item" data-size="60"><a href="{{ route('male') }}">Asrama Putra</a></li>
-                                    <li class="menu-item" data-size="60"><a href="{{ route('female') }}">Asrama Putri</a></li>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('male') }}">Asrama Putra</a>
+                                    </li>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('female') }}">Asrama
+                                            Putri</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item kingster-normal-menu"><a href="university-life.html">Pendaftaran</a></li>
+                            <li class="menu-item kingster-normal-menu"><a href="university-life.html">Pendaftaran</a>
+                            </li>
                             <li class="menu-item kingster-normal-menu"><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                     </div>

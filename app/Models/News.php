@@ -14,7 +14,7 @@ class News extends Model
         "name",
         "slug",
         "image",
-        "categories",
+        "news_categories",
         "description",
         "create_by",
     ];
@@ -23,4 +23,14 @@ class News extends Model
         "deleted_at",
         "delete_by",
     ];
+
+
+    public function category()
+    {
+        return $this->belongsTo(NewsCategory::class, 'news_categories', 'id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'create_by', 'id');
+    }
 }

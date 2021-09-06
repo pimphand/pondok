@@ -52,10 +52,12 @@
                                             data-bs-target="#show{{$item->id}}"><i class="fas fa-image"></i></button>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#delete{{ $item->id }}">
-                                            Delete
-                                        </button>
+                                        <form action="{{ route('putri.destroy', ['putri'=> $item->id]) }}"
+                                            method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm">Hapus</button>
+                                        </form>
                                         @include('admin.facility.modal')
                                         </form>
                                     </td>

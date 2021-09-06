@@ -109,10 +109,11 @@
                                 <img src="{{ asset('storage/gallery/'. $items->image) }}" alt="" width="100px">
                             </td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#delete{{ $item->id }}">
-                                    Delete
-                                </button>
+                                <form action="{{ route('image.destroy', ['image'=> $items->id]) }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn btn-danger btn-sm">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                         @empty

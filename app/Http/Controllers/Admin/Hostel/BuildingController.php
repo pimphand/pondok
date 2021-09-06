@@ -121,6 +121,7 @@ class BuildingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Building::destroy($id);
+        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
     }
 }

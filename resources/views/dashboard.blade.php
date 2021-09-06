@@ -26,11 +26,11 @@
             </div>
         </div>
     </div>
-   
+
     <form action="{{ route('video.store') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf
-        
+
         <label for="">name</label><br>
         <input type="text" name="name">
         <label for="">video</label><br>

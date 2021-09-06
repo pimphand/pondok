@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400%2C700%7CRoboto:400" rel="stylesheet"
         property="stylesheet" media="all" type="text/css" />
 
+    @yield('css')
     @livewireStyles
 
 </head>

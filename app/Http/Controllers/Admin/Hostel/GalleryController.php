@@ -92,6 +92,7 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Gallery::destroy($id);
+        return back()->withToastSuccess('<i class="fa fa-trash" style="color: red"></i> Data berhasil di hapus');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Building;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -29,12 +30,20 @@ class FrontendController extends Controller
 
     public function female()
     {
-        return view('user.facility.female');
+        $fasilitas = Building::where('hostel_id', 2)->with('gallery')->get();
+        return view('user.facility.index',[
+            "title" => "Asrama Putri",
+            "data" => $fasilitas
+        ]);
     }
 
     public function male()
     {
-        return view('user.facility.man');
+        $fasilitas = Building::where('hostel_id', 1)->with('gallery')->get();
+        return view('user.facility.index',[
+            "title" => "Asrama Putra",
+            "data" => $fasilitas
+        ]);
     }
 
     public function galery()
