@@ -44,16 +44,16 @@
                         <div class="card">
                             <div class="card-body">
                                 <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal"
-                                    data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                                    data-bs-target="#CreateAdd"><i class="fas fa-plus-square"> Upload Video</i></a>
                                 <hr>
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                     <thead>
                                         <tr>
-                                            <th class="text-center">Name</th>
+                                            <th class="text-center">Judul</th>
                                             <th class="text-center">Video</th>
-                                            <th class="text-center">Action</th>
+                                            <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -74,8 +74,8 @@
                                                     @method('delete')
                                                     <button type="button" class="btn btn-primary btn-sm"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#Updatevideo{{$item->id}}">Update</button>
-                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                        data-bs-target="#Updatevideo{{$item->id}}">Edit</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                                 </form>
                                             </td>
                                             @include('admin.video.modal')
@@ -92,16 +92,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal"
-                                    data-bs-target="#CreateAddLink"><i class="fas fa-plus-square">Add Data</i></a>
+                                    data-bs-target="#CreateAddLink"><i class="fas fa-plus-square"> Tambah Video
+                                        Youtube</i></a>
                                 <hr>
                                 <table id="video" class="table table-bordered dt-responsive nowrap"
                                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                     <thead>
                                         <tr>
-                                            <th class="text-center">Name</th>
-                                            <th class="text-center">Link Video</th>
-                                            <th class="text-center">Action</th>
+                                            <th class="text-center">Nama</th>
+                                            <th class="text-center">Video Youtube</th>
+                                            <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -124,8 +125,8 @@
                                                     @method('delete')
                                                     <button type="button" class="btn btn-primary btn-sm"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#UpdateNews{{$item->id}}">Update</button>
-                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                        data-bs-target="#UpdateNews{{$item->id}}">Edit</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                                 </form>
                                             </td>
                                             @include('admin.video.modal')
