@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\FileController;
 use App\Models\Video;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -17,7 +18,10 @@ class VideoController extends Controller
      */
     public function index()
     {
-        return view('admin.video.index');
+        $data = Video::all();
+        return view('admin.video.index',[
+            "data" => $data,
+        ]);
     }
 
     /**
@@ -46,13 +50,15 @@ class VideoController extends Controller
         $video->name = $request->name;
         $video->slug = Str::slug($request->name);
         $video->link = $request->link;
-        if ($request->hasFile("image")) {
+        if ($request->hasFile("video")) {
             $imageName = Str::uuid();
-            FileController::video($request->file("image"), $imageName);
-            $video->image = $imageName;
+            FileController::video($request->file("video"), $imageName, $video->video);
+            $video->video = $imageName;
         }
-        $video->save();
-        return back()->withToastSuccess('Data berhasil ditambahkan');
+
+        return $request;
+        // $video->save();
+        // return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 
     /**
@@ -90,18 +96,18 @@ class VideoController extends Controller
             "name" => "required"
          ]);
 
-         $video = new Video();
+         $video = Video::findOrFail($id);
          $video->name = $request->name;
          $video->slug = Str::slug($request->name);
          $video->link = $request->link;
-         if ($request->hasFile("image")) {
+         if ($request->hasFile("video")) {
             $imageName = Str::uuid();
-            FileController::video($request->file("image"), $imageName, $video->video);
+            FileController::video($request->file("video"), $imageName, $video->video);
             $video->video = $imageName;
          }
             $video->save();
 
-         return back()->withToastSuccess('Data berhasil disimpan');
+         return back()->withToastSuccess('Data berhasil di Update');
     }
 
     /**

@@ -72,7 +72,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Edit Facility
+                <h5 class="modal-title" id="staticBackdropLabel">Show Facility
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -100,7 +100,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="6" class="text-center p-5">
+                            <td colspan="6" class="p-5 text-center">
                                 Data tidak tersedia
                             </td>
                         </tr>

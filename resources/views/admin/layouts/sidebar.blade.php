@@ -65,6 +65,11 @@
                                 <span>Visi & Misi</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{route('video.index')}}" class=" waves-effect">
+                                <span>Video</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-title">Akademik</li>
