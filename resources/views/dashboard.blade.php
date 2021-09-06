@@ -27,18 +27,14 @@
         </div>
     </div>
    
-    <form action="{{ route('test') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('video.store') }}" method="post" enctype="multipart/form-data">
         <!-- Name -->
         @csrf
-        <select name="hostel" id="">
-            <option value="1">Putra</option>
-            <option value="2">Putri</option>
-        </select>
+        
         <label for="">name</label><br>
         <input type="text" name="name">
-        <label for="">image</label><br>
-        <input type="file" name="image[]">
-        <input type="file" name="image[]">
+        <label for="">video</label><br>
+        <input type="file" name="video">
 
         <button type="submit">ksrsr</button>
     </form>

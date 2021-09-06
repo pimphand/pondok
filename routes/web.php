@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
+use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\FrontendController;
 use App\Models\Gallery;
 

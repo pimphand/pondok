@@ -7,7 +7,6 @@ use App\Http\Controllers\FileController;
 use App\Models\Video;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class VideoController extends Controller
@@ -57,8 +56,8 @@ class VideoController extends Controller
             $video->video = $imageName;
         }
 
+        $video->save();
         return $request;
-        // $video->save();
         // return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 
