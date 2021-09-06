@@ -57,8 +57,7 @@ class VideoController extends Controller
         }
 
         $video->save();
-        return $request;
-        // return back()->withToastSuccess('Data berhasil ditambahkan');
+        return back()->withToastSuccess('Data berhasil ditambahkan');
     }
 
     /**

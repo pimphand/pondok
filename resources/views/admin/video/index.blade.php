@@ -26,18 +26,25 @@
         <div class="container-fluid">
 
             <!-- start page title -->
-            
-
+            <div class="page-title-box">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h6 class="page-title">Video</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="card">
-                                
                                 <div class="card-body">
+                                    <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                                    <hr>
                                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                
+
                                     <thead>
                                         <tr>
                                             <th class="text-center">Name</th>
@@ -69,13 +76,15 @@
                                 </div>
                             </div>
                         </div> <!-- end col-->
-            
+
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-body">
+                                    <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                                    <hr>
                                     <table id="video" class="table table-bordered dt-responsive nowrap"
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                    
+
                                         <thead>
                                             <tr>
                                                 <th class="text-center">Name</th>
@@ -107,20 +116,20 @@
                                 </div>
                             </div>
                         </div> <!-- end col -->
-            
+
                     </div>
-            
+
                     <div style='clear:both'></div>
-            
+
                     <!-- Add New Event MODAL -->
                     <div class="modal fade" id="event-modal" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
-                                <div class="modal-header py-3 px-4">
+                                <div class="px-4 py-3 modal-header">
                                     <h5 class="modal-title">Event</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body p-4">
+                                <div class="p-4 modal-body">
                                     <form class="needs-validation" name="event-form" id="form-event" novalidate>
                                         <div class="row">
                                             <div class="col-12">
@@ -147,7 +156,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mt-2">
+                                        <div class="mt-2 row">
                                             <div class="col-6">
                                                 <button type="button" class="btn btn-danger" id="btn-delete-event">Delete</button>
                                             </div>
@@ -160,16 +169,9 @@
                                 </div>
                             </div> <!-- end modal-content-->
                         </div> <!-- end modal dialog-->
-                    </div>
-                    <!-- end modal-->
-                </div>
-            </div>
         </div>
     </div>
 
-    
-    
-   
 
     <div class="modal fade" id="CreateAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -208,7 +210,7 @@
                         <div class="mb-12">
                             <label class="form-label">Video</label>
                             <div>
-                                <input type="file" name="video" class="form-control" placeholder="Enter File">
+                                <input type="file" name="video" class="form-control">
                                 <div class="text-danger">
                                     @error('video')
                                         {{$message}}
