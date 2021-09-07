@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Building;
 use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\News;
 use App\Models\Profile;
 use App\Models\Video;
 use Illuminate\Support\Facades\View;
@@ -33,18 +34,14 @@ class AppServiceProvider extends ServiceProvider
         $image      = Profile::select('image')->first();
         $contact    = Contact::first();
         $profil     = Profile::first();
-        $female     = Gallery::where('building_id', 2)->get();
-        $man        = Gallery::where('building_id', 1)->get();
-        $video      = Video::first();
+        $news       = News::latest()->limit(6)->get();
         // dd($logo);
         View::share([
             'logo'      => $logo,
             'contact'   => $contact,
             'profil'    => $profil,
             'image'     => $image,
-            'female'    => $female,
-            'man'       => $man,
-            'video'     => $video,
+            'berita'    => $news,
         ]);
 
     }

@@ -35,6 +35,9 @@ Route::get('/asrama-putri', [FrontendController::class, "female"])->name('female
 Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
 Route::get('/galery', [FrontendController::class, "galery"])->name('galery');
 
+Route::get('/list-berita', [FrontendController::class, "galery"])->name('user.news');
+Route::get('/detail-berita/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
+
 Route::get('/test', function () {
     $data = Gallery::all();
     return view('dashboard', compact('data'));

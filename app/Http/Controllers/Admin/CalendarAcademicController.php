@@ -55,7 +55,7 @@ class CalendarAcademicController extends Controller
 
         if ($request->hasFile('image')) {
             $imageName = Str::uuid();
-            FileController::calenders($request->file("image"), $imageName, $data->url);
+            FileController::calenders($request->file("image"), $imageName, $data->image);
             $data->image = $imageName;
         }
         $data->save();
@@ -104,7 +104,7 @@ class CalendarAcademicController extends Controller
 
         if ($request->hasFile('image')) {
             $imageName = Str::uuid();
-            FileController::calenders($request->file('image'),$imageName, $calender->url);
+            FileController::calenders($request->file('image'),$imageName, $calender->image);
             $calender->image = $imageName;
         }
 

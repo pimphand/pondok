@@ -47,8 +47,7 @@ class ActivityController extends Controller
 
         if ($request->hasFile("image")) {
             $imageName = Str::uuid();
-            FileController::activity($request->file("image"), $imageName,
-            $activity->image);
+            FileController::activity($request->file("image"), $imageName,$activity->image);
             $activity->image = $imageName;
         }
 

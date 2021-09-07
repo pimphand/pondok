@@ -5,16 +5,7 @@
                 <div id="text-2" class="widget widget_text kingster-widget">
                     <div class="textwidget">
                         <p>
-                            <img src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="200" /><br />
-                            <span class="gdlr-core-space-shortcode" style="margin-top: 0px;"></span><br />
-                            {{$contact->address}}
-                        </p>
-                        <p>
-                            <span style="font-size: 15px; color: #ffffff;">{{$contact->phone}}</span><br />
-                            <span class="gdlr-core-space-shortcode" style="margin-top: -20px;"></span><br />
-                            <a style="font-size: 15px; color: #8dd7e5;" href="#">
-                                <span class="__cf_email__">{{$contact->email}}</span>
-                            </a>
+                            <img src="{{ asset('storage/profil/'. $logo->logo) }}" alt="" width="100" /><br />
                         </p>
                     </div>
                 </div>
@@ -22,19 +13,15 @@
             <div class="kingster-footer-column kingster-item-pdlr kingster-column-20">
                 <div id="gdlr-core-custom-menu-widget-2"
                     class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                    <h3 class="kingster-widget-title">Pengumuman</h3>
+                    <h3 class="kingster-widget-title">Berita Terbaru</h3>
                     <span class="clear"></span>
                     <div class="menu-our-campus-container">
                         <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                            <li class="menu-item kingster-normal-menu"><a href="#">Acedemic</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Planning &#038;
-                                    Administration</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Campus Safety</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Office of the
-                                    Chancellor</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Facility Services</a>
+                            @foreach ($berita as $newss)
+                            <li class="menu-item kingster-normal-menu">
+                                <a href="{{ route('detail.news', $newss->slug) }}">{{ $newss->name }}</a>
                             </li>
-                            <li class="menu-item kingster-normal-menu"><a href="#">Human Resources</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -46,8 +33,10 @@
                     <span class="clear"></span>
                     <div class="menu-academics-container">
                         <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                            <li class="menu-item kingster-normal-menu"><a href="{{ route('male') }}">Asrama Putra</a></li>
-                            <li class="menu-item kingster-normal-menu"><a href="{{ route('female') }}">Asrama Putri</a></li>
+                            <li class="menu-item kingster-normal-menu"><a href="{{ route('male') }}">Asrama Putra</a>
+                            </li>
+                            <li class="menu-item kingster-normal-menu"><a href="{{ route('female') }}">Asrama Putri</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

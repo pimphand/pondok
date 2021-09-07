@@ -88,7 +88,7 @@ class NewsCategoryController extends Controller
             'name' => $request->name,
         ]);
 
-        return back()->withToastSuccess('Data Berhasil di Edit')->autoClose(5000);
+        return back()->withToastSuccess('Data Berhasil di Edit');
     }
 
     /**

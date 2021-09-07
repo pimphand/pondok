@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Building;
 use App\Models\Contact;
+use App\Models\News;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -48,6 +50,23 @@ class FrontendController extends Controller
 
     public function galery()
     {
-        return view('user.galery.index');
+        $video = Video::latest()->get();
+        return view('user.galery.index',[
+            "video" => $video
+        ]);
+    }
+
+    public function news()
+    {
+        $news = News::latest()->get();
+        return view('user.galery.index',[
+            'news' => $news
+        ]);
+    }
+
+    public function detailNews(News $news)
+    {
+        $news->increment('views');
+        return view('user.news.index', compact('news'));
     }
 }
