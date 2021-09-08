@@ -21,7 +21,7 @@
                                         <a href="{{ route('visionmission') }}">Visi dan Misi</a>
                                     </li>
                                     <li class="menu-item" data-size="60">
-                                        <a href="{{ route('visionmission') }}">Sejarah</a>
+                                        <a href="{{ route('sejarah') }}">Sejarah</a>
                                     </li>
                                 </ul>
                             </li>
@@ -50,9 +50,9 @@
                             <li class="menu-item menu-item-has-children kingster-normal-menu">
                                 <a href="javascript:void(0)" class="sf-with-ul-pre">Galery</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item" data-size="60"><a href="{{ route('male') }}">Video</a>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('video') }}">Video</a>
                                     </li>
-                                    <li class="menu-item" data-size="60"><a href="{{ route('female') }}">Photo</a>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('photo') }}">Photo</a>
                                     </li>
                                 </ul>
                             </li>
@@ -60,7 +60,7 @@
                                 <a href="course-list-1.html" class="sf-with-ul-pre">Santri</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item" data-size="60">
-                                        <a href="{{ route('male') }}">Asrama</a>
+                                        <a href="">Asrama</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item" data-size="60">
                                                 <a href="{{ route('female') }}">Asrama Putri</a>

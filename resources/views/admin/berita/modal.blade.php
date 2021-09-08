@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Update Catagory
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Kategori
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -13,7 +13,7 @@
                     @csrf
                     @method('put')
                     <div class="mb-12">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{$item->name}}">
                             <div class="text-danger">

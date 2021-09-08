@@ -12,7 +12,7 @@
                 @csrf
                 @method('put')
                     <div class="mb-12">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{$item->name}}">
                             <div class="text-danger">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">FullName</label>
+                        <label class="form-label">Nama Lengkap</label>
                         <div>
                             <input type="text" name="fullname" class="form-control" value="{{$item->fullname}}">
                             <div class="text-danger">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Image</label>
+                        <label class="form-label">Gambar</label>
                         <div>
                             <input type="file" name="image" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg" value="{{$item->image}}">
                             <div class="text-danger">

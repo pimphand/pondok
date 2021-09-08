@@ -17,7 +17,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Catagory</h6>
+                    <h6 class="page-title">Kategori</h6>
                 </div>
             </div>
         </div>
@@ -26,9 +26,9 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Table Category</h4><br>
+                        <h4 class="card-title">Tabel Kategori Berita</h4><br>
                         <a class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i
-                                class="fas fa-plus-circle"></i> Add
+                                class="fas fa-plus-circle"></i> Tambah
                             Data </a>
                         <hr>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
@@ -36,8 +36,8 @@
 
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Action</th>
+                                    <th>Nama</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,10 +46,10 @@
                                     <td>{{$item->name}}</td>
                                     <td>
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#Update{{$item->id}}">Update</button>
+                                            data-bs-target="#Update{{$item->id}}">Edit</button>
                                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#delete{{ $item->id }}">
-                                            Delete
+                                            Hapus
                                         </button>
                                         </form>
                                     </td>
@@ -72,7 +72,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add Catagory
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Kategori
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>

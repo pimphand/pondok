@@ -29,7 +29,7 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-md-8">
-                        <h6 class="page-title">Teacher</h6>
+                        <h6 class="page-title">Pendaftaran Siswa</h6>
                     </div>
                 </div>
             </div>
@@ -38,22 +38,20 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Table Teacher</h4><br>
-                            <a href="/teacher/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
-                            <hr>
+                            <h4 class="card-title">Tabel Pendaftaran Siswa</h4><br>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Nama</th>
+                                    <th class="text-center">NIK</th>
                                     <th class="text-center">Nama Lengkap</th>
-                                    <th class="text-center">Gambar</th>
-                                    <th class="text-center">teach</th>
+                                    {{-- <th class="text-center">Gambar</th>
+                                    <th class="text-center">teach</th> --}}
                                     <th class="text-center">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($data as $item)
+                                {{-- @foreach ($tk as $item)
                                     <tr>
                                         <td class="text-center">{{$item->name}}</td>
                                         <td class="text-center">{{$item->fullname}}</td>
@@ -63,13 +61,13 @@
                                             <form action="{{route('teacher.destroy',['teacher' => $item->id])}}" method="POST">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateNews{{$item->id}}" >Edit</button>
-                                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateNews{{$item->id}}" >Update</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                             </form>
                                         </td>
                                         @include('admin.teacher.modal')
                                     </tr>
-                                @endforeach
+                                @endforeach --}}
                                 </tbody>
                             </table>
 
@@ -105,7 +103,7 @@
                             </div>
                         </div>
                         <div class="mb-12">
-                            <label class="form-label">Nama Lengkap</label>
+                            <label class="form-label">Full Nama</label>
                             <div>
                                 <input type="text" name="fullname" class="form-control" placeholder="Enter FullName">
                                 <div class="text-danger">

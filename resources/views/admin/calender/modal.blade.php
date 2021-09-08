@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Update Calender
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Kalender
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -13,7 +13,7 @@
                     @csrf
                     @method('put')
                     <div class="mb-12">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{$item->name}}">
                             <div class="text-danger">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Image</label>
+                        <label class="form-label">Gambar Kalender</label>
                         <div>
                             <input type="file" name="image" class="form-control" value="{{$item->name}}" accept="png/jpg/jpeg">
                             <div class="text-danger">
@@ -32,7 +32,8 @@
                                 {{$message}}
                                 @enderror
                             </div>
-                        </div>
+                        </div><br>
+                        <img src="{{asset('storage/calenders')}}/{{$item->image}}" width="200px">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save</button>

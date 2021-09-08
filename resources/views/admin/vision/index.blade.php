@@ -14,7 +14,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Vision Mision</h6>
+                    <h6 class="page-title">Visi dan Misi</h6>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Vision Mision</h4>
+                        <h4 class="card-title">Visi dan Misi</h4>
                         <form action="{{route('vision.update', ['vision'=>$data->id])}}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
@@ -31,20 +31,20 @@
                             <div class="float-end">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Update
+                                        Edit
                                     </button>
                                 </div>
                             </div>
                             <br><br>
                             <div class="mb-3">
-                                <label class="form-label">Vision</label>
+                                <label class="form-label">Visi</label>
                                 <div>
                                     <textarea type="text" id="elm1" name="vision" class="form-control" required
                                         data-parsley-min="6" placeholder="Enter Vision">{{$data->vision}}</textarea>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Mission</label>
+                                <label class="form-label">Misi</label>
                                 <div>
                                     <textarea type="text" id="elm2" name="mission" class="form-control" required
                                         data-parsley-min="6" placeholder="Enter Mision">{{$data->mission}}</textarea>

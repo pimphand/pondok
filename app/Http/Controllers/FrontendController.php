@@ -48,10 +48,18 @@ class FrontendController extends Controller
         ]);
     }
 
-    public function galery()
+    public function video()
     {
         $video = Video::latest()->get();
-        return view('user.galery.index',[
+        return view('user.galery.video',[
+            "video" => $video
+        ]);
+    }
+
+    public function photo()
+    {
+        $video = Video::latest()->get();
+        return view('user.galery.photo',[
             "video" => $video
         ]);
     }
@@ -68,5 +76,10 @@ class FrontendController extends Controller
     {
         $news->increment('views');
         return view('user.news.index', compact('news'));
+    }
+
+    public function sejarah()
+    {
+        return view('user.sejarah.index');
     }
 }

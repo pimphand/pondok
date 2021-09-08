@@ -29,7 +29,7 @@
             <div class="page-title-box">
                 <div class="row align-items-center">
                     <div class="col-md-8">
-                        <h6 class="page-title">Teacher</h6>
+                        <h6 class="page-title">Aktifitas Pria</h6>
                     </div>
                 </div>
             </div>
@@ -38,36 +38,35 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Table Teacher</h4><br>
-                            <a href="/teacher/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                            <h4 class="card-title">Tabel Aktifitas Pria</h4><br>
+                            <a href="/man/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
                             <hr>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Nama</th>
-                                    <th class="text-center">Nama Lengkap</th>
-                                    <th class="text-center">Gambar</th>
-                                    <th class="text-center">teach</th>
+                                    <th class="text-center">Name</th>
+                                    <th class="text-center">Description</th>
+                                    <th class="text-center">Image</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($data as $item)
+                                @foreach ($activity as $item)
                                     <tr>
                                         <td class="text-center">{{$item->name}}</td>
-                                        <td class="text-center">{{$item->fullname}}</td>
-                                        <td class="text-center"><img src="{{ asset('storage/teacher') }}/{{ $item->image }}" width="150px"></td>
-                                        <td class="text-center">{{$item->teach}}</td>
+                                        <td class="text-center">{!!$item->description!!}</td>
+                                        <td class="text-center"><img src="{{ asset('storage/activity') }}/{{ $item->image }}" width="150px"></td>
                                         <td class="text-center">
-                                            <form action="{{route('teacher.destroy',['teacher' => $item->id])}}" method="POST">
+                                            <form action="{{route('man.destroy',['man' => $item->id])}}" method="POST">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateNews{{$item->id}}" >Edit</button>
-                                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateMan{{$item->id}}" >Update</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                             </form>
                                         </td>
-                                        @include('admin.teacher.modal')
+                                        @include('admin.activity.modal')
+
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -85,16 +84,16 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Tambah Guru
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Teacher
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{route('teacher.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('man.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                         <div class="mb-12">
-                            <label class="form-label">Nama</label>
+                            <label class="form-label">Name</label>
                             <div>
                                 <input type="text" name="name" class="form-control" placeholder="Enter Name">
                                 <div class="text-danger">
@@ -105,18 +104,18 @@
                             </div>
                         </div>
                         <div class="mb-12">
-                            <label class="form-label">Nama Lengkap</label>
+                            <label class="form-label">Deskripai</label>
                             <div>
-                                <input type="text" name="fullname" class="form-control" placeholder="Enter FullName">
+                                <textarea type="text" id="elm3" name="description" class="form-control" placeholder="Masukkan deskripsi"></textarea>
                                 <div class="text-danger">
-                                    @error('fullname')
+                                    @error('description')
                                         {{$message}}
                                     @enderror
                                 </div>
                             </div>
                         </div>
                         <div class="mb-12">
-                            <label class="form-label">Gambar</label>
+                            <label class="form-label">Image</label>
                             <div>
                                 <input type="file" name="image" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg">
                                 <div class="text-danger">
@@ -126,19 +125,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-12">
-                            <label class="form-label">Teach</label>
-                            <div>
-                                <input type="text" name="teach" class="form-control" placeholder="Enter Teach">
-                                <div class="text-danger">
-                                    @error('teach')
-                                        {{$message}}
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" name="hostel" value="1" class="btn btn-primary">Save</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         </div>
                     </form>

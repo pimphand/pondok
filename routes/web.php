@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Hostel\BuildingController;
 use App\Http\Controllers\Admin\NewsCategoryController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
+use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\FrontendController;
 use App\Models\Gallery;
@@ -33,7 +35,9 @@ Route::get('/kontak', [FrontendController::class, "contact"])->name('contact');
 Route::get('/visi-dan-misi', [FrontendController::class, "visionmission"])->name('visionmission');
 Route::get('/asrama-putri', [FrontendController::class, "female"])->name('female');
 Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
-Route::get('/galery', [FrontendController::class, "galery"])->name('galery');
+Route::get('/video', [FrontendController::class, "video"])->name('video');
+Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
+Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
 
 Route::get('/list-berita', [FrontendController::class, "galery"])->name('user.news');
 Route::get('/detail-berita/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
@@ -57,11 +61,17 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/teacher', TeacherController::class);
     Route::resource('/calender', CalendarAcademicController::class);
     Route::resource('/video', VideoController::class);
+    Route::resource('/female', ActivityController::class);
+    Route::get('/male', [ActivityController::class, 'man'])->name('activity.male');
+    Route::resource('/man', ActivityController::class);
+    Route::resource('/register', RegisterController::class);
+
+
 
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);
         Route::get('/putra', [BuildingController::class, 'man'])->name('facility.man');
-        Route::resource('image', GalleryController::class);
+        Route::resource('/image', GalleryController::class);
     });
 
 

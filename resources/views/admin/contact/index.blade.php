@@ -30,19 +30,19 @@
                             <div class="float-end">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Update
+                                        Edit
                                     </button>
                                 </div>
                             </div>
                             <br><br>
                             <div class="mb-3">
-                                <label class="form-label">Address</label>
+                                <label class="form-label">Alamat</label>
                                 <div>
                                     <input type="text" name="address" class="form-control" required data-parsley-minlength="6" placeholder="Enter Address" value="{{$data->address}}">
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Phone</label>
+                                <label class="form-label">No Telpon</label>
                                 <div>
                                     <input type="text" name="phone" class="form-control" required ata-parsley-maxlength="6" placeholder="Enter Phone" value="{{$data->phone}}">
                                 </div>

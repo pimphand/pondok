@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Update News
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Berita
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
@@ -12,7 +12,7 @@
                 @csrf
                 @method('put')
                     <div class="mb-12">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{$item->name}}">
                             <div class="text-danger">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Image</label>
+                        <label class="form-label">Gambar</label>
                         <div>
                             <input type="file" name="image" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg" value="{{$item->image}}">
                             <div class="text-danger">
@@ -35,7 +35,7 @@
                         </div><br>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Categories</label>
+                        <label class="form-label">Kategori</label>
                         <div>
                             <select name="categories" class="form-control">
                                 <option value="">--Select Categories--</option>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <label class="form-label">Description</label>
+                        <label class="form-label">Deskripsi</label>
                         <div>
                             <textarea type="text" id="elm1" name="description" class="form-control" placeholder="Enter Description">{{$item->description}}</textarea>
                             <div class="text-danger">

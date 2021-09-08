@@ -14,7 +14,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Profile</h6>
+                    <h6 class="page-title">Profil</h6>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Profile</h4>
+                        <h4 class="card-title">Profil</h4>
                         <form action="{{route('profile.update', ['profile'=>$data->id])}}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
@@ -31,14 +31,14 @@
                             <div class="float-end">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Update
+                                        Edit
                                     </button>
                                 </div>
                             </div>
                             <br><br>
                             <div class="row">
                                 <div class="mb-3 col-6">
-                                    <label class="form-label">Image</label>
+                                    <label class="form-label">Gambar</label>
                                     <div>
                                         <input type="file" name="image" class="form-control"
                                             data-parsley-minlength="6" placeholder="Min 6 chars.">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Description</label>
+                                <label class="form-label">Deskripsi</label>
                                 <div>
                                     <textarea type="text" id="elm1" name="description" class="form-control" required
                                         data-parsley-min="6"

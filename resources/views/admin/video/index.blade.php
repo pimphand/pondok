@@ -92,7 +92,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <a href="/video/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal"
-                                    data-bs-target="#CreateAddLink"><i class="fas fa-plus-square"> Tambah Video
+                                    data-bs-target="#CreateAddLink"><i class="fas fa-plus-square"> Upload Video
                                         Youtube</i></a>
                                 <hr>
                                 <table id="video" class="table table-bordered dt-responsive nowrap"
@@ -204,7 +204,7 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Add Video
+                            <h5 class="modal-title" id="staticBackdropLabel">Tambah Video
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -212,7 +212,7 @@
                             <form action="{{route('video.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-12">
-                                    <label class="form-label">Name</label>
+                                    <label class="form-label">Nama</label>
                                     <div>
                                         <input type="text" name="name" class="form-control" placeholder="Enter Name">
                                         <div class="text-danger">
@@ -252,7 +252,7 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Add Video
+                            <h5 class="modal-title" id="staticBackdropLabel">Upload Link Video
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -260,7 +260,7 @@
                             <form action="{{route('video.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-12">
-                                    <label class="form-label">Name</label>
+                                    <label class="form-label">Nama</label>
                                     <div>
                                         <input type="text" name="name" class="form-control" placeholder="Enter Name">
                                         <div class="text-danger">

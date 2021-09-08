@@ -15,14 +15,14 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        $count = [
-            "tk" => Register::where('education', "Tk")->where('status', false)->count,
-            "mi" => Register::where('education', "Mi")->where('status', false)->count,
-            "smp" => Register::where('education', "Smp")->where('status', false)->count,
-            "sma" => Register::where('education', "Sma")->where('status', false)->count,
-        ];
+        // $count = [
+        //     "tk" => Register::where('education', "Tk")->where('status', false)->count,
+        //     "mi" => Register::where('education', "Mi")->where('status', false)->count,
+        //     "smp" => Register::where('education', "Smp")->where('status', false)->count,
+        //     "sma" => Register::where('education', "Sma")->where('status', false)->count,
+        // ];
         return view('admin.register.index', [
-            "count" => $count
+            // "count" => $count
         ]);
     }
 

@@ -27,7 +27,7 @@ class BuildingController extends Controller
     public function man()
     {
         $facility = Building::where("hostel_id", 1)->get();
-        return view('admin.facility.index',[
+        return view('admin.facility.male',[
             "data" => $facility
         ]);
     }

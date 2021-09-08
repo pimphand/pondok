@@ -20,7 +20,18 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return view('admin.activity.index');
+        $activity = Activity::where('hostel_id', 2)->get();
+        return view('admin.activity.index',[
+            "activity" => $activity
+        ]);
+    }
+
+    public function man()
+    {
+        $activity = Activity::where('hostel_id', 1)->get();
+        return view('admin.activity.man', [
+            "activity" => $activity
+        ]);
     }
 
     /**
@@ -44,6 +55,8 @@ class ActivityController extends Controller
         $activity = new Activity();
         $activity->description = $request->description;
         $activity->name = $request->name;
+        $activity->hostel_id = $request->hostel;
+        $activity->created_by = Auth::id();
 
         if ($request->hasFile("image")) {
             $imageName = Str::uuid();
@@ -90,6 +103,7 @@ class ActivityController extends Controller
         $activity = Activity::findOrFail($id);
         $activity->description = $request->description;
         $activity->name = $request->name;
+
         if ($request->hasFile("image")) {
             $imageName = Str::uuid();
             FileController::activity($request->file("image"), $imageName, $activity->image);

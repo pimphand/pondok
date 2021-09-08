@@ -20,7 +20,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Facility</h6>
+                    <h6 class="page-title">Fasilitas</h6>
                 </div>
             </div>
         </div>
@@ -29,17 +29,17 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Table Facility</h4><br>
+                        <h4 class="card-title">Tabel Fasilitas</h4><br>
                         <a class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i
-                                class="fas fa-plus-circle"></i> Add
+                                class="fas fa-plus-circle"></i> Tambah
                             Data </a>
                         <hr>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Image</th>
+                                    <th>Nama</th>
+                                    <th>Gambar</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -49,7 +49,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>
                                         <button type=" button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#show{{$item->id}}"><i class="fas fa-image"></i></button>
+                                            data-bs-target="#Show{{$item->id}}"><i class="fas fa-image"></i></button>
                                     </td>
                                     <td>
                                         <form action="{{ route('putri.destroy', ['putri'=> $item->id]) }}"
@@ -59,7 +59,6 @@
                                             <button class="btn btn-danger btn-sm">Hapus</button>
                                         </form>
                                         @include('admin.facility.modal')
-                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -78,7 +77,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add Fasility
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Fasilitas
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -86,7 +85,7 @@
                 <form action="{{route('putri.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-12">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" placeholder="Enter Name">
                             <div class="text-danger">
@@ -102,7 +101,7 @@
                             <input type="file" name="image[]" class="form-control" placeholder="Enter Name">
                             <div class="text-danger">
                                 @error('image')
-                                {{$message}}
+                                  {{$message}}
                                 @enderror
                             </div>
                         </div>

@@ -5,9 +5,14 @@
     style="background-image: url({{asset('storage/profil')}}/{{$profil->image}});">
     <div class="kingster-header-transparent-substitute"></div>
     <div class="kingster-page-title-overlay"></div>
+    <div class="kingster-header-transparent-substitute"></div>
+    <div class="kingster-page-title-overlay"></div>
+    <div class="kingster-page-title-top-gradient"></div>
+    <div class="kingster-page-title-bottom-gradient"></div>
+    <div class="p"></div>
     <div class="kingster-page-title-container kingster-container">
         <div class="kingster-page-title-content kingster-item-pdlr">
-            <h1 class="kingster-page-title">Gallery</h1>
+            <h1 class="kingster-page-title">Photo</h1>
         </div>
     </div>
 </div>

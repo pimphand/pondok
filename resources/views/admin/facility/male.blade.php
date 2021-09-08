@@ -2,12 +2,15 @@
 
 @section('css')
 <!-- DataTables -->
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+    type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+    type="text/css">
 
 <!-- Responsive datatable examples -->
-<link href="{{ asset('admin') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
-    type="text/css">
+<link href="{{ asset('admin') }}/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+    rel="stylesheet" type="text/css">
+
 @endsection
 @section('content')
 <div class="page-content">
@@ -17,7 +20,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Kalender Akademik</h6>
+                    <h6 class="page-title">Fasilitas</h6>
                 </div>
             </div>
         </div>
@@ -26,60 +29,60 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Tabel Kalender Akademik</h4><br>
+                        <h4 class="card-title">Tabel Fasilitas</h4><br>
                         <a class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i
                                 class="fas fa-plus-circle"></i> Tambah
                             Data </a>
                         <hr>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-
                             <thead>
                                 <tr>
-                                    <th class="text-center">Nama</th>
-                                    <th class="text-center">Gambar Kalender</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Nama</th>
+                                    <th>Gambar</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                 <tr>
-                                    <td class="text-center">{{$item->name}}</td>
-                                    <td class="text-center"><img src="{{asset('storage/calenders')}}/{{$item->image}}" width="200px"></td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#Update{{$item->id}}">Edit</button>
-                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#delete{{ $item->id }}">
-                                            Hapus
-                                        </button>
-                                        </form>
+                                    <td>{{$item->name}}</td>
+                                    <td>
+                                        <button type=" button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#Show{{$item->id}}"><i class="fas fa-image"></i></button>
                                     </td>
-                                    @include('admin.calender.modal')
+                                    <td>
+                                        <form action="{{ route('putri.destroy', ['putri'=> $item->id]) }}"
+                                            method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger btn-sm">Hapus</button>
+                                        </form>
+                                        @include('admin.facility.modal')
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div> <!-- end col -->
-        </div> <!-- end row -->
+        </div>
     </div>
 </div>
 
-
+<!-- Create -->
 <div class="modal fade" id="CreateAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Tambah Kalender
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Fasilitas
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('calender.store')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('putri.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-12">
                         <label class="form-label">Nama</label>
@@ -92,19 +95,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-12">
-                        <label class="form-label">Gambar Kalender</label>
+                    <div class="mt-2 mb-2 records">
+                        <label class="form-label">Gambar</label>
                         <div>
-                            <input type="file" name="image" class="form-control" placeholder="Enter Image" accept="png/jpg/jpeg">
+                            <input type="file" name="image[]" class="form-control" placeholder="Enter Name">
                             <div class="text-danger">
                                 @error('image')
-                                    {{$message}}
+                                  {{$message}}
                                 @enderror
                             </div>
                         </div>
+                        <a class="mt-2 extra-fields btn btn-info btn-sm" href="#">Tambah Foto</a>
                     </div>
+                    <div class="records_dynamic form-group"></div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" name="hostel" value="1" class="btn btn-primary">Save</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </form>
@@ -114,6 +119,7 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
 @endsection
 @section('script')
 <!-- Required datatable js -->
@@ -122,4 +128,26 @@
 
 <!-- Datatable init js -->
 <script src="{{ asset('admin') }}/assets/js/pages/datatables.init.js"></script>
+<script>
+    $('.extra-fields').click(function() {
+            $('.records').clone().appendTo('.records_dynamic');
+            $('.records_dynamic .records').addClass('single remove');
+            $('.single .extra-fields').remove();
+            $('.single').append('<a href="#" class="mt-2 remove-field btn btn-info btn-sm">Hapus</a>');
+            $('.records_dynamic > .single').attr("class", "remove");
+
+            $('.records_dynamic input').each(function() {
+                var count = [];
+                var fieldname = $(this).attr("name");
+                $(this).attr('name', fieldname + count);
+                count++;
+            });
+
+        });
+
+        $(document).on('click', '.remove-field', function(e) {
+            $(this).parent('.remove').remove();
+            e.preventDefault();
+        });
+</script>
 @endsection

@@ -14,7 +14,9 @@
                         <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end"></span>
                         <span>Dashboard</span>
                     </a>
-                    <a href="{{ route('dashboard') }}" class="waves-effect">
+                </li>
+                <li>
+                    <a href="{{ route('register.index') }}" class="waves-effect">
                         <i class="fas fa-clipboard-list"></i><span
                             class="badge rounded-pill bg-primary float-end"></span>
                         <span>Pendaftaran</span>
@@ -105,7 +107,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('news.index')}}" class=" waves-effect">
+                            <a href="{{route('female.index')}}" class=" waves-effect">
                                 <i class="fas fa-images"></i>
                                 <span>Kegiatan</span>
                             </a>
@@ -125,7 +127,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('news.index')}}" class=" waves-effect">
+                            <a href="{{route('activity.male')}}" class=" waves-effect">
                                 <i class="fas fa-images"></i>
                                 <span>Kegiatan</span>
                             </a>

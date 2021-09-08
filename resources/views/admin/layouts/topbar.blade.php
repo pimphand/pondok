@@ -17,7 +17,7 @@
                 <i class="mdi mdi-menu"></i>
             </button>
 
-            <div class="d-none d-sm-block">
+            {{-- <div class="d-none d-sm-block">
                 <div class="pt-3 dropdown d-inline-block">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,17 +32,17 @@
                         <a class="dropdown-item" href="#">Separated link</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="d-flex">
             <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
+            {{-- <form class="app-search d-none d-lg-block">
                 <div class="position-relative">
                     <input type="text" class="form-control" placeholder="Search...">
                     <span class="fa fa-search"></span>
                 </div>
-            </form>
+            </form> --}}
 
             <div class="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
@@ -116,7 +116,7 @@
                 </button>
             </div>
 
-            <div class="dropdown d-inline-block">
+            {{-- <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect"
                     id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -241,16 +241,16 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i
+                    <a class="dropdown-item" href="{{route('profile.index')}}"><i
                             class="align-middle mdi mdi-account-circle font-size-17 me-1"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle mdi mdi-wallet font-size-17 me-1"></i> My
+                    {{-- <a class="dropdown-item" href="#"><i class="align-middle mdi mdi-wallet font-size-17 me-1"></i> My
                         Wallet</a>
                     <a class="dropdown-item d-flex align-items-center" href="#"><i
                             class="align-middle mdi mdi-cog font-size-17 me-1"></i> Settings<span
                             class="badge bg-success ms-auto">11</span></a>
                     <a class="dropdown-item" href="#"><i
                             class="align-middle mdi mdi-lock-open-outline font-size-17 me-1"></i> Lock
-                        screen</a>
+                        screen</a> --}}
                     <div class="dropdown-divider"></div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -264,11 +264,11 @@
                 </div>
             </div>
 
-            <div class="dropdown d-inline-block">
+            {{-- <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                     <i class="mdi mdi-cog-outline"></i>
                 </button>
-            </div>
+            </div> --}}
 
         </div>
     </div>
