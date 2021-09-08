@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="kingster-page-title-wrap kingster-style-medium kingster-center-align"
-    style="background-image: url({{asset('storage/profil')}}/{{$profil->image}});">
+    style="background-image: url({{asset('storage/profil')}}/{{$image->image}});">
     <div class="kingster-header-transparent-substitute"></div>
     <div class="kingster-page-title-overlay"></div>
     <div class="kingster-header-transparent-substitute"></div>

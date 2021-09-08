@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
-    protected $fillable = ['description', 'image','mission','vision','logo'];
+    protected $fillable = ['description', 'image','mission','vision','logo','history'];
     
 }

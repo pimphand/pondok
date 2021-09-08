@@ -32,14 +32,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $logo       = Profile::select('logo')->first();
         $image      = Profile::select('image')->first();
-        $contact    = Contact::first();
-        $profil     = Profile::first();
         $news       = News::latest()->limit(6)->get();
         // dd($logo);
         View::share([
             'logo'      => $logo,
-            'contact'   => $contact,
-            'profil'    => $profil,
             'image'     => $image,
             'berita'    => $news,
         ]);

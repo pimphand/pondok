@@ -56,6 +56,7 @@
                                     <th class="text-center">Isi</th>
                                     <th class="text-center">Penulis</th>
                                     <th class="text-center">Dibuat</th>
+                                    <th class="text-center">Dilihat</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -69,6 +70,7 @@
                                     <td class="text-center">{!!$item->description!!}</td>
                                     <td class="text-center">{{$item->user->name}}</td>
                                     <td class="text-center">{{($item->created_at)->format('d-m-Y')}}</td>
+                                    <td class="text-center">{{$item->views}} Kali</td>
                                     <td class="text-center">
                                         <form action="{{route('news.destroy',['news' => $item->id])}}" method="POST">
                                             @csrf

@@ -38,7 +38,7 @@
 
         <button type="submit">ksrsr</button>
     </form>
-
+    {{ \Carbon\Carbon::now()->translatedFormat('Y-M-d H:i') }}
     @include('sweetalert::alert')
 </body>
 

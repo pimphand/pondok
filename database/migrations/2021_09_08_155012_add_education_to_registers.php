@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddHostelIdToActivities extends Migration
+class AddEducationToRegisters extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddHostelIdToActivities extends Migration
      */
     public function up()
     {
-        Schema::table('activities', function (Blueprint $table) {
-            $table->integer('hostel_id');
+        Schema::table('registers', function (Blueprint $table) {
+            $table->string('education')->after('fullname');
         });
     }
 
@@ -25,8 +25,8 @@ class AddHostelIdToActivities extends Migration
      */
     public function down()
     {
-        Schema::table('activities', function (Blueprint $table) {
-            $table->dropColumn(['hostel_id']);
+        Schema::table('registers', function (Blueprint $table) {
+             $table->dropColumn(['education']);
         });
     }
 }

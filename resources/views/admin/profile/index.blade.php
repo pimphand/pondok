@@ -40,8 +40,8 @@
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Gambar</label>
                                     <div>
-                                        <input type="file" name="image" class="form-control"
-                                            data-parsley-minlength="6" placeholder="Min 6 chars.">
+                                        <input type="file" name="image" class="form-control" data-parsley-minlength="6"
+                                            placeholder="Min 6 chars.">
                                         <br>
                                         <img src="{{asset('storage/profil')}}/{{$data->image}}" width="200">
                                     </div>
@@ -49,8 +49,8 @@
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Logo</label>
                                     <div>
-                                        <input type="file" name="logo" class="form-control"
-                                            ata-parsley-maxlength="6" placeholder="Max 6 chars.">
+                                        <input type="file" name="logo" class="form-control" ata-parsley-maxlength="6"
+                                            placeholder="Max 6 chars.">
                                         <br>
                                         <img src="{{asset('storage/profil')}}/{{$data->logo}}" width="200">
                                     </div>
@@ -62,6 +62,14 @@
                                     <textarea type="text" id="elm1" name="description" class="form-control" required
                                         data-parsley-min="6"
                                         placeholder="Enter Description">{{$data->description}}</textarea>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Sejarah</label>
+                                <div>
+                                    <textarea type="text" id="elm2" name="history" class="form-control" required
+                                        data-parsley-min="6"
+                                        placeholder="Enter Description">{{$data->history}}</textarea>
                                 </div>
                             </div>
                         </form>

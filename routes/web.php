@@ -39,7 +39,7 @@ Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
 
-Route::get('/list-berita', [FrontendController::class, "galery"])->name('user.news');
+Route::get('/list-berita', [FrontendController::class, "news"])->name('user.news');
 Route::get('/detail-berita/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
 
 Route::get('/test', function () {
@@ -66,12 +66,17 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/man', ActivityController::class);
     Route::resource('/register', RegisterController::class);
 
-
-
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);
         Route::get('/putra', [BuildingController::class, 'man'])->name('facility.man');
         Route::resource('/image', GalleryController::class);
+    });
+
+    Route::prefix('pendaftaran')->group( function(){
+        Route::get('/tk', [RegisterController::class, 'tk'])->name('tk.index');
+        Route::get('/mi', [RegisterController::class, 'mi'])->name('mi.index');
+        Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
+        Route::get('/sma', [RegisterController::class, 'sma'])->name('sma.index');
     });
 
 

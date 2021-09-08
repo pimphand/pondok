@@ -77,12 +77,14 @@ class ProfilController extends Controller
     {
         $request->validate([
             "description" => "required|string",
+            "history" => "required|string",
             "image" => "image|mimes:jpg,png|max:2048",
             "logo" => "image|mimes:jpg,png|max:2048",
         ]);
 
         $profil = Profile::findOrFail($id);
         $profil->description = $request->description;
+        $profil->history = $request->history;
         if ($request->hasFile("image")) {
             $imageName = Str::uuid();
             FileController::profil($request->file("image"), $imageName, $profil->image);

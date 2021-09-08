@@ -36,7 +36,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item kingster-normal-menu">
-                                <a href="{{ route('home') }}">Berita</a>
+                                <a href="{{ route('user.news') }}">Berita</a>
                             </li>
                             <li class="kingster-center-nav-menu-item">
                                 <div class="kingster-logo kingster-item-pdlr">

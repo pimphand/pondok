@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Building;
 use App\Models\Contact;
 use App\Models\News;
+use App\Models\Picture;
+use App\Models\Profile;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,10 @@ class FrontendController extends Controller
 
     public function profil()
     {
-        return view('user.profile.index');
+        $profi = Profile::select('description')->get();
+        return view('user.profile.index', [
+            "profil" => $profi
+        ]);
     }
 
     public function contact()
@@ -52,22 +57,22 @@ class FrontendController extends Controller
     {
         $video = Video::latest()->get();
         return view('user.galery.video',[
-            "video" => $video
+            "data" => $video
         ]);
     }
 
     public function photo()
     {
-        $video = Video::latest()->get();
+        $video = Picture::latest()->get();
         return view('user.galery.photo',[
-            "video" => $video
+            "data" => $video
         ]);
     }
 
     public function news()
     {
         $news = News::latest()->get();
-        return view('user.galery.index',[
+        return view('user.news.index',[
             'news' => $news
         ]);
     }
@@ -75,11 +80,14 @@ class FrontendController extends Controller
     public function detailNews(News $news)
     {
         $news->increment('views');
-        return view('user.news.index', compact('news'));
+        return view('user.news.detail', compact('news'));
     }
 
     public function sejarah()
     {
-        return view('user.sejarah.index');
+        $profi = Profile::select('history')->first();
+        return view('user.sejarah.index',[
+            "profil" => $profi
+        ]);
     }
 }
