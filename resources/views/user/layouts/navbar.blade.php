@@ -28,9 +28,9 @@
                             <li class="menu-item menu-item-has-children kingster-normal-menu">
                                 <a href="javascript:void(0)" class="sf-with-ul-pre">Akademik</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item" data-size="60"><a href="{{ route('male') }}">Guru</a>
+                                    <li class="menu-item" data-size="60"><a href="{{ route('guru') }}">Guru</a>
                                     </li>
-                                    <li class="menu-item" data-size="60"><a href="{{ route('female') }}">Kalender
+                                    <li class="menu-item" data-size="60"><a href="{{ route('kalender') }}">Kalender
                                             Akademik</a>
                                     </li>
                                 </ul>
@@ -59,7 +59,7 @@
                             <li class="menu-item menu-item-has-children kingster-normal-menu">
                                 <a href="course-list-1.html" class="sf-with-ul-pre">Santri</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item" data-size="60">
+                                    <li class="menu-item menu-item-has-children ">
                                         <a href="">Asrama</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item" data-size="60">
@@ -70,9 +70,16 @@
                                     </li>
                                     <li class="menu-item" data-size="60">
                                         <a href="{{ route('female') }}">Kegiatan Santri</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item" data-size="60">
+                                                <a href="{{ route('kegiatanputri') }}">Putri</a>
+                                                <a href="{{ route('kegiatanputra') }}">Putra</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
+
                             <li class="menu-item kingster-normal-menu"><a href="{{route('pendaftaran')}}">Pendaftaran</a>
                             </li>
                             <li class="menu-item kingster-normal-menu"><a href="{{ route('contact') }}">Kontak</a></li>

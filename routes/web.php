@@ -39,6 +39,10 @@ Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
 Route::get('/pendaftaran', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
+Route::get('/guru', [FrontendController::class, "guru"])->name('guru');
+Route::get('/kalender-akademik', [FrontendController::class, "kalender"])->name('kalender');
+Route::get('/kegiatan-putri', [FrontendController::class, "kegiatanputri"])->name('kegiatanputri');
+Route::get('/kegiatan-putra', [FrontendController::class, "kegiatanputra"])->name('kegiatanputra');
 
 Route::get('/berita', [FrontendController::class, "news"])->name('user.news');
 Route::get('/berita/detail/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');

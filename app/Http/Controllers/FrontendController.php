@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use App\Models\Building;
+use App\Models\CalendarAcademic;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\News;
 use App\Models\Picture;
 use App\Models\Profile;
+use App\Models\Teacher;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -28,12 +31,18 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('user.contact.index');
+        $contact = Contact::first();
+        return view('user.contact.index',[
+            "contact" => $contact
+        ]);
     }
 
     public function visionmission()
     {
-        return view('user.visionmission.index');
+        $profi = Profile::select('vision','mission')->first();
+        return view('user.visionmission.index', [
+            "profil" => $profi
+        ]);
     }
 
     public function female()
@@ -41,7 +50,7 @@ class FrontendController extends Controller
         $fasilitas  = Building::where('hostel_id', 2)->with('gallery')->get();
         $gallery    = Gallery::where('building_id', null)->limit(10)->get();
         return view('user.facility.index',[
-            "title" => "Pasilitas",
+            "title" => "Fasilitas",
             "data"  => $fasilitas,
             "photo" => $gallery
         ]);
@@ -52,7 +61,7 @@ class FrontendController extends Controller
         $fasilitas = Building::where('hostel_id', 1)->with('gallery')->get();
         $gallery   = Gallery::where('building_id', null)->limit(10)->get();
         return view('user.facility.index',[
-            "title" => "Pasilitas",
+            "title" => "Fasilitas",
             "data"  => $fasilitas,
             "photo" => $gallery
         ]);
@@ -60,7 +69,7 @@ class FrontendController extends Controller
 
     public function video()
     {
-        $video = Video::latest()->get();
+        $video = Video::all();
         return view('user.galery.video',[
             "data" => $video
         ]);
@@ -99,5 +108,39 @@ class FrontendController extends Controller
     public function pendaftaran()
     {
         return view('user.pendaftaran.index');
+    }
+
+    public function guru()
+    {
+        $guru = Teacher::all();
+        return view('user.akademik.guru',[
+            "teacher" => $guru
+        ]);
+    }
+
+    public function kalender()
+    {
+        $kalender = CalendarAcademic::select('image','name')->get();
+        return view('user.akademik.kalender',[
+            "data" => $kalender
+        ]);
+    }
+
+    public function kegiatanputri()
+    {
+        $aktifitas = Activity::where('hostel_id', 2)->get();
+        return view('user.aktifitas.index',[
+            "title" => "Kegiatan Satri Putri",
+            "data" => $aktifitas
+        ]);
+    }
+
+    public function kegiatanputra()
+    {
+        $aktifitas = Activity::where('hostel_id', 1)->get();
+        return view('user.aktifitas.index',[
+            "title" => "Kegiatan Santri Putra",
+            "data"  => $aktifitas
+        ]);
     }
 }
