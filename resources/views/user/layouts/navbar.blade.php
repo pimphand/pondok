@@ -73,7 +73,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item kingster-normal-menu"><a href="university-life.html">Pendaftaran</a>
+                            <li class="menu-item kingster-normal-menu"><a href="{{route('pendaftaran')}}">Pendaftaran</a>
                             </li>
                             <li class="menu-item kingster-normal-menu"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>

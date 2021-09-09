@@ -5,19 +5,19 @@
             data-parallax-speed="0.15"></div>
     </div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-            <div class="gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix"
+        <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
+            <div class="clearfix gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr"
                 style="margin: 0px 0px -200px 0px; z-index: 9; width: 100%;">
                 <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first"
                     id="gdlr-core-column-33303">
                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
                         style="padding-top: 0px; padding-bottom: 15px;">
                         <div class="gdlr-core-pbf-background-wrap"></div>
-                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                        <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                             <div class="gdlr-core-pbf-element">
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
+                                <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
                                     style="padding-bottom: 40px;">
-                                    <div class="gdlr-core-title-item-title-wrap clearfix">
+                                    <div class="clearfix gdlr-core-title-item-title-wrap">
                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
                                             style="font-size: 28px; font-weight: 400; letter-spacing: 0px; color: #222222;">
                                             upcoming events</h3>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="gdlr-core-pbf-column gdlr-core-column-30">
                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
-                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"></div>
+                        <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js"></div>
                     </div>
                 </div>
             </div>
@@ -62,18 +62,19 @@
 <div class="gdlr-core-pbf-wrapper" style="margin-top: -258px; padding: 0px 0px 100px 0px;">
     <div class="gdlr-core-pbf-background-wrap"></div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+        <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
             <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" id="gdlr-core-column-78730"
                 style="z-index: 9;">
                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="padding-top: 0px;">
                     <div class="gdlr-core-pbf-background-wrap"></div>
-                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                    <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-event-item gdlr-core-item-pdb" style="padding-bottom: 0px;">
-                                <div class="gdlr-core-event-item-holder clearfix">
+
+                                <div class="clearfix gdlr-core-event-item-holder">
 
                                     <div
-                                        class="gdlr-core-event-item-list gdlr-core-item-pdlr gdlr-core-style-grid2 gdlr-core-column-20 gdlr-core-with-frame gdlr-core-column-first clearfix">
+                                        class="clearfix gdlr-core-event-item-list gdlr-core-item-pdlr gdlr-core-style-grid2 gdlr-core-column-20 gdlr-core-with-frame gdlr-core-column-first">
                                         <div class="gdlr-core-event-item-list-inner"
                                             style="box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1);">
                                             <div class="gdlr-core-event-item-thumbnail">
@@ -99,8 +100,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -110,3 +109,5 @@
         </div>
     </div>
 </div>
+
+

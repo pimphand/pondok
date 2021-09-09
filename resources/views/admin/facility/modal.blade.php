@@ -39,6 +39,7 @@
                             <td>
                                 <img src="{{ asset('storage/gallery/'. $items->image) }}" alt="" width="100px">
                             </td>
+
                             <td>
                                 <form action="{{ route('image.destroy', ['image'=> $items->id]) }}" method="post">
                                     @csrf

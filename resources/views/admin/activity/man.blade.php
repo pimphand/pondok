@@ -61,8 +61,8 @@
                                             <form action="{{route('man.destroy',['man' => $item->id])}}" method="POST">
                                                 @csrf
                                                 @method('delete')
-                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateMan{{$item->id}}" >Update</button>
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#UpdateMan{{$item->id}}" >Edit</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                             </form>
                                         </td>
                                         @include('admin.activity.modal')

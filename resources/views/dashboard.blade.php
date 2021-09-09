@@ -1,45 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- csrf-token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-    <title>Use SweetAlert2 with AJAX in Laravel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="{{ asset('style.css') }}" id="app-style" rel="stylesheet" type="text/css">
 </head>
-
-<body class="container" style="margin-top: 40px;">
-    <div class="row" style="margin-bottom: 20px;">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h3>Users</h3>
-            </div>
-        </div>
-    </div>
-
-    <form action="{{ route('video.store') }}" method="post" enctype="multipart/form-data">
-        <!-- Name -->
+<body>
+    <form id="regForm" action="{{route('news.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
+        <h1>Register:</h1>
 
-        <label for="">name</label><br>
-        <input type="text" name="name">
-        <label for="">video</label><br>
-        <input type="file" name="video">
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">Name:
+          <p><input placeholder="First name..." name="name" oninput="this.className = ''"></p>
+        </div>
 
-        <button type="submit">ksrsr</button>
+        <div class="tab">Contact Info:
+          <p><input placeholder="E-mail..." type="file" name="image" oninput="this.className = ''"></p>
+        </div>
+
+        <div class="tab">Birthday:
+          <p><input placeholder="dd" name="categories" value="1" oninput="this.className = ''"></p>
+        </div>
+
+        <div class="tab">Login Info:
+          <p><input placeholder="Username..." name="description" oninput="this.className = ''"></p>
+        </div>
+
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+
     </form>
-    {{ \Carbon\Carbon::now()->translatedFormat('Y-M-d H:i') }}
-    @include('sweetalert::alert')
 </body>
+<script src="{{ asset('test.js') }}"></script>
 
 </html>

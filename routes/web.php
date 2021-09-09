@@ -38,9 +38,10 @@ Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
 Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
+Route::get('/pendaftaran', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
 
-Route::get('/list-berita', [FrontendController::class, "news"])->name('user.news');
-Route::get('/detail-berita/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
+Route::get('/berita', [FrontendController::class, "news"])->name('user.news');
+Route::get('/berita/detail/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
 
 Route::get('/test', function () {
     $data = Gallery::all();

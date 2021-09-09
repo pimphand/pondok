@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Building;
 use App\Models\Contact;
+use App\Models\Gallery;
 use App\Models\News;
 use App\Models\Picture;
 use App\Models\Profile;
@@ -19,7 +20,7 @@ class FrontendController extends Controller
 
     public function profil()
     {
-        $profi = Profile::select('description')->get();
+        $profi = Profile::select('description')->first();
         return view('user.profile.index', [
             "profil" => $profi
         ]);
@@ -37,19 +38,23 @@ class FrontendController extends Controller
 
     public function female()
     {
-        $fasilitas = Building::where('hostel_id', 2)->with('gallery')->get();
+        $fasilitas  = Building::where('hostel_id', 2)->with('gallery')->get();
+        $gallery    = Gallery::where('building_id', null)->limit(10)->get();
         return view('user.facility.index',[
-            "title" => "Asrama Putri",
-            "data" => $fasilitas
+            "title" => "Pasilitas",
+            "data"  => $fasilitas,
+            "photo" => $gallery
         ]);
     }
 
     public function male()
     {
         $fasilitas = Building::where('hostel_id', 1)->with('gallery')->get();
+        $gallery   = Gallery::where('building_id', null)->limit(10)->get();
         return view('user.facility.index',[
-            "title" => "Asrama Putra",
-            "data" => $fasilitas
+            "title" => "Pasilitas",
+            "data"  => $fasilitas,
+            "photo" => $gallery
         ]);
     }
 
@@ -89,5 +94,10 @@ class FrontendController extends Controller
         return view('user.sejarah.index',[
             "profil" => $profi
         ]);
+    }
+
+    public function pendaftaran()
+    {
+        return view('user.pendaftaran.index');
     }
 }

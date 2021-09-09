@@ -30,14 +30,12 @@
 
 </head>
 
-<body class="home page-template-default page page-id-6208 gdlr-core-body tribe-no-js kingster-body 
-    kingster-body-front kingster-full kingster-with-sticky-navigation kingster-sticky-navigation-no-logo
-     kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+<body class="home page-template-default page page-id-6208 gdlr-core-body tribe-no-js kingster-body kingster-body-front kingster-full kingster-with-sticky-navigation kingster-sticky-navigation-no-logo kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
 
     @include('user.layouts.mobile')
 
     <div class="kingster-body-outer-wrapper">
-        <div class="kingster-body-wrapper clearfix kingster-with-transparent-header kingster-with-frame">
+        <div class="clearfix kingster-body-wrapper kingster-with-transparent-header kingster-with-frame">
 
             @include('user.layouts.navbar')
 
@@ -53,6 +51,7 @@
     <script src="{{asset('user') }}/plugins/revslider/public/assets/js/rbtools.min.js" id="tp-tools-js"></script>
     <script src="{{asset('user') }}/plugins/revslider/public/assets/js/rs6.min.js" id="revmin-js"></script>
     <script src="{{asset('user') }}/js/kingster-learnpress.js" id="kingster-learnpress-js"></script>
+    @yield('js')
     <script>
         function setREVStartSize(e){
             //window.requestAnimationFrame(function() {

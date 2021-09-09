@@ -72,6 +72,11 @@
                                 <span>Video</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{route('video.index')}}" class=" waves-effect">
+                                <span>Photo</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-title">Akademik</li>
