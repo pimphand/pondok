@@ -37,6 +37,15 @@
                         </div>
 
                         <div class="p-4 card-body">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
                             <div class="p-3">
                                 <form method="POST" action="{{ route('login') }}" class="mt-4">
                                     @csrf

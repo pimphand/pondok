@@ -16,6 +16,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('user.index') }}" class="waves-effect">
+                        <i class="ti-user"></i><span class="badge rounded-pill bg-primary float-end"></span>
+                        <span>admin</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('register.index') }}" class="waves-effect">
                         <i class="fas fa-clipboard-list"></i><span
                             class="badge rounded-pill bg-primary float-end"></span>

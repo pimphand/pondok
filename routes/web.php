@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
 use App\Http\Controllers\Admin\RegisterController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\FrontendController;
 use App\Models\Gallery;
@@ -70,6 +71,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/male', [ActivityController::class, 'man'])->name('activity.male');
     Route::resource('/man', ActivityController::class);
     Route::resource('/register', RegisterController::class);
+    Route::resource('/user', UserController::class);
 
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);
