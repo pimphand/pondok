@@ -20,31 +20,14 @@
                                     <div class="clearfix gdlr-core-title-item-title-wrap">
                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
                                             style="font-size: 28px; font-weight: 400; letter-spacing: 0px; color: #222222;">
-                                            upcoming events</h3>
+                                            Video</h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-element">
                                 <div
                                     class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
-                                    <a class="gdlr-core-button gdlr-core-button-transparent gdlr-core-left-align gdlr-core-button-with-border"
-                                        href="#" style="
-                                                                font-size: 13px;
-                                                                font-weight: 600;
-                                                                letter-spacing: 1px;
-                                                                color: #222222;
-                                                                padding: 0px 0px 2px 0px;
-                                                                text-transform: uppercase;
-                                                                border-radius: 0px;
-                                                                -moz-border-radius: 0px;
-                                                                -webkit-border-radius: 0px;
-                                                                border-width: 0px 0px 1px 0px;
-                                                                border-color: #c5c5c5;
-                                                            ">
-                                        <span class="gdlr-core-content">View All Events</span><i
-                                            class="gdlr-core-pos-right fa fa-long-arrow-right"
-                                            style="font-size: 15px; color: #222222;"></i>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -72,34 +55,63 @@
                             <div class="gdlr-core-event-item gdlr-core-item-pdb" style="padding-bottom: 0px;">
 
                                 <div class="clearfix gdlr-core-event-item-holder">
-
-                                    <div
-                                        class="clearfix gdlr-core-event-item-list gdlr-core-item-pdlr gdlr-core-style-grid2 gdlr-core-column-20 gdlr-core-with-frame gdlr-core-column-first">
-                                        <div class="gdlr-core-event-item-list-inner"
-                                            style="box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1);">
+                                    @foreach ($video as $item)
+                                    @if (!$item->video == null)
+                                    <div class="clearfix gdlr-core-event-item-list gdlr-core-item-pdlr gdlr-core-style-grid2 gdlr-core-column-20 gdlr-core-with-frame gdlr-core-column-first">
+                                        <div
+                                            class="gdlr-core-event-item-list-inner"
+                                            style="box-shadow: 0 20px 50px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1);"
+                                        >
                                             <div class="gdlr-core-event-item-thumbnail">
-                                                <iframe width="700" height="450"
-                                                    src="https://www.youtube.com/embed/oPUousvlruI"
-                                                    title="YouTube video player" frameborder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowfullscreen></iframe>
+                                                <a href="#">
+                                                    <video width="400" height="250" controls>
+                                                        <source src="{{ asset('storage/video') }}/{{ $item->video }}"
+                                                            type="video/mp4">
+                                                        Browhser anda tidak didukung untuk memutar video ini
+                                                    </video>
+                                                </a>
                                             </div>
-                                            <div class="gdlr-core-frame gdlr-core-skin-e-background gdlr-core-js"
-                                                data-sync-height="event-item-1">
-                                                <span
-                                                    class="gdlr-core-event-item-info gdlr-core-skin-caption gdlr-core-type-start-time"><span
-                                                        class="gdlr-core-tail">7 January
-                                                        2020</span></span>
+                                            <div class="gdlr-core-frame gdlr-core-skin-e-background gdlr-core-js" data-sync-height="event-item-1">
+                                                <span class="gdlr-core-event-item-info gdlr-core-skin-caption gdlr-core-type-start-time"><span class="gdlr-core-tail">{{ Date::parse($item->created_at)->format('j F Y') }}</span></span>
                                                 <div class="gdlr-core-event-item-content-wrap">
-                                                    <h3 class="gdlr-core-event-item-title"
-                                                        style="text-transform: uppercase;">
-                                                        <a href="#">Reunion Event : Kingster’s
-                                                            Alumni Golf Tour</a>
+                                                    <h3 class="gdlr-core-event-item-title" style="text-transform: uppercase;">
+                                                        <a href="#">{{$item->name}}</a>
                                                     </h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    @else
+                                    <div class="clearfix gdlr-core-event-item-list gdlr-core-item-pdlr gdlr-core-style-grid2 gdlr-core-column-20 gdlr-core-with-frame">
+                                        <div
+                                            class="gdlr-core-event-item-list-inner"
+                                            style="box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 30px 50px rgba(10, 10, 10, 0.1);"
+                                        >
+                                            <div class="gdlr-core-event-item-thumbnail">
+                                                <a href="#">
+                                                    <iframe width="700" height="450"
+                                            src="https://www.youtube.com/embed/{{ $item->link }}"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                                </a>
+                                            </div>
+                                            <div class="gdlr-core-frame gdlr-core-skin-e-background gdlr-core-js" data-sync-height="event-item-1">
+                                                <span class="gdlr-core-event-item-info gdlr-core-skin-caption gdlr-core-type-start-time"><span class="gdlr-core-tail">{{ Date::parse($item->created_at)->format('j F Y') }}</span></span>
+                                                <div class="gdlr-core-event-item-content-wrap">
+                                                    <h3 class="gdlr-core-event-item-title" style="text-transform: uppercase;">
+                                                        <a href="#">{{$item->name}}</a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+
+                                    @endforeach
+
+
                                 </div>
                             </div>
                         </div>

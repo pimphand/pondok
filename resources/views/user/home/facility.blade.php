@@ -5,10 +5,10 @@
             data-parallax-speed="0.15"></div>
     </div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+        <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
             <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
-                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                    <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-left-align gdlr-core-style-vertical"
                                 style="margin-bottom: 50px;">
@@ -18,15 +18,15 @@
                         </div>
                         <div class="gdlr-core-pbf-element">
                             <div
-                                class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                 <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
                                     style="font-size: 15px; font-style: normal; letter-spacing: 1px; text-transform: uppercase; color: #333333;">
-                                    Our Latest News
+
                                 </span>
-                                <div class="gdlr-core-title-item-title-wrap clearfix">
+                                <div class="clearfix gdlr-core-title-item-title-wrap">
                                     <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
                                         style="font-size: 42px; font-weight: 400; letter-spacing: 0px; color: #222222;">
-                                        Fasilitas</h3>
+                                        Foto</h3>
                                 </div>
                             </div>
                         </div>
@@ -36,28 +36,11 @@
             <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-89816">
                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="padding-top: 240px;">
                     <div class="gdlr-core-pbf-background-wrap"></div>
-                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                    <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                         <div class="gdlr-core-pbf-element">
                             <div
                                 class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-right-align">
-                                <a class="gdlr-core-button gdlr-core-button-transparent gdlr-core-right-align gdlr-core-button-with-border"
-                                    href="#" style="
-                                                            font-size: 13px;
-                                                            font-weight: 600;
-                                                            letter-spacing: 1px;
-                                                            color: #222222;
-                                                            padding: 0px 0px 2px 0px;
-                                                            text-transform: uppercase;
-                                                            border-radius: 0px;
-                                                            -moz-border-radius: 0px;
-                                                            -webkit-border-radius: 0px;
-                                                            border-width: 0px 0px 1px 0px;
-                                                            border-color: #c5c5c5;
-                                                        ">
-                                    <span class="gdlr-core-content">Visit Our Blog</span><i
-                                        class="gdlr-core-pos-right fa fa-long-arrow-right"
-                                        style="font-size: 15px; color: #222222;"></i>
-                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -70,15 +53,15 @@
     style="margin: -448px 0px 0px 0px; padding: 0px 0px 90px 0px;" id="gdlr-core-wrapper-7">
     <div class="gdlr-core-pbf-background-wrap"></div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
-        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+        <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
             <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" id="gdlr-core-column-37730"
                 style="z-index: 9;">
                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js gdlr-core-item-mglr gdlr-core-item-mgb"
                     style="margin: 0px 0px 0px 0px; padding-top: 50px; padding-bottom: 0px;">
                     <div class="gdlr-core-pbf-background-wrap"></div>
-                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                    <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js">
                         <div class="gdlr-core-pbf-element">
-                            <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix gdlr-core-style-blog-column-with-frame gdlr-core-item-pdlr"
+                            <div class="clearfix gdlr-core-blog-item gdlr-core-item-pdb gdlr-core-style-blog-column-with-frame gdlr-core-item-pdlr"
                                 style="padding-bottom: 0px;">
                                 <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 gdlr-core-bullet-style-round3 gdlr-core-color-bullet"
                                     data-type="carousel" data-column="2" data-move="1" data-nav="bullet"
@@ -98,8 +81,8 @@
                                                     </a>
                                                 </div>
                                                 <div
-                                                    class="gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position clearfix">
-                                                    <div class="gdlr-core-blog-grid-top-info clearfix">
+                                                    class="clearfix gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position">
+                                                    <div class="clearfix gdlr-core-blog-grid-top-info">
                                                         <span
                                                             class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
                                                             <a href="#">June 6, 2016</a>
@@ -116,7 +99,7 @@
                                                         <a href="#">The Forum hosts a discussion
                                                             with Niall Ferguson</a>
                                                     </h3>
-                                                    <div class="gdlr-core-blog-content clearfix">
+                                                    <div class="clearfix gdlr-core-blog-content">
                                                         <a class="gdlr-core-excerpt-read-more gdlr-core-plain-text"
                                                             href="#">
                                                             Read More<i class="fa fa-long-arrow-right"></i>
