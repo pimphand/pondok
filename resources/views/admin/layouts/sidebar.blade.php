@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('video.index')}}" class=" waves-effect">
+                            <a href="{{route('photos.index')}}" class=" waves-effect">
                                 <span>Photo</span>
                             </a>
                         </li>

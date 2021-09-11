@@ -50,6 +50,20 @@ class GalleryController extends Controller
         return back()->withToastSuccess('Data berhasil disimpan');
     }
 
+    public function storePhoto(Request $request)
+    {
+        $gallery = new Gallery();
+        $gallery->picture_id = $request->id;
+        if ($request->hasFile("image")) {
+          $imageName = Str::uuid();
+          FileController::gallery($request->file("image"), $imageName, $gallery->url);
+          $gallery->image = $imageName;
+        }
+        $gallery->save();
+
+        return back()->withToastSuccess('Data berhasil disimpan');
+    }
+
     /**
      * Display the specified resource.
      *

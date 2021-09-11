@@ -17,7 +17,10 @@ class PictureController extends Controller
      */
     public function index()
     {
-        return view('admin.picture.index');
+        $data = Picture::with('gallery')->get();
+        return view('admin.picture.index',[
+            "data" => $data
+        ]);
     }
 
     /**
@@ -41,7 +44,6 @@ class PictureController extends Controller
         $request->validate([
             "name"  => "required|string|max:100",
             "image" => "required",
-            "image" => "mimes:jpg,png,svg|max:2000",
         ]);
 
         $picture = new Picture();
@@ -55,7 +57,7 @@ class PictureController extends Controller
                  $name = $image->getClientOriginalName();
                  $image->storeAs('gallery', $name, 'public');
                  Gallery::create([
-                     'building_id' => $picture->id,
+                     'picture_id' => $picture->id,
                      'image' => $name
               ]);
             }
