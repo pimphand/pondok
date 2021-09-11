@@ -8,6 +8,7 @@ class Register extends Component
 {
     public $currentPage = 1;
     public $success;
+    public $special = false, $move = false;
 
     public $pages = [
         1 => [
@@ -33,7 +34,27 @@ class Register extends Component
     // wali / Custodian
     public $c_register_id,$c_name,$c_nik,$c_homeroom,$c_address,$c_phone,$c_education,$c_work,$c_income;
 
+    // form kebutuhan kusus
+    public function formSpecialOpen()
+    {
+        $this->special = true;
+    }
 
+    public function formSpecialClose()
+    {
+        $this->special = false;
+    }
+
+    // form pindahan
+    public function formMoveOpen()
+    {
+        $this->move = true;
+    }
+
+    public function formMoveClose()
+    {
+        $this->move = false;
+    }
 
     public function goToNextPage()
     {

@@ -10,7 +10,7 @@ class Gallery extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name', 'image','building_id'];
+    protected $fillable = ['name', 'image','building_id','picture_id'];
     protected $hidden = ['deleted_at'];
 
     public function building()

@@ -37,21 +37,24 @@
                         <div
                             class="clearfix gdlr-core-gallery-item gdlr-core-item-pdb gdlr-core-gallery-item-style-grid">
                             <div class="clearfix gdlr-core-gallery-item-holder gdlr-core-js-2" data-layout="fitrows">
-                                @foreach ($data as $item)
-                                <div
-                                    class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-15 gdlr-core-item-pdlr gdlr-core-item-mgb">
-                                    <div class="gdlr-core-gallery-list gdlr-core-media-image">
-                                        <a class="gdlr-core-lightgallery gdlr-core-js"
-                                            href="{{asset("user")}}/upload/shutterstock_704277943.jpg"
-                                            data-lightbox-group="gdlr-core-img-group-1">
-                                            <img src="{{asset("user")}}/upload/shutterstock_704277943-700x660.jpg"
-                                                alt="" width="700" height="660" title="shutterstock_704277943" />
-                                            <span class="gdlr-core-image-overlay"><i
-                                                    class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                @endforeach
+                                @forelse ($data as $item)
+                                    @foreach ($item->gallery as $i)
+                                        <div
+                                            class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-15 gdlr-core-item-pdlr gdlr-core-item-mgb">
+                                            <div class="gdlr-core-gallery-list gdlr-core-media-image">
+                                                <a class="gdlr-core-lightgallery gdlr-core-js"
+                                                    href="{{ asset('storage/gallery/'. $i->image) }}"
+                                                    data-lightbox-group="gdlr-core-img-group-1">
+                                                    <img src="{{ asset('storage/gallery/'. $i->image) }}"
+                                                        alt="narshsunnah:gambar{{$item->name}}" title="{{$item->name}}" />
+                                                    <span class="gdlr-core-image-overlay"><i
+                                                            class="gdlr-core-image-overlay-icon gdlr-core-size-22 fa fa-search"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @empty
+                                @endforelse
 
                             </div>
                         </div>

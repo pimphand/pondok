@@ -19,11 +19,13 @@ class FrontendController extends Controller
     public function home()
     {
         $profil = Profile::select('description')->first();
-        $news   = News::latest()->get();
-        $video  = Video::all();
+        $news   = News::latest()->limit('6')->get();
+        $video  = Video::latest()->limit('6')->get();
+        $p  = Picture::latest()->limit('6')->get();
         return view('user.home.index',[
             "profil"    => $profil,
             'news'      => $news,
+            'picture'   => $p,
             "video"     => $video
         ]);
     }
@@ -84,7 +86,7 @@ class FrontendController extends Controller
 
     public function photo()
     {
-        $foto = Picture::latest()->get();
+        $foto = Picture::with('gallery')->latest()->get();
         return view('user.galery.photo',[
             "data" => $foto
         ]);
@@ -114,7 +116,9 @@ class FrontendController extends Controller
 
     public function pendaftaran()
     {
-        return view('user.pendaftaran.index');
+        return view('user.pendaftaran.index',[
+            "title" => "Form Pendfaftaran"
+        ]);
     }
 
     public function guru()
