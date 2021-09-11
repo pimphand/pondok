@@ -67,47 +67,40 @@
                                     data-type="carousel" data-column="2" data-move="1" data-nav="bullet"
                                     data-nav-parent="gdlr-core-blog-item" data-controls-top-margin="70px">
                                     <ul class="slides">
-
-
-                                        <li class="gdlr-core-item-mglr">
-                                            <div class="gdlr-core-blog-grid gdlr-core-style-4 gdlr-core-js gdlr-core-left-button gdlr-core-blog-grid-with-frame gdlr-core-item-mgb gdlr-core-skin-e-background gdlr-core-outer-frame-element gdlr-core-with-thumbnail"
-                                                style="box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1);"
-                                                data-sync-height="blog-item-1">
-                                                <div
-                                                    class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
-                                                    <a href="#">
-                                                        <img src="{{asset('user') }}/upload/3454568-1-700x450.jpg"
-                                                            alt="" width="700" height="450" title="3454568" />
-                                                    </a>
-                                                </div>
-                                                <div
-                                                    class="clearfix gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position">
-                                                    <div class="clearfix gdlr-core-blog-grid-top-info">
-                                                        <span
-                                                            class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                            <a href="#">June 6, 2016</a>
-                                                        </span>
-                                                        <span
-                                                            class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                                            <a href="#" rel="tag">Admission</a><span
-                                                                class="gdlr-core-sep">,</span> <a href="#"
-                                                                rel="tag">Student</a>
-                                                        </span>
-                                                    </div>
-                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title"
-                                                        style="font-size: 24px; font-weight: 500; letter-spacing: 1px;">
-                                                        <a href="#">The Forum hosts a discussion
-                                                            with Niall Ferguson</a>
-                                                    </h3>
-                                                    <div class="clearfix gdlr-core-blog-content">
-                                                        <a class="gdlr-core-excerpt-read-more gdlr-core-plain-text"
-                                                            href="#">
-                                                            Read More<i class="fa fa-long-arrow-right"></i>
+                                        @forelse ($foto as $item)
+                                            @foreach ($item->gallery as $items)
+                                            <li class="gdlr-core-item-mglr">
+                                                <div class="gdlr-core-blog-grid gdlr-core-style-4 gdlr-core-js gdlr-core-left-button gdlr-core-blog-grid-with-frame gdlr-core-item-mgb gdlr-core-skin-e-background gdlr-core-outer-frame-element gdlr-core-with-thumbnail"
+                                                    style="box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1);"
+                                                    data-sync-height="blog-item-1">
+                                                    <div
+                                                        class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
+                                                        <a href="#">
+                                                            <img src="{{ asset('storage/gallery/'. $items->image) }}"
+                                                                alt="" />
                                                         </a>
                                                     </div>
+                                                    <div
+                                                        class="clearfix gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position">
+                                                        <div class="clearfix gdlr-core-blog-grid-top-info">
+                                                            <span
+                                                                class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
+                                                                <a href="#">June 6, 2016</a>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="gdlr-core-blog-title gdlr-core-skin-title"
+                                                            style="font-size: 24px; font-weight: 500; letter-spacing: 1px;">
+                                                            <a href="#">The Forum hosts a discussion
+                                                                with Niall Ferguson</a>
+                                                        </h3>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                            @endforeach
+                                        @empty
+
+                                        @endforelse
+
 
                                     </ul>
                                 </div>

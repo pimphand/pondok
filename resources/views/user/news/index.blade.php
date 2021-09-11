@@ -2,24 +2,24 @@
 
 @section('content')
 
-<div class="kingster-page-title-wrap kingster-style-medium kingster-left-align">
+<div class="kingster-page-title-wrap kingster-style-medium kingster-left-align"
+    style="background-image: url({{asset('storage/profil')}}/{{$image->image}});">
     <div class="kingster-header-transparent-substitute"></div>
     <div class="kingster-page-title-overlay"></div>
     <div class="kingster-page-title-container kingster-container">
         <div class="kingster-page-title-content kingster-item-pdlr">
-            <div class="kingster-page-caption">News & Updates</div>
-            <h1 class="kingster-page-title">Blog 4 Columns</h1>
+            <h1 class="kingster-page-title">Berita</h1>
         </div>
     </div>
 </div>
 <div class="kingster-page-wrapper" id="kingster-page-wrapper">
     <div class="gdlr-core-page-builder-body">
         <div class="gdlr-core-pbf-section">
-            <div class="gdlr-core-pbf-section-container gdlr-core-container clearfix">
+            <div class="clearfix gdlr-core-pbf-section-container gdlr-core-container">
                 <div class="gdlr-core-pbf-element">
-                    <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix gdlr-core-style-blog-column"
+                    <div class="clearfix gdlr-core-blog-item gdlr-core-item-pdb gdlr-core-style-blog-column"
                         style="padding-bottom: 40px;">
-                        <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                        <div class="clearfix gdlr-core-blog-item-holder gdlr-core-js-2" data-layout="fitrows">
 
                             @foreach ($news as $item)
                             <div class="gdlr-core-item-list gdlr-core-item-pdlr gdlr-core-column-15">
@@ -29,8 +29,6 @@
                                         <a href="{{ route('detail.news', $item->slug) }}">
                                             <img src="{{ asset('storage/news/'. $item->image) }}" alt="" width="550"
                                                 height="500" title="{{ $item->slug }}" />
-                                            <div class="gdlr-core-sticky-banner gdlr-core-title-font"><i
-                                                    class="fa fa-bolt"></i>Sticky Post</div>
                                         </a>
                                     </div>
                                     <div class="gdlr-core-blog-grid-content-wrap">
@@ -47,13 +45,6 @@
                                 </div>
                             </div>
                             @endforeach
-
-                        </div>
-                        <div
-                            class="gdlr-core-pagination gdlr-core-style-circle gdlr-core-left-align gdlr-core-item-pdlr">
-                            <span aria-current="page" class="page-numbers current">1</span>
-                            <a class="page-numbers" href="#">2</a>
-                            <a class="next page-numbers" href="#"></a>
                         </div>
                     </div>
                 </div>
