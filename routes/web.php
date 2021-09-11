@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
+use App\Http\Controllers\Admin\PictureController;
 use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
@@ -72,6 +73,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/man', ActivityController::class);
     Route::resource('/register', RegisterController::class);
     Route::resource('/user', UserController::class);
+    Route::resource('/photos', PictureController::class);
+    Route::post('/pho', [GalleryController::class, "storePhoto"])->name("tambah");
 
     Route::prefix('santri')->group( function(){
         Route::resource('/putri', BuildingController::class);

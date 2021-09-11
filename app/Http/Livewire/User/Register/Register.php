@@ -9,6 +9,17 @@ class Register extends Component
     public $currentPage = 1;
     public $success;
 
+    public $pages = [
+        1 => [
+            'heading' => 'Biodata Calon Siswa',
+            'subheading' => 'Enter your name and email to get started.',
+        ],
+        2 => [
+            'heading' => 'Password',
+            'subheading' => 'Create a password for the new account.',
+        ],
+    ];
+
     // Register
     public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,$date_birth,$child_to,$child_from,$status_family,$country,$province,$city,$district,$Ward,$address,$place_address,$student_address,$phone,$distance_to_school,$vehicle,$hobby,$spp,$statement,$goals,$school_from,$school_address,$semester_move;
     // Parent
@@ -21,6 +32,19 @@ class Register extends Component
     public $s_register_id,$s_special_needs,$s_disease,$s_study_problem,$s_talent;
     // wali / Custodian
     public $c_register_id,$c_name,$c_nik,$c_homeroom,$c_address,$c_phone,$c_education,$c_work,$c_income;
+
+
+
+    public function goToNextPage()
+    {
+        // $this->validate($this->validationRules[$this->currentPage]);
+        $this->currentPage++;
+    }
+
+    public function goToPreviousPage()
+    {
+        $this->currentPage--;
+    }
 
     public function render()
     {

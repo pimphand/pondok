@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -16,7 +17,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.user.index');
+        $data = User::latest()->get();
+        return view('admin.user.index',[
+            "data" => $data
+        ]);
     }
 
     /**
@@ -37,14 +41,28 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed']],
+    [
+            "name.required" => "nama tidak boleh kosong",
+            "email.required" => "nama tidak boleh kosong",
+            "username.unique" => "username sudah digunakan",
+            "email.unique" => "email sudah digunakan",
+            "password.required" => "password tidak boleh kosong",
+            "password.confirmed" => "password tidak sama",
+        ]);
+        
         User::create([
-        'name' => $request->name,
-        'email' => $request->email,
-        'password' => Hash::make($request->password),
-        'username' => "admin",
-        'nik' => 123,
-        'role' =>false,
-        'status' => false,
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'username' => $request->username,
+            // 'nik' => 123,
+            'role' =>false,
+            'status' => false,
         ]);
 
         return back()->withToastSuccess('Data berhasil ditambah');
