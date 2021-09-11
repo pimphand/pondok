@@ -33,10 +33,11 @@
                         </div>
                     </div>
                     <div class="gdlr-core-pbf-element">
+
                         <div
                             class="clearfix gdlr-core-gallery-item gdlr-core-item-pdb gdlr-core-gallery-item-style-grid">
                             <div class="clearfix gdlr-core-gallery-item-holder gdlr-core-js-2" data-layout="fitrows">
-
+                                @foreach ($data as $item)
                                 <div
                                     class="gdlr-core-item-list gdlr-core-gallery-column gdlr-core-column-15 gdlr-core-item-pdlr gdlr-core-item-mgb">
                                     <div class="gdlr-core-gallery-list gdlr-core-media-image">
@@ -50,6 +51,7 @@
                                         </a>
                                     </div>
                                 </div>
+                                @endforeach
 
                             </div>
                         </div>

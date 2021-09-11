@@ -18,7 +18,14 @@ class FrontendController extends Controller
 {
     public function home()
     {
-        return view('user.home.index');
+        $profil = Profile::select('description')->first();
+        $news   = News::latest()->get();
+        $video  = Video::all();
+        return view('user.home.index',[
+            "profil"    => $profil,
+            'news'      => $news,
+            "video"     => $video
+        ]);
     }
 
     public function profil()
@@ -77,9 +84,9 @@ class FrontendController extends Controller
 
     public function photo()
     {
-        $video = Picture::latest()->get();
+        $foto = Picture::latest()->get();
         return view('user.galery.photo',[
-            "data" => $video
+            "data" => $foto
         ]);
     }
 
