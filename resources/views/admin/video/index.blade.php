@@ -275,6 +275,7 @@
                                     <div>
                                         <input type="text" name="link" class="form-control"
                                             placeholder="Enter Link Video">
+                                            <small>Masukkan Kode Link Youtube Contoh <b class="text-danger">c74kMCOmP80</b></small>
                                         <div class="text-danger">
                                             @error('link')
                                             {{$message}}

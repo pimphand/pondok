@@ -8,7 +8,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('admin') }}/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('storage/profil/'. $logo->logo) }}">
 
     <!-- Bootstrap Css -->
     <link href="{{ asset('admin') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet"
@@ -28,8 +28,8 @@
                     <div class="overflow-hidden card">
                         <div class="bg-primary">
                             <div class="p-4 text-center text-primary">
-                                <h5 class="text-white font-size-20">Welcome Back !</h5>
-                                <p class="text-white-50">Sign in to continue to Veltrix.</p>
+                                <h5 class="text-white font-size-20">Login</h5>
+                                <p class="text-white-50">Selamat Datang di Sistem</p>
                                 <a href="#" class="logo-admin logo">
                                     <img src="{{ asset('storage/profil/'. $logo->logo) }}" height="70" alt="logo">
                                 </a>

@@ -54,7 +54,7 @@ class BuildingController extends Controller
             "name" => "required",
             "hostel" => "required",
             "image" => "required",
-            "image.*" => "mimes:png,jpg|max:2048",
+            "image.*" => "mimes:jpeg,jpg|max:2048",
         ]);
 
 

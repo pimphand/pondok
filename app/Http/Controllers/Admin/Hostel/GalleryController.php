@@ -38,6 +38,10 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image' => 'mimes:jpeg,jpg|max:2048'
+        ]);
+
         $gallery = new Gallery();
         $gallery->building_id = $request->id;
         if ($request->hasFile("image")) {
@@ -95,7 +99,7 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**

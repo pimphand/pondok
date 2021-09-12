@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="gdlr-core-pbf-wrapper gdlr-core-hide-in-tablet-mobile"
+<div class="gdlr-core-pbf-wrapper gdlr-core-in-tablet-mobile"
     style="margin: -448px 0px 0px 0px; padding: 0px 0px 90px 0px;" id="gdlr-core-wrapper-7">
     <div class="gdlr-core-pbf-background-wrap"></div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
@@ -71,7 +71,7 @@
                                         <li class="gdlr-core-item-mglr">
                                             <div class="gdlr-core-blog-grid gdlr-core-style-4 gdlr-core-js gdlr-core-left-button gdlr-core-blog-grid-with-frame gdlr-core-item-mgb gdlr-core-skin-e-background gdlr-core-outer-frame-element gdlr-core-with-thumbnail"
                                                 style="box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1);"
-                                                data-sync-height="blog-item-1">
+                                                data-sync-height="blog-item">
                                                 <div
                                                     class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
                                                     <a href="#">

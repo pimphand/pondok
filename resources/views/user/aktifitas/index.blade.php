@@ -48,11 +48,6 @@
                             </div>
                             @endforeach
                         </div>
-                        <div class="gdlr-core-pagination gdlr-core-style-circle gdlr-core-left-align gdlr-core-item-pdlr">
-                            <span aria-current="page" class="page-numbers current">1</span>
-                            <a class="page-numbers" href="#">2</a>
-                            <a class="next page-numbers" href="#"></a>
-                        </div>
                     </div>
                 </div>
             </div>

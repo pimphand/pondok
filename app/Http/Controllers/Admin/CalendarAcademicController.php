@@ -46,7 +46,7 @@ class CalendarAcademicController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'image'=> 'image|mimes:png,jpg|max:2048',
+            'image'=> 'image|mimes:jpeg,jpg|max:2048',
         ]);
 
         $data = new CalendarAcademic();
@@ -96,7 +96,7 @@ class CalendarAcademicController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'image'=> 'image|mimes:png,jpg|max:2048',
+            'image'=> 'image|mimes:jpeg,jpg|max:2048',
         ]);
 
         $calender = CalendarAcademic::findOrFail($id);

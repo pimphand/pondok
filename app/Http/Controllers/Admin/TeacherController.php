@@ -45,7 +45,7 @@ class TeacherController extends Controller
         $request->validate([
             "name" => "required|string",
             "fullname" => "required|string",
-            "image" => "required|mimes:jpg,png|max:2048",
+            "image" => "required|mimes:jpg,jpeg|max:2048",
             "teach" => "required|",
         ]);
         $data = new Teacher();
@@ -99,7 +99,7 @@ class TeacherController extends Controller
         $request->validate([
             "name" => "required|string",
             "fullname" => "required|string",
-            "image" => "mimes:jpg,png|max:2048",
+            "image" => "mimes:jpg,jpeg|max:2048",
             "teach" => "required|",
         ]);
         $data = Teacher::findOrFail($id);

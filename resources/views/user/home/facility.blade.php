@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="gdlr-core-pbf-wrapper gdlr-core-hide-in-tablet-mobile"
+<div class="gdlr-core-pbf-wrapper gdlr-core-in-tablet-mobile"
     style="margin: -448px 0px 0px 0px; padding: 0px 0px 90px 0px;" id="gdlr-core-wrapper-7">
     <div class="gdlr-core-pbf-background-wrap"></div>
     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
@@ -72,12 +72,12 @@
                                             <li class="gdlr-core-item-mglr">
                                                 <div class="gdlr-core-blog-grid gdlr-core-style-4 gdlr-core-js gdlr-core-left-button gdlr-core-blog-grid-with-frame gdlr-core-item-mgb gdlr-core-skin-e-background gdlr-core-outer-frame-element gdlr-core-with-thumbnail"
                                                     style="box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -moz-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1); -webkit-box-shadow: 0 20px 35px rgba(10, 10, 10, 0.1);"
-                                                    data-sync-height="blog-item-1">
+                                                    data-sync-height="blog-item">
                                                     <div
                                                         class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
                                                         <a href="#">
                                                             <img src="{{ asset('storage/gallery/'. $items->image) }}"
-                                                                alt="" />
+                                                                alt=""/>
                                                         </a>
                                                     </div>
                                                     <div
@@ -85,13 +85,12 @@
                                                         <div class="clearfix gdlr-core-blog-grid-top-info">
                                                             <span
                                                                 class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                                                <a href="#">June 6, 2016</a>
+                                                                <a href="#">{{($item->created_at)->format('j F Y')}}</a>
                                                             </span>
                                                         </div>
                                                         <h3 class="gdlr-core-blog-title gdlr-core-skin-title"
                                                             style="font-size: 24px; font-weight: 500; letter-spacing: 1px;">
-                                                            <a href="#">The Forum hosts a discussion
-                                                                with Niall Ferguson</a>
+                                                            <a href="#">{{$item->name}}</a>
                                                         </h3>
                                                     </div>
                                                 </div>

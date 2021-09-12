@@ -121,7 +121,7 @@
                         <label class="form-label">Gambar</label>
                         <div>
                             <input type="file" name="image" class="form-control" placeholder="Enter File"
-                                accept="png/jpg/jpeg">
+                                accept="imagejpg/,image/jpeg">
                             <div class="text-danger">
                                 @error('image')
                                 {{$message}}
