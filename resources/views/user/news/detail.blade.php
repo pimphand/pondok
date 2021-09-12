@@ -59,7 +59,7 @@
                             <!-- kingster-single-article -->
                         </article>
                         <!-- post-id -->
-                    </div>\
+                    </div>
                 </div>
             </div>
         </div>

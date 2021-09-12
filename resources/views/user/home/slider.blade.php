@@ -14,9 +14,9 @@
                                 <rs-slide data-key="rs-1" data-title="Slide"
                                     data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
                                     <img src="{{asset('storage/profil/'. $image->image) }}" title="slider-1"
-                                        width="2000" height="1200" data-panzoom="d:7000ms;ss:100%;se:103%;"
+                                        width="100%" height="100%" data-panzoom="d:7000ms;ss:100%;se:103%;"
                                         class="rev-slidebg" data-no-retina />
-                                    {{-- {{ asset('storage/profil/'. $image->image) }} --}}
+
                                     <!--                        -->
                                     <rs-layer id="slider-1-slide-1-layer-3" class="lebeaune-font" data-type="text"
                                         data-rsp_ch="on" data-xy="x:c;y:m;yo:18px,18px,18px,88px;"

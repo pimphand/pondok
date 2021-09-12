@@ -91,7 +91,7 @@
                                     <div class="gdlr-core-portfolio-grid gdlr-core-left-align gdlr-core-style-normal">
                                         <div class="gdlr-core-portfolio-thumbnail gdlr-core-media-image gdlr-core-style-title-icon">
                                             <div class="gdlr-core-portfolio-thumbnail-image-wrap gdlr-core-zoom-on-hover">
-                                                <video width="250" height="190" controls>
+                                                <video width="340" height="230" controls>
                                                     <source src="{{ asset('storage/video') }}/{{ $item->video }}"
                                                         type="video/mp4">
                                                     Browhser anda tidak didukung untuk memutar video ini
