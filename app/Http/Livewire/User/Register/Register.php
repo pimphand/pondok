@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\User\Register;
 
+use App\Models\Register as ModelsRegister;
 use Livewire\Component;
 
 class Register extends Component
@@ -22,7 +23,11 @@ class Register extends Component
     ];
 
     // Register
-    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,$date_birth,$child_to,$child_from,$status_family,$country,$province,$city,$district,$Ward,$address,$place_address,$student_address,$phone,$distance_to_school,$vehicle,$hobby,$spp,$statement,$goals,$school_from,$school_address,$semester_move;
+    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,
+    $date_birth,$child_to,$child_from,$status_student_family, $status_head_family,$country,
+    $province,$city,$district,$Ward,$address,$place_address,
+    $student_address,$phone,$distance_to_school,$vehicle,$hobby,
+    $spp,$statement,$goals,$school_from,$school_address,$semester_move;
     // Parent
     public $p_register_id,$p_address,$p_phone,$p_kps_no;
     // father 
@@ -67,6 +72,43 @@ class Register extends Component
         $this->currentPage--;
     }
 
+
+    public function simpan()
+    {
+        ModelsRegister::create([
+            "nik" => $this->nik,
+            "education" => "smp",
+            "nik_kk" => $this->nik_kk,
+            "fullname" => $this->fullname,
+            "gender" => $this->gender,
+            "slug" => $this->fullname,
+            "country" => $this->country,
+            "place_birth" => $this->place_birth,
+            "date_birth" => $this->date_birth,
+            "child_to" => $this->child_to,
+            "child_from" => $this->child_from,
+            "status_family" => $this->status_student_family,
+            "status_head_family" => $this->status_head_family,
+            "address" => $this->address,
+            "province" => $this->province,
+            "city" => $this->city,
+            "district" => $this->district,
+            "Ward" => $this->Ward,
+            "place_address" => $this->place_address,
+            "student_address" => $this->student_address,
+            "phone" => $this->phone,
+            "distance_to_school" => $this->distance_to_school,
+            "vehicle" => $this->vehicle,
+            "hobby" => $this->hobby,
+            "spp" => 123,
+            "statement" => "adf",
+            "goals" => $this->goals,
+            "school_from" => $this->school_from,
+            "school_address" => $this->school_address,
+            "semester_move" => $this->semester_move,
+        ]);
+    }
+    
     public function render()
     {
         return view('livewire.user.register.register');

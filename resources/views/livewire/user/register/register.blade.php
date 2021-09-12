@@ -9,7 +9,7 @@
                 </div>
                 <div class="p-4 card-body">
                     <div class="p-3">
-                        <form wire:submit.prevent="submit">
+                        <form wire:submit.prevent="simpan">
 
                             <!-- One "tab" for each step in the form: -->
                             @if ($currentPage === 1)
@@ -18,14 +18,17 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Siswa</label>
-                                    <p><input type="text" required name="name" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input type="text" required wire:model.lazy="fullname" class="form-control"
+                                        id="useremail" placeholder="Enter Facebook" oninput="this.className = ''">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Jenis
                                         Kelamin</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="gender" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Select--</option>
                                             <option value="Laki-Laki">Laki - Laki
                                             </option>
@@ -37,7 +40,8 @@
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
                                         Siswa</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="country" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Select--</option>
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
@@ -47,38 +51,47 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tempat
                                         Lahir</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input type="text" wire:model.lazy="place_birth" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Masukan Tempat Lahir"
+                                        oninput="this.className = ''">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tanggal
+                                    <label class="form-label">Tanggal
                                         Lahir</label>
-                                    <p><input type="date" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input type="date" wire:model.lazy="date_birth" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Masukan Tanggal lahir"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Anak
                                         Ke..</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="child_to" type="number" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Dari ...
                                         Bersaudara</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="child_from" type="number" name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Induk Kependudukan (NIK) Siswa</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="nik" type="number" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Status Siswa
                                         Dalam Keluarga</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="status_student_family" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Pilih--</option>
                                             <option value="Anak Kandung Ayah & Ibu">Anak
                                                 Kandung Ayah & Ibu</option>
@@ -95,14 +108,16 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Kartu Keluarga (KK)</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="nik_kk" type="number" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Status Kepala
                                         Keluarga dalam KK</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="status_head_family" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Pilih--</option>
                                             <option value="Ayah Kandung">Ayah Kandung
                                             </option>
@@ -120,37 +135,47 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Sesuai KK</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="address" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kelurahan
                                         Sesuai KK</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input wire:model.lazy="Ward" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kecamatan
                                         Sesuai KK</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input wire:model.lazy="district" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kota/Kabupaten Sesuai KK</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="city" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Provinsi
                                         Sesuai KK</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="province" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Tempat
                                         Tinggal Siswa</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="place_address" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Pilih--</option>
                                             <option value="Ikut Orang Tua">Ikut Orang
                                                 Tua</option>
@@ -167,55 +192,69 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Tempat Tinggal Siswa</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="student_address" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Kontak Tempat Tinggal Siswa (Telp.
                                         Rumah/Hp)</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="phone" type="number" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Perkiraan
                                         Jarak Tempat Tinggal Siswa (Km)</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+
+                                    <input wire:model.lazy="distance_to_school" type="text" required name="facebook"
+                                        class="form-control" id="useremail" placeholder="Enter Facebook"
+                                        oninput="this.className = ''">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kendaraan
                                         Siswa Menuju Sekolah</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="vehicle" type="text" required name="facebook"
+                                        class="form-control" id="useremail" placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Hobi</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="hobby" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Cita -
                                         Cita</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="goals" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                             </div>
-
+                            @if ($special == false)
+                            <button wire:click="formSpecialOpen" class="btn btn-primary btn-circle"><i
+                                    class="fa fa-plus"></i></button>
+                            @endif
+                            @if ($special == true)
                             {{-- jika ada kebutuhan kusus --}}
+                            <button wire:click="formSpecialClose" class="btn btn-primary btn-circle"><i
+                                    class="fa fa-minus"></i></button>
                             <h5 class="text-center">Riwayat Kebutuhan Khusus Siswa</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kelainan
                                         Jasmani/Cacat Tubuh</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Penyakit
                                         Kronis yang di Derita</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Permasalahan
@@ -232,11 +271,13 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Bakat Luar
                                         Biasa</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                             </div>
                             {{-- end jika ada kebutuhan kusus --}}
+                            @endif
+
                             {{-- jenjang sebelumnya --}}
 
                             <h5 class="text-center">Jenjang Pendidikan Sebelumnya</h5>
@@ -244,33 +285,33 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Jenjang Pendidikan Sebelumnya</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tahun
                                         Lulus</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Induk Siswa Nasional (NISN)</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Pokok Sekolah Nasional (NPSN) Jenjang Pendidikan
                                         Sebelumnya</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Jenjang Pendidikan Sebelumnya</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                             </div>
 
@@ -280,20 +321,23 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Sekolah Asal Siswa Pindahan</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="school_from" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Sekolah Asal Siswa Pindahan</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input wire:model.lazy="school_address" type="text" required name="facebook"
+                                        class="form-control" id="useremail" required placeholder="Enter Facebook"
+                                        oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Masuk di
                                         Kelas</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="semester_move" required class="form-select"
+                                            aria-label="Default select example">
                                             <option selected>--Pilih--</option>
                                             <option value="1">Kelas 1</option>
                                             <option value="1">Kelas 2</option>
@@ -312,8 +356,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Ayah Kandung</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
@@ -329,26 +373,26 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tempat
                                         Lahir Ayah Kandung</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tanggal
                                         Lahir Ayah Kandung</label>
-                                    <p><input type="date" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="date" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">NIK Ayah
                                         Kandung</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Ibu Kandung</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
@@ -364,38 +408,38 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tempat
                                         Lahir Ibu Kandung</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tanggal
                                         Lahir Ibu Kandung</label>
-                                    <p><input type="date" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="date" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">NIK Ibu
                                         Kandung</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Lengkap Orang Tua</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            required placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        required placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Kontak Orang Tua</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail" required
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         KPS/KKS/PKH (jika ada)</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Pendidikan
@@ -569,32 +613,32 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Wali</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">NIK
                                         Wali</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Hubungan
                                         Siswa Sebagai</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Tempat Tinggal Wali</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
                                         Kontak Wali (Telp. Rumah/HP)</label>
-                                    <p><input type="number" name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Pendidikan
@@ -619,14 +663,14 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Pekerjaan
                                         Wali</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Rata -
                                         Rata Penghasilan Perbulan Wali</label>
-                                    <p><input type="text" name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
                             </div>
                             {{-- selesai wali --}}
@@ -659,8 +703,8 @@
                                         dengan ini kami siap berkerjasama dan mematuhi
                                         seluruh peraturan serta kebijakan
                                         sekolah</label>
-                                    <p><input type="text" required name="facebook" class="form-control" id="useremail"
-                                            placeholder="Enter Facebook" oninput="this.className = ''"></p>
+                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                        placeholder="Enter Facebook" oninput="this.className = ''"></p>
                                 </div>
 
                                 <div class="mb-3 col-sm-6">
