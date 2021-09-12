@@ -163,7 +163,7 @@
                                                 <div
                                                     class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
                                                     <a href="#">
-                                                        <video width="100%" height="150 auto" controls >
+                                                        <video width="100%" height="230 auto" controls >
                                                             <source src="{{ asset('storage/video') }}/{{ $item->video }}"
                                                                 type="video/mp4">
                                                             Browhser anda tidak didukung untuk memutar video ini
