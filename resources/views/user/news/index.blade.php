@@ -1,5 +1,4 @@
 @extends('user.layouts.app')
-
 @section('content')
 
 <div class="kingster-page-title-wrap kingster-style-medium kingster-left-align"
@@ -35,7 +34,8 @@
                                         <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                             <span
                                                 class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a
-                                                    href="{{ route('detail.news', $item->slug) }}">{{ $item->created_at }}</a></span>
+                                                    href="{{ route('detail.news', $item->slug) }}">{{ ($item->created_at)->format('j F Y') }}</a>
+                                            </span>
                                         </div>
                                         <h3 class="gdlr-core-blog-title gdlr-core-skin-title"
                                             style="font-size: 23px; font-weight: 700; letter-spacing: 0px;">

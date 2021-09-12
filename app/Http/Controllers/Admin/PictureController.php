@@ -43,7 +43,7 @@ class PictureController extends Controller
     {
         $request->validate([
             "name"  => "required|string|max:100",
-            "image" => "required",
+            "image" => "required|mimes:jpeg,jpg|max:2048",
         ]);
 
         $picture = new Picture();

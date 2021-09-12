@@ -25,7 +25,7 @@
                     <div class="mb-12">
                         <label class="form-label">Gambar</label>
                         <div>
-                            <input type="file" name="image" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg" value="{{$item->image}}">
+                            <input type="file" name="image" class="form-control" placeholder="Enter File" accept="imagejpg/,image/jpeg" value="{{$item->image}}">
                             <div class="text-danger">
                                 @error('image')
                                     {{$message}}

@@ -26,6 +26,7 @@
         property="stylesheet" media="all" type="text/css" />
 
     @yield('css')
+
     @livewireStyles
 
 </head>

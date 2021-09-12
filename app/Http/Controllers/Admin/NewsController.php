@@ -46,7 +46,7 @@ class NewsController extends Controller
     {
         $request->validate([
             "name" => "required|string",
-            "image" => "required|",
+            "image" => "required|mimes:jpeg,jpg|max:2048",
             "categories" => "required|",
             "description" => "required|string",
         ]);
@@ -104,6 +104,7 @@ class NewsController extends Controller
             "name" => "required|string",
             "categories" => "required|",
             "description" => "required|string",
+            "image"     => "mimes:jpeg,jpg|max:2048"
         ]);
 
         $new = News::findOrFail($id);

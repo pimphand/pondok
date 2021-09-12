@@ -52,6 +52,10 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image' => 'mimes:jpeg,jpg|max:2048'
+        ]);
+
         $activity = new Activity();
         $activity->description = $request->description;
         $activity->name = $request->name;
@@ -100,6 +104,10 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'image' => 'mimes:jpeg,jpg|max:2048'
+        ]);
+
         $activity = Activity::findOrFail($id);
         $activity->description = $request->description;
         $activity->name = $request->name;

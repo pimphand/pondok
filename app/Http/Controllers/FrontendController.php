@@ -19,14 +19,14 @@ class FrontendController extends Controller
     public function home()
     {
         $profil = Profile::select('description')->first();
-        $news   = News::latest()->limit('6')->get();
-        $video  = Video::latest()->limit('6')->get();
-        $p  = Picture::latest()->limit('6')->get();
+        $news   = News::latest()->get();
+        $video  = Video::all();
+        $foto   = Picture::with('gallery')->latest()->get();
         return view('user.home.index',[
             "profil"    => $profil,
             'news'      => $news,
-            'picture'   => $p,
-            "video"     => $video
+            "video"     => $video,
+            "foto"      => $foto
         ]);
     }
 

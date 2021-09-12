@@ -95,7 +95,7 @@
                     <div class="mb-12">
                         <label class="form-label">Gambar Kalender</label>
                         <div>
-                            <input type="file" name="image" class="form-control" placeholder="Enter Image" accept="png/jpg/jpeg">
+                            <input type="file" name="image" class="form-control" placeholder="Enter Image" accept="imagejpg/,image/jpeg">
                             <div class="text-danger">
                                 @error('image')
                                     {{$message}}

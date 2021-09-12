@@ -41,7 +41,7 @@
                                     <ul class="slides">
                                         @foreach ($items->gallery as $g)
                                         <li class="gdlr-core-gallery-list gdlr-core-item-mglr">
-                                            <div class="gdlr-core-media-image" style="height: 500px;">
+                                            <div class="gdlr-core-media-image" style="height: 300px;">
                                                 <a class="gdlr-core-lightgallery gdlr-core-js"
                                                     href="{{ asset('storage/gallery/'. $g->image) }}"
                                                     data-lightbox-group="gdlr-core-img-group-3">

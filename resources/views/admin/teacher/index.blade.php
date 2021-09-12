@@ -101,7 +101,7 @@
             <div class="modal-body">
                 <form action="{{route('teacher.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="mb-12 mt-3">
+                    <div class="mt-3 mb-12">
                         <label class="form-label">Nama</label>
                         <div>
                             <input type="text" name="name" class="form-control" placeholder="Enter Name">
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-12 mt-3">
+                    <div class="mt-3 mb-12">
                         <label class="form-label">Nama Lengkap</label>
                         <div>
                             <input type="text" name="fullname" class="form-control" placeholder="Enter FullName">
@@ -123,11 +123,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-12 mt-3">
+                    <div class="mt-3 mb-12">
                         <label class="form-label">Gambar</label>
                         <div>
                             <input type="file" name="image" class="form-control" placeholder="Enter File"
-                                accept="png/jpg/jpeg">
+                                accept="imagejpg/,image/jpeg">
                             <div class="text-danger">
                                 @error('image')
                                 {{$message}}
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-12 mt-3">
+                    <div class="mt-3 mb-12">
                         <label class="form-label">Mengajar</label>
                         <div>
                             <input type="text" name="teach" class="form-control" placeholder="Matematika">
