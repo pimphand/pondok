@@ -16,7 +16,6 @@
                                     <img src="{{asset('storage/profil/'. $image->image) }}" title="slider-1"
                                         width="100%" height="100%" data-panzoom="d:7000ms;ss:100%;se:103%;"
                                         class="rev-slidebg" data-no-retina />
-
                                     <!--                        -->
                                     <rs-layer id="slider-1-slide-1-layer-3" class="lebeaune-font" data-type="text"
                                         data-rsp_ch="on" data-xy="x:c;y:m;yo:18px,18px,18px,88px;"
@@ -43,15 +42,6 @@
                                         style="z-index: 9; font-family: Jost;">
                                         Pondok Pesantren Nashrus Sunnah
                                     </rs-layer>
-                                    <!--                        -->
-                                    <a id="slider-1-slide-1-layer-14" class="rs-layer lebeaune-font" href="#"
-                                        target="_self" rel="nofollow" data-type="text" data-rsp_ch="on"
-                                        data-xy="x:c;y:m;yo:347px,347px,347px,129px;"
-                                        data-text="w:normal;s:15,15,15,5;l:25,25,25,9;fw:500;a:center;"
-                                        data-dim="w:182px,182px,182px,67px;" data-frame_1="st:990;sR:990;"
-                                        data-frame_999="o:0;st:w;sR:7710;" style="z-index: 8; font-family: Jost;">
-                                        Discover Now
-                                    </a>
                                     <!--                        -->
                                     <rs-layer id="slider-1-slide-1-layer-16" data-type="shape" data-rsp_ch="on"
                                         data-xy="x:c;xo:1px,1px,1px,0;yo:931px,931px,931px,348px;"

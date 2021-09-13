@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="kingster-page-wrapper" id="kingster-page-wrapper">
+<div class="kingster-page-wrapper" id="kingster-page-wrapper" >
     <div class="gdlr-core-page-builder-body">
         <div class="gdlr-core-pbf-wrapper" style="padding: 250px 0px 160px 0px;">
             <div class="gdlr-core-pbf-background-wrap">
                 <div
                     class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
-                    style="background-image: url({{asset('user')}}/upload/image-bg-1.jpg); background-size: cover; background-position: center;"
+                    style="background-image: url({{asset('storage/profil')}}/{{$image->image}}); background-size: cover; background-position: center;"
                     data-parallax-speed="0.3">
                 </div>
             </div>
@@ -17,7 +17,7 @@
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
                             <div class="clearfix gdlr-core-title-item-title-wrap">
-                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 75px; font-weight: 700; letter-spacing: 0px; text-transform: none; color: #ffffff;">Contact Us</h3>
+                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 75px; font-weight: 700; letter-spacing: 0px; text-transform: none; color: #ffffff;">Kontak Kami</h3>
                             </div>
                         </div>
                     </div>
@@ -209,64 +209,7 @@
             <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
                 <div class="clearfix gdlr-core-pbf-wrapper-container gdlr-core-container">
                     <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
-                            <div class="gdlr-core-pbf-background-wrap"></div>
-                            <div class="clearfix gdlr-core-pbf-column-content gdlr-core-js" style="max-width: 760px;">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px;">
-                                        <div class="clearfix gdlr-core-title-item-title-wrap"><h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 39px;">Leave us your info</h3></div>
-                                        <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 19px; font-style: normal; text-transform: uppercase;">
-                                            and we will get back to you.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb">
-                                        <div role="form" class="wpcf7" id="wpcf7-f1979-p1964-o1" lang="en-US" dir="ltr">
-                                            <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-                                            <form class="quform" action="http://max-themes.net/demos/kingster/college/plugins/quform/process.php" method="post" enctype="multipart/form-data" onclick="">
 
-                                                <div class="quform-elements">
-                                                    <div class="quform-element">
-                                                        <p>
-
-                                                            <span class="wpcf7-form-control-wrap your-name">
-                                                                <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
-                                                            </span>
-                                                        </p>
-                                                    </div>
-                                                    <div class="quform-element">
-                                                        <p>
-
-                                                            <span class="wpcf7-form-control-wrap your-email">
-                                                                <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
-                                                            </span>
-                                                        </p>
-                                                    </div>
-                                                    <div class="quform-element">
-                                                        <p>
-
-                                                            <span class="wpcf7-form-control-wrap your-message">
-                                                                <textarea  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
-                                                            </span>
-                                                        </p>
-                                                    </div>
-                                                    <p>
-                                                        <!-- Begin Submit button -->
-                                                        <div class="quform-submit">
-                                                            <div class="quform-submit-inner">
-                                                                <button type="submit" class="submit-button"><span>Send</span></button>
-                                                            </div>
-                                                            <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
-                                                        </div>
-                                                    </p>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

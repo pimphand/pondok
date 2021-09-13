@@ -42,7 +42,7 @@
                             </li>
 
                             <li class="menu-item menu-item-has-children ">
-                                <a href="#">Tentang Kami</a>
+                                <a href="">Tentang Kami</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="{{ route('profil') }}">Profil</a></li>
                                     <li class="menu-item"><a href="{{ route('visionmission') }}">Visi & Misi</a></li>
@@ -50,7 +50,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children ">
-                                <a href="#">Akademik</a>
+                                <a href="">Akademik</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="{{ route('guru') }}">Guru</a></li>
                                     <li class="menu-item"><a href="{{ route('kalender') }}">Kalender Akademik</a></li>
@@ -58,7 +58,7 @@
                             </li>
                             <li class="menu-item"><a href="{{ route('user.news') }}">Berita</a></li>
                             <li class="menu-item menu-item-has-children ">
-                                <a href="#">Galery</a>
+                                <a href="">Galery</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="{{ route('video') }}">Video</a></li>
                                     <li class="menu-item"><a href="{{ route('photo') }}">Foto</a></li>
@@ -83,7 +83,23 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="{{route('pendaftaran')}}">Pendaftaran</a></li>
+                            <li class="menu-item menu-item-has-children ">
+                                <a href="">Pendaftaran</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <a href="{{ route('ra') }}">Raudhathul Athfal</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{ route('sd') }}">Madrasah Salafiyah Ula Setara SD</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{ route('smp') }}">Madrasah Salafiyah Wustha Setara SMP</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{ route('sma') }}">Madrasah Salafiyah Ulya Setara SMA</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="menu-item"><a href="{{route('contact')}}">Kontak</a></li>
                         </ul>
 
