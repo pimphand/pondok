@@ -10,7 +10,6 @@
                 <div class="p-4 card-body">
                     <div class="p-3">
                         <form wire:submit.prevent="simpan">
-
                             <!-- One "tab" for each step in the form: -->
                             @if ($currentPage === 1)
                             <h5 class="text-center">Biodata Calon Siswa</h5>
@@ -129,35 +128,35 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Sesuai KK</label>
-                                    <input wire:model.lazy="address" type="text" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="address" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kelurahan
                                         Sesuai KK</label>
 
-                                    <input wire:model.lazy="Ward" type="text" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="Ward" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kecamatan
                                         Sesuai KK</label>
 
-                                    <input wire:model.lazy="district" type="text" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="district" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Kota/Kabupaten Sesuai KK</label>
-                                    <input wire:model.lazy="city" type="text"  name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="city" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Provinsi
                                         Sesuai KK</label>
-                                    <input wire:model.lazy="province" type="text"  name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="province" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Tempat
@@ -207,8 +206,8 @@
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Hobi</label>
-                                    <input wire:model.lazy="hobby" type="text" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="hobby" type="text" name="facebook" class="form-control"
+                                        id="useremail" required placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Cita -
@@ -222,8 +221,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Jenjang Pendidikan Sebelumnya</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tahun
@@ -323,8 +322,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Ayah Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
@@ -340,8 +339,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tempat
                                         Lahir Ayah Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tanggal
@@ -358,8 +357,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
                                         Lengkap Ibu Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
@@ -375,8 +374,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tempat
                                         Lahir Ibu Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Tanggal
@@ -393,8 +392,8 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Alamat
                                         Lengkap Orang Tua</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nomor
