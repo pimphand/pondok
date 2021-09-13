@@ -15,16 +15,20 @@ class TingkatanSeeder extends Seeder
     public function run()
     {
         Tingkatan::create([
-            "name" => "Raudhathul Athfal"
+            "name" => "Raudhathul Athfal",
+            "password" => "password"
         ]);
         Tingkatan::create([
-            "name" => "Madrasah Salafiyah Ula Setara SD"
+            "name" => "Madrasah Salafiyah Ula Setara SD",
+            "password" => "password"
         ]);
         Tingkatan::create([
-            "name" => "Madrasah salafiyah Wustha Setara SMP"
+            "name" => "Madrasah salafiyah Wustha Setara SMP",
+            "password" => "password"
         ]);
         Tingkatan::create([
-            "name" => "Madrasah Salafiyah Ulya Setara SMA"
+            "name" => "Madrasah Salafiyah Ulya Setara SMA",
+            "password" => "password"
         ]);
     }
 }

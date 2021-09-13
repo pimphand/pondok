@@ -2,6 +2,10 @@
 
 namespace App\Http\Livewire\User\Register;
 
+use App\Models\ReffRegister\Father;
+use App\Models\ReffRegister\Mother;
+use App\Models\ReffRegister\ReffParent;
+use App\Models\ReffRegister\SpecialNeed;
 use App\Models\Register as ModelsRegister;
 use Livewire\Component;
 
@@ -28,8 +32,9 @@ class Register extends Component
     $province,$city,$district,$Ward,$address,$place_address,
     $student_address,$phone,$distance_to_school,$vehicle,$hobby,
     $spp,$statement,$goals,$school_from,$school_address,$semester_move;
+
     // Parent
-    public $p_register_id,$p_address,$p_phone,$p_kps_no;
+    public $p_address,$p_phone,$p_kps_no;
     // father 
     public $f_parent_id,$f_name,$f_country,$f_birth_date,$f_birth_place,$f_nik,$f_education,$f_work,$f_income;
     // mother
@@ -75,7 +80,7 @@ class Register extends Component
 
     public function simpan()
     {
-        ModelsRegister::create([
+       $register=  ModelsRegister::create([
             "nik" => $this->nik,
             "education" => "smp",
             "nik_kk" => $this->nik_kk,
@@ -107,6 +112,46 @@ class Register extends Component
             "school_address" => $this->school_address,
             "semester_move" => $this->semester_move,
         ]);
+
+        SpecialNeed::create([
+            "register_id" => $register->id,
+            "special_needs" => $this->s_special_needs,
+            "disease" => $this->s_disease,
+            "study_problem" => $this->s_study_problem,
+            "talent" => $this->s_talent,
+        ]);
+
+        $parent = ReffParent::create([
+            "register_id" => $register->id,
+            "address" => $this->p_address,
+            "phone" => $this->p_phone,
+            "kps_no" => $this->p_kps_no,
+        ]);
+
+        Father::create([
+            "parent_id" => $parent->id,
+            "name" => $this->f_name,
+            "country" => $this->f_country,
+            "birth_date" => $this->f_birth_date,
+            "birth_place" => $this->f_birth_place,
+            "nik" => $this->f_nik,
+            "education" => $this->f_education,
+            "work" => $this->f_work,
+            "income" => $this->f_income,
+        ]);
+
+        Mother::create([
+            "parent_id" => $parent->id,
+            "name" => $this->m_name,
+            "country" => $this->m_country,
+            "birth_date" => $this->m_birth_date,
+            "birth_place" => $this->m_birth_place,
+            "nik" => $this->m_nik,
+            "education" => $this->m_education,
+            "work" => $this->m_work,
+            "income" => $this->m_income,
+        ]);
+
     }
     
     public function render()
