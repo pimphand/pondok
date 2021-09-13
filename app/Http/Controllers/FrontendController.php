@@ -121,7 +121,7 @@ class FrontendController extends Controller
 
     public function pendaftaran()
     {
-        return view('user.pendaftaran.index',[
+        return view('user.pendaftaran.daftar',[
             "title" => "Form Pendfaftaran"
         ]);
     }

@@ -21,14 +21,14 @@
                         <span>admin</span>
                     </a>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="{{ route('register.index') }}" class="waves-effect">
                         <i class="fas fa-clipboard-list"></i><span
                             class="badge rounded-pill bg-primary float-end"></span>
                         <span>Pendaftaran</span>
                     </a>
-                </li> --}}
-                <li>
+                </li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-clipboard-list"></i>
                         <span>Pendaftaran</span>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="menu-title">Informasi</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

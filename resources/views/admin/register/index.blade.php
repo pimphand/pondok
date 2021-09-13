@@ -1,4 +1,4 @@
-{{-- @extends('admin.layouts.app')
+@extends('admin.layouts.app')
 
 @section('css')
 <!-- DataTables -->
@@ -45,11 +45,11 @@
                             <div class="float-start mini-stat-img me-4">
                                 <img src="assets/images/services-icon/01.png" alt="">
                             </div>
-                            <h5 class="font-size-16 text-uppercase text-white-50">TK</h5>
-                            <h4 class="fw-medium font-size-18">Pendaftar : 10{{ $count['tk'] }}</h4>
+                            <h5 class="font-size-16 text-uppercase text-white-50">RA</h5>
+                            <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['ra'] }}</h4>
                         </div>
                         <div class="pt-2">
-                            <a href="{{ route('tk.index') }}" class="text-white-50">
+                            <a href="{{ route('ra.index') }}" class="text-white-50">
                                 <div class="float-end">
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
@@ -67,11 +67,11 @@
                             <div class="float-start mini-stat-img me-4">
                                 <img src="assets/images/services-icon/02.png" alt="">
                             </div>
-                            <h5 class="font-size-16 text-uppercase text-white-50">MI</h5>
-                            <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['mi'] }}</h4>
+                            <h5 class="font-size-16 text-uppercase text-white-50">SD</h5>
+                            <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['sd'] }}</h4>
                         </div>
                         <div class="pt-2">
-                            <a href="{{ route('mi.index') }}" class="text-white-50">
+                            <a href="{{ route('sd.index') }}" class="text-white-50">
                                 <div class="float-end">
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
@@ -132,4 +132,4 @@
 </div>
 
 
-@endsection --}}
+@endsection

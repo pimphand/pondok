@@ -299,7 +299,7 @@
                             {{-- jenjang sebelumnya --}}
 
 
-                            <h5 class="text-center mt-4">Khusus Siswa Pindahan</h5>
+                            <h5 class="mt-4 text-center">Khusus Siswa Pindahan</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label" for="useremail">Nama
@@ -320,12 +320,12 @@
                                         <select wire:model.lazy="semester_move" required class="form-select"
                                             aria-label="Default select example">
                                             <option selected>--Pilih--</option>
-                                            <option value="1">Kelas 1</option>
-                                            <option value="1">Kelas 2</option>
-                                            <option value="1">Kelas 3</option>
-                                            <option value="1">Kelas 4</option>
-                                            <option value="1">Kelas 5</option>
-                                            <option value="1">Kelas 6</option>
+                                            <option value="Kelas 1">Kelas 1</option>
+                                            <option value="Kelas 2">Kelas 2</option>
+                                            <option value="Kelas 3">Kelas 3</option>
+                                            <option value="Kelas 4">Kelas 4</option>
+                                            <option value="Kelas 5">Kelas 5</option>
+                                            <option value="Kelas 6">Kelas 6</option>
                                         </select>
                                     </div>
                                 </div>

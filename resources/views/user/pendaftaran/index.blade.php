@@ -73,7 +73,7 @@
                                     </center>
                                     <span class="gdlr-core-space-shortcode" style="margin-top: 30px;"></span>
                                     <div class="clear"></div>
-                                        <a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="{{$data->link}}" target="_blank">
+                                        <a class="gdlr-core-excerpt-read-more gdlr-core-button gdlr-core-rectangle" href="{{route('pendaftaran')}}" target="_blank">
                                             Silahkan Klik Tombol Untuk Mendaftar
                                         </a>
 

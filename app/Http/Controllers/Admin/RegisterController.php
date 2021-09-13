@@ -15,20 +15,20 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function tk()
+    public function ra()
     {
-        $data = Register::where('education', "Tk")->latest();
+        $data = Register::where('education', "RA")->latest()->get();
         return view('admin.register.register',[
-            "edu"    => "TK",
+            "edu"    => "RA",
             "data"  => $data
         ]);
     }
 
-    public function mi()
+    public function sd()
     {
-        $data = Register::where('education', "MI")->latest();
+        $data = Register::where('education', "SD")->latest();
         return view('admin.register.register',[
-            "edu"    => "MI",
+            "edu"    => "SD",
             "data"  => $data
         ]);
     }
@@ -41,7 +41,7 @@ class RegisterController extends Controller
             "data"  => $data
         ]);
     }
-    
+
     public function sma()
     {
         $data = Register::where('education', "SMA")->latest();
@@ -55,8 +55,8 @@ class RegisterController extends Controller
     public function index()
     {
         $count = [
-            "tk" => Register::where('education', "Tk")->count(),
-            "mi" => Register::where('education', "Mi")->count(),
+            "ra" => Register::where('education', "RA")->count(),
+            "sd" => Register::where('education', "Sd")->count(),
             "smp" => Register::where('education', "Smp")->count(),
             "sma" => Register::where('education', "Sma")->count(),
         ];
@@ -94,7 +94,12 @@ class RegisterController extends Controller
      */
     public function show($id)
     {
-        //
+        $show = Register::findOrFail($id);
+        // dd($show);
+        return view('admin.register.detail',[
+            "title"=> "Detail Pendaftaran",
+            "data" => $show,
+        ]);
     }
 
     /**
@@ -105,7 +110,11 @@ class RegisterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $show = Register::findOrFail($id);
+        return view('admin.register.edit',[
+            "title"=> "Edit Pendaftaran ",
+            "data" => $show,
+        ]);
     }
 
     /**
@@ -128,6 +137,7 @@ class RegisterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Register::destroy($id);
+        return back()->withToastSuccess('Data Berhasil di Hapus');
     }
 }

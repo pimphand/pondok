@@ -50,29 +50,27 @@
 
                             <thead>
                                 <tr>
-                                    <th class="text-center">Judul</th>
-                                    <th class="text-center">Gambar</th>
-                                    <th class="text-center">Kategori</th>
-                                    <th class="text-center">Isi</th>
-                                    <th class="text-center">Penulis</th>
-                                    <th class="text-center">Dibuat</th>
+                                    <th class="text-center">NIK</th>
+                                    <th class="text-center">Nama Lengkap</th>
+                                    <th class="text-center">Tanggal Daftar</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                 <tr>
-                                    <td class="text-center">{{$item->name}}</td>
+                                    <td class="text-center">{{$item->nik}}</td>
+                                    <td class="text-center">{{$item->fullname}}</td>
+                                    <td class="text-center">{{($item->created_at)->format('j F Y')}}</td>
                                     <td class="text-center">
-                                        <form action="{{route('news.destroy',['news' => $item->id])}}" method="POST">
+                                        <form action="{{ route('daftar', $item->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
-                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#UpdateNews{{$item->id}}">Edit</button>
+                                            <a href="{{route('detail', $item->id)}}" class="btn btn-warning btn-sm">Detail</a>
+                                            <a href="{{route('edit', $item->id)}}" class="btn btn-primary btn-sm" >Edit</a>
                                             <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                         </form>
                                     </td>
-                                    @include('admin.news.modal')
                                 </tr>
                                 @endforeach
                             </tbody>

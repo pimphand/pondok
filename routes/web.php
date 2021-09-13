@@ -87,20 +87,24 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::resource('/image', GalleryController::class);
     });
 
-    Route::prefix('pendaftaran')->group( function(){
-        Route::get('/ra', [PendaftaranController::class, 'ra'])->name('ra.index');
-        Route::get('/sd', [PendaftaranController::class, 'sd'])->name('sd.index');
-        Route::get('/smp', [PendaftaranController::class, 'smp'])->name('smp.index');
-        Route::get('/sma', [PendaftaranController::class, 'sma'])->name('sma.index');
-        Route::resource('/daftar', PendaftaranController::class);
-    });
-
     // Route::prefix('pendaftaran')->group( function(){
-    //     Route::get('/tk', [RegisterController::class, 'tk'])->name('tk.index');
-    //     Route::get('/mi', [RegisterController::class, 'mi'])->name('mi.index');
-    //     Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
-    //     Route::get('/sma', [RegisterController::class, 'sma'])->name('sma.index');
+    //     Route::get('/ra', [PendaftaranController::class, 'ra'])->name('ra.index');
+    //     Route::get('/sd', [PendaftaranController::class, 'sd'])->name('sd.index');
+    //     Route::get('/smp', [PendaftaranController::class, 'smp'])->name('smp.index');
+    //     Route::get('/sma', [PendaftaranController::class, 'sma'])->name('sma.index');
+    //     Route::resource('/daftar', PendaftaranController::class);
     // });
+
+    Route::prefix('pendaftaran')->group( function(){
+        Route::get('/ra', [RegisterController::class, 'ra'])->name('ra.index');
+        Route::get('/sd', [RegisterController::class, 'sd'])->name('sd.index');
+        Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
+        Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
+        // Route::get('/sma', [RegisterController::class, 'rederect'])->name('rederect');
+        Route::get('/daftar-detail/{id}', [RegisterController::class, 'show'])->name('detail');
+        Route::get('/daftar-edit/{id}', [RegisterController::class, 'edit'])->name('edit');
+        Route::delete('/daftar-hapus/{id}', [RegisterController::class, 'destroy'])->name('daftar');
+    });
 
 
 });
