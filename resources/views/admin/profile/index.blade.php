@@ -42,6 +42,11 @@
                                     <div>
                                         <input type="file" name="image" class="form-control" data-parsley-minlength="6"
                                             placeholder="Min 6 chars.">
+                                        <div class="text-danger">
+                                            @error('image')
+                                                {{$message}}
+                                            @enderror
+                                        </div>
                                         <br>
                                         <img src="{{asset('storage/profil')}}/{{$data->image}}" width="200">
                                     </div>
@@ -68,12 +73,10 @@
                                 <label class="form-label">Sejarah</label>
                                 <div>
                                     <textarea type="text" id="elm2" name="history" class="form-control" required
-                                        data-parsley-min="6"
-                                        placeholder="Enter Description">{{$data->history}}</textarea>
+                                        data-parsley-min="6" placeholder="Enter Mision">{{$data->history}}</textarea>
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div> <!-- end col -->

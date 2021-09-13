@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pendaftaran;
 use App\Models\Activity;
 use App\Models\Building;
 use App\Models\CalendarAcademic;
@@ -12,7 +13,11 @@ use App\Models\Picture;
 use App\Models\Profile;
 use App\Models\Teacher;
 use App\Models\Video;
+use Response;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response as HttpResponse;
+use Illuminate\Support\Facades\Response as FacadesResponse;
 
 class FrontendController extends Controller
 {
@@ -152,6 +157,42 @@ class FrontendController extends Controller
         return view('user.aktifitas.index',[
             "title" => "Kegiatan Santri Putra",
             "data"  => $aktifitas
+        ]);
+    }
+
+    public function ra()
+    {
+        $pendaftar = Pendaftaran::where('tingkatan_id', 1)->first();
+        return view('user.pendaftaran.index',[
+            "title"=> "Pendaftaran Raudhathul Athfal (RA)",
+            "data"  => $pendaftar,
+        ]);
+    }
+
+    public function sd()
+    {
+        $pendaftar = Pendaftaran::where('tingkatan_id', 2)->first();
+        return view('user.pendaftaran.index',[
+            "title"     => "Pendaftaran Madrasah Salafiyah Ula Setara SD",
+            "data"      => $pendaftar
+        ]);
+    }
+
+    public function smp()
+    {
+        $pendaftar = Pendaftaran::where('tingkatan_id', 3)->first();
+        return view('user.pendaftaran.index',[
+            "title"=> "Pendaftaran Madrasah Salafiyah Wustha Setara SMP",
+            "data" => $pendaftar
+        ]);
+    }
+
+    public function sma()
+    {
+        $pendaftar = Pendaftaran::where('tingkatan_id', 4)->first();
+        return view('user.pendaftaran.index',[
+            "title"=> "Pendaftaran Madrasah Salafiyah Ulya Setara SMA",
+            "data" => $pendaftar
         ]);
     }
 }

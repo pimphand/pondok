@@ -21,12 +21,40 @@
                         <span>admin</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{ route('register.index') }}" class="waves-effect">
                         <i class="fas fa-clipboard-list"></i><span
                             class="badge rounded-pill bg-primary float-end"></span>
                         <span>Pendaftaran</span>
                     </a>
+                </li> --}}
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Pendaftaran</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('ra.index')}}" class=" waves-effect">
+                                <span>RA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('sd.index')}}" class=" waves-effect">
+                                <span>SD</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('smp.index')}}" class=" waves-effect">
+                                <span>SMP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('sma.index')}}" class=" waves-effect">
+                                <span>SMA</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu-title">Informasi</li>
                 <li>

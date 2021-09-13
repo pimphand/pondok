@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\Admin\FacilityController;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
+use App\Http\Controllers\Admin\PendaftaranController;
 use App\Http\Controllers\Admin\PictureController;
 use App\Http\Controllers\Admin\RegisterController;
 use App\Http\Controllers\Admin\UserController;
@@ -45,9 +46,13 @@ Route::get('/guru', [FrontendController::class, "guru"])->name('guru');
 Route::get('/kalender-akademik', [FrontendController::class, "kalender"])->name('kalender');
 Route::get('/kegiatan-putri', [FrontendController::class, "kegiatanputri"])->name('kegiatanputri');
 Route::get('/kegiatan-putra', [FrontendController::class, "kegiatanputra"])->name('kegiatanputra');
-
 Route::get('/berita', [FrontendController::class, "news"])->name('user.news');
 Route::get('/berita/detail/{news:slug}', [FrontendController::class, "detailNews"])->name('detail.news');
+Route::get('/daftar-RA', [FrontendController::class, "ra"])->name('ra');
+Route::get('/daftar-SD', [FrontendController::class, "sd"])->name('sd');
+Route::get('/daftar-SMP', [FrontendController::class, "smp"])->name('smp');
+Route::get('/daftar-SMA', [FrontendController::class, "sma"])->name('sma');
+
 
 Route::get('/test', function () {
     $data = Gallery::all();
@@ -83,11 +88,19 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     });
 
     Route::prefix('pendaftaran')->group( function(){
-        Route::get('/tk', [RegisterController::class, 'tk'])->name('tk.index');
-        Route::get('/mi', [RegisterController::class, 'mi'])->name('mi.index');
-        Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
-        Route::get('/sma', [RegisterController::class, 'sma'])->name('sma.index');
+        Route::get('/ra', [PendaftaranController::class, 'ra'])->name('ra.index');
+        Route::get('/sd', [PendaftaranController::class, 'sd'])->name('sd.index');
+        Route::get('/smp', [PendaftaranController::class, 'smp'])->name('smp.index');
+        Route::get('/sma', [PendaftaranController::class, 'sma'])->name('sma.index');
+        Route::resource('/daftar', PendaftaranController::class);
     });
+
+    // Route::prefix('pendaftaran')->group( function(){
+    //     Route::get('/tk', [RegisterController::class, 'tk'])->name('tk.index');
+    //     Route::get('/mi', [RegisterController::class, 'mi'])->name('mi.index');
+    //     Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
+    //     Route::get('/sma', [RegisterController::class, 'sma'])->name('sma.index');
+    // });
 
 
 });

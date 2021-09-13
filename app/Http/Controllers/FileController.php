@@ -22,7 +22,7 @@ class FileController extends Controller
         }
              Storage::putFileAs("public/video", $image, $name);
     }
-    
+
     public static function profil($image, $name, $oldName = null): void
     {
         if ($oldName) {
@@ -61,5 +61,13 @@ class FileController extends Controller
             Storage::delete('public/calenders/' . $oldName);
         }
         Storage::putFileAs("public/calenders/", $image, $name);
+    }
+
+    public static function pendaftar($image, $name, $oldName = null): void
+    {
+        if ($oldName){
+            Storage::delete('public/browsur/' . $oldName);
+        }
+        Storage::putFileAs('public/browsur/', $image, $name);
     }
 }

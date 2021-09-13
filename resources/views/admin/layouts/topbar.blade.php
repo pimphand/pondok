@@ -237,7 +237,7 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
-                        src="{{ asset('admin') }}/assets/images/users/user-4.jpg" alt="Header Avatar">
+                        src="{{ asset('storage/profil/'. $logo->logo) }}" alt="Header Avatar">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->

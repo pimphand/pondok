@@ -79,8 +79,22 @@
                                     </li>
                                 </ul>
                             </li>
-
-                            <li class="menu-item kingster-normal-menu"><a href="{{route('pendaftaran')}}">Pendaftaran</a>
+                            <li class="menu-item menu-item-has-children kingster-normal-menu">
+                                <a href="" class="sf-with-ul-pre">Pendaftaran</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-has-children ">
+                                        <a href="{{ route('ra') }}">Raudhathul Athfal</a>
+                                    </li>
+                                    <li class="menu-item" data-size="60">
+                                        <a href="{{ route('sd') }}">Madrasah Salafiyah Ula Setara SD</a>
+                                    </li>
+                                    <li class="menu-item" data-size="60">
+                                        <a href="{{ route('smp') }}">Madrasah Salafiyah Wustha Setara SMP</a>
+                                    </li>
+                                    <li class="menu-item" data-size="60">
+                                        <a href="{{ route('sma') }}">Madrasah Salafiyah Ulya Setara SMA</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="menu-item kingster-normal-menu"><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>

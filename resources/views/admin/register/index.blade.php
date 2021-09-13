@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+{{-- @extends('admin.layouts.app')
 
 @section('css')
 <!-- DataTables -->
@@ -39,7 +39,7 @@
         <!-- end page title -->
         <div class="row">
             <div class="col-xl-3 col-md-6">
-                <div class="card mini-stat bg-primary text-white">
+                <div class="text-white card mini-stat bg-primary">
                     <div class="card-body">
                         <div class="mb-4">
                             <div class="float-start mini-stat-img me-4">
@@ -54,14 +54,14 @@
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
 
-                                <p class="text-white-50 mb-0 mt-1">Detail Pendaftar</p>
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card mini-stat bg-primary text-white">
+                <div class="text-white card mini-stat bg-primary">
                     <div class="card-body">
                         <div class="mb-4">
                             <div class="float-start mini-stat-img me-4">
@@ -76,14 +76,14 @@
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
 
-                                <p class="text-white-50 mb-0 mt-1">Detail Pendaftar</p>
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card mini-stat bg-primary text-white">
+                <div class="text-white card mini-stat bg-primary">
                     <div class="card-body">
                         <div class="mb-4">
                             <div class="float-start mini-stat-img me-4">
@@ -98,14 +98,14 @@
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
 
-                                <p class="text-white-50 mb-0 mt-1">Detail Pendaftar</p>
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card mini-stat bg-primary text-white">
+                <div class="text-white card mini-stat bg-primary">
                     <div class="card-body">
                         <div class="mb-4">
                             <div class="float-start mini-stat-img me-4">
@@ -120,7 +120,7 @@
                                     <i class="mdi mdi-arrow-right h5"></i>
                                 </div>
 
-                                <p class="text-white-50 mb-0 mt-1">Detail Pendaftar</p>
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
                             </a>
                         </div>
                     </div>
@@ -132,4 +132,4 @@
 </div>
 
 
-@endsection
+@endsection --}}

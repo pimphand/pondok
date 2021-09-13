@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             GallerySeeder::class,
             ProfilSeeder::class,
             ContactSeeder::class,
+            TingkatanSeeder::class,
+            PendaftarSeeder::class,
         ]);
     }
 }
