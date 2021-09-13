@@ -12,6 +12,7 @@ use App\Models\News;
 use App\Models\Picture;
 use App\Models\Profile;
 use App\Models\Teacher;
+use App\Models\Tingkatan;
 use App\Models\Video;
 use Response;
 use Illuminate\Support\Facades\Storage;
@@ -194,5 +195,23 @@ class FrontendController extends Controller
             "title"=> "Pendaftaran Madrasah Salafiyah Ulya Setara SMA",
             "data" => $pendaftar
         ]);
+    }
+
+    public function pass()
+    {
+        return view('user.password');
+    }
+
+    public function enter(Request $request)
+    {
+        $pas = $request->password;
+        if($pas)
+        {
+            $pass = Tingkatan::where('password',$pas)->first();
+            if(!$pass == null){
+                return redirect(route('pendaftaran'));
+            }
+            return back()->withMessages('passowd salah');
+        }
     }
 }

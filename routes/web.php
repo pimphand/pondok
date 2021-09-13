@@ -33,6 +33,8 @@ use App\Models\Gallery;
 */
 
 Route::get('/', [FrontendController::class, "home"])->name('home');
+Route::get('/pass', [FrontendController::class, "pass"])->name('pass');
+Route::get('/passs', [FrontendController::class, "enter"])->name('enter');
 Route::get('/profil',[FrontendController::class, "profil"])->name('profil');
 Route::get('/kontak', [FrontendController::class, "contact"])->name('contact');
 Route::get('/visi-dan-misi', [FrontendController::class, "visionmission"])->name('visionmission');
