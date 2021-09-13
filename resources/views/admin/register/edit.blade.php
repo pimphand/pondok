@@ -102,7 +102,7 @@
                         <label for="example-date-input" class="col-sm-2 col-form-label">Status Siswa
                             Dalam Keluarga</label>
                         <div class="col-sm-10">
-                            <select name="status_student_family" required class="form-select"
+                            <select name="status_family" required class="form-select"
                                 aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Anak Kandung Ayah & Ibu">Anak
@@ -149,7 +149,7 @@
                         <label for="example-time-input" class="col-sm-2 col-form-label">Alamat
                             Sesuai KK</label>
                         <div class="col-sm-10">
-                            <input name="address" type="text" required name="facebook"
+                            <input name="address" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                         <label for="example-time-input" class="col-sm-2 col-form-label">Kelurahan
                             Sesuai KK</label>
                         <div class="col-sm-10">
-                            <input name="Ward" type="text" required name="facebook"
+                            <input name="Ward" type="text" required
                                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -165,14 +165,14 @@
                         <label for="example-text-input-lg" class="col-sm-2 col-form-label">Kecamatan
                             Sesuai KK</label>
                         <div class="col-sm-10">
-                            <input name="district" type="text" required name="facebook"
+                            <input name="district" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kota/Kabupaten Sesuai KK</label>
                         <div class="col-sm-10">
-                            <input name="city" type="text" required name="facebook"
+                            <input name="city" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Provinsi
                             Sesuai KK</label>
                         <div class="col-sm-10">
-                            <input name="province" type="text" required name="facebook"
+                            <input name="province" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                             Tempat Tinggal Siswa</label>
                         <div class="col-sm-10">
-                            <input name="student_address" type="text" required name="facebook"
+                            <input name="student_address" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                             Kontak Tempat Tinggal Siswa (Telp.
                             Rumah/Hp)</label>
                         <div class="col-sm-10">
-                            <input name="phone" type="number" name="facebook" class="form-control"
+                            <input name="phone" type="number" class="form-control"
                             id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Perkiraan
                             Jarak Tempat Tinggal Siswa (Km)</label>
                         <div class="col-sm-10">
-                            <input name="distance_to_school" type="text" required name="facebook"
+                            <input name="distance_to_school" type="text" required
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kendaraan
                             Siswa Menuju Sekolah</label>
                         <div class="col-sm-10">
-                            <input name="vehicle" type="text" required name="facebook"
+                            <input name="vehicle" type="text" required
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -240,14 +240,14 @@
                     <div class="mb-3 row">
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Hobi</label>
                         <div class="col-sm-10">
-                            <input name="hobby" type="text" required name="facebook"
+                            <input name="hobby" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Cita-Cita</label>
                         <div class="col-sm-10">
-                            <input name="goals" type="text" required name="facebook"
+                            <input name="goals" type="text" required
                             class="form-control" id="useremail" required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -299,7 +299,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kelainan
                             Jasmani/Cacat Tubuh</label>
                         <div class="col-sm-10">
-                            <input type="text" required name="facebook"
+                            <input type="text" required name="disease"
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penyakit
                             Kronis yang di Derita</label>
                         <div class="col-sm-10">
-                            <input type="text" required name="facebook"
+                            <input type="text" required name="special_needs"
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -315,7 +315,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Permasalahan
                             Belajar</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="study_problem" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                                 <option value="Lamban">Lamban</option>
@@ -327,7 +327,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Bakat Luar
                             Biasa</label>
                         <div class="col-sm-10">
-                            <input type="text" required name="facebook"
+                            <input type="text" required name="talent"
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -370,7 +370,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                             Lengkap Ayah Kandung</label>
                         <div class="col-sm-10">
-                            <input type="text" required name="facebook"
+                            <input type="text" required name="name"
                             class="form-control" id="useremail" placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -378,7 +378,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kewarganegaraan
                             Ayah kandung</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="country" aria-label="Default select example">
                                 <option selected>--Select--</option>
                                 <option value="WNI">WNI</option>
                                 <option value="WNA">WNA</option>
@@ -389,8 +389,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tempat
                             Lahir Ayah Kandung</label>
                         <div class="col-sm-10">
-
-                            <input type="text" required name="facebook" class="form-control" id="useremail"
+                            <input type="text" required name="birth_place" class="form-control" id="useremail"
                             required placeholder="Enter Facebook">
                         </div>
                     </div>
@@ -398,8 +397,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tanggal
                             Lahir Ayah Kandung</label>
                             <div class="col-sm-10">
-
-                                <input type="date" name="facebook" class="form-control" id="useremail" required
+                                <input type="date" name="birth_date" class="form-control" id="useremail" required
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -407,8 +405,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK Ayah
                             Kandung</label>
                             <div class="col-sm-10">
-
-                                <input type="number" name="facebook" class="form-control" id="useremail" required
+                                <input type="number" name="nik" class="form-control" id="useremail" required
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -416,8 +413,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                             Lengkap Ibu Kandung</label>
                             <div class="col-sm-10">
-
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="name" class="form-control" id="useremail"
                                 required placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -425,7 +421,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kewarganegaraan
                             Ibu kandung</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="country" aria-label="Default select example">
                                 <option selected>--Select--</option>
                                 <option value="WNI">WNI</option>
                                 <option value="WNA">WNA</option>
@@ -436,8 +432,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tempat
                             Lahir Ibu Kandung</label>
                             <div class="col-sm-10">
-
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="birth_place" class="form-control" id="useremail"
                                 required placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -445,8 +440,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tanggal
                             Lahir Ibu Kandung</label>
                             <div class="col-sm-10">
-
-                                <input type="date" name="facebook" class="form-control" id="useremail" required
+                                <input type="date" name="birth_date" class="form-control" id="useremail" required
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -455,7 +449,7 @@
                             Kandung</label>
                             <div class="col-sm-10">
 
-                                <input type="number" name="facebook" class="form-control" id="useremail" required
+                                <input type="number" name="nik" class="form-control" id="useremail" required
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -464,7 +458,7 @@
                             Lengkap Orang Tua</label>
                             <div class="col-sm-10">
 
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="address" class="form-control" id="useremail"
                                 required placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -472,8 +466,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                             Kontak Orang Tua</label>
                             <div class="col-sm-10">
-
-                                <input type="number" name="facebook" class="form-control" id="useremail" required
+                                <input type="number" name="phone" class="form-control" id="useremail" required
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -481,8 +474,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                             KPS/KKS/PKH (jika ada)</label>
                             <div class="col-sm-10">
-
-                                <input type="number" name="facebook" class="form-control" id="useremail"
+                                <input type="number" name="kps_no" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -490,7 +482,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                             Terakhir Ayah</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="education" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Tamat">Tidak Tamat
                                 </option>
@@ -510,7 +502,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                             Terakhir Ibu</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="education" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Tamat">Tidak Tamat
                                 </option>
@@ -530,7 +522,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                             Ayah</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="work" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option
                                     value="Pegawai BUMN/PNS (bukan Guru/Dosen, dan bukan Dokter/Bidan/Perawat)">
@@ -568,7 +560,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                             Ibu</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="work" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Ibu Rumah Tangga (di Rumah Saja)">
                                     Ibu Rumah Tangga (di Rumah Saja)
@@ -609,7 +601,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                             Ayah</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="income" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                                 <option value="< Rp.500.000">
@@ -631,7 +623,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                             Ibu</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="income" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Ada">Tidak Ada</option>
                                 <option value="< Rp.500.000">
@@ -657,8 +649,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                             Lengkap Wali</label>
                             <div class="col-sm-10">
-
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="name" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -666,8 +657,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK
                             Wali</label>
                             <div class="col-sm-10">
-
-                                <input type="number" name="facebook" class="form-control" id="useremail"
+                                <input type="number" name="nik" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -675,8 +665,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Hubungan
                             Siswa Sebagai</label>
                             <div class="col-sm-10">
-
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="homeroom" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -684,8 +673,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                             Tempat Tinggal Wali</label>
                             <div class="col-sm-10">
-
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="address" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -693,8 +681,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                             Kontak Wali (Telp. Rumah/HP)</label>
                             <div class="col-sm-10">
-
-                                <input type="number" name="facebook" class="form-control" id="useremail"
+                                <input type="number" name="phone" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -702,7 +689,7 @@
                         <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                             Terakhir Wali</label>
                         <div class="col-sm-10">
-                            <select required class="form-select" aria-label="Default select example">
+                            <select required class="form-select" name="education" aria-label="Default select example">
                                 <option selected>--Pilih--</option>
                                 <option value="Tidak Tamat">Tidak Tamat
                                 </option>
@@ -723,7 +710,7 @@
                             Wali</label>
                             <div class="col-sm-10">
 
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
+                                <input type="text" required name="work" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>
@@ -732,7 +719,7 @@
                             Rata Penghasilan Perbulan Wali</label>
                             <div class="col-sm-10">
 
-                                <input type="text" name="facebook" class="form-control" id="useremail"
+                                <input type="text" name="income" class="form-control" id="useremail"
                                 placeholder="Enter Facebook">
                             </div>
                     </div>

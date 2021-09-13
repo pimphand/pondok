@@ -321,7 +321,7 @@
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tempat
                                     Lahir Ayah Kandung</label>
                                 <div class="col-sm-10">
-                                    <input value="{{ $data->birth_place }}"
+                                    <input value="{{ $data->father->birth_place }}"
                                     class="form-control" readonly>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tanggal
                                     Lahir Ayah Kandung</label>
                                 <div class="col-sm-10">
-                                    <input value="{{ Date::parse($data->birth_date)->format('j F Y') }}"
+                                    <input value="{{ Date::parse($data->father->birth_date)->format('j F Y') }}"
                                     class="form-control" readonly>
                                 </div>
                             </div>
@@ -337,246 +337,132 @@
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK Ayah
                                     Kandung</label>
                                     <div class="col-sm-10">
-                                        <input value="{{ $data->nik }}"
+                                        <input value="{{ $data->father->nik }}"
                                         class="form-control" readonly>
                                     </div>
                             </div>
+
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                     Lengkap Ibu Kandung</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                        <input value="{{ $data->mather->name }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kewarganegaraan
                                     Ibu kandung</label>
-                                <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Select--</option>
-                                        <option value="WNI">WNI</option>
-                                        <option value="WNA">WNA</option>
-                                    </select>
-                                </div>
+                                    <div class="col-sm-10">
+                                        <input value="{{ $data->mather->country }}"
+                                        class="form-control" readonly>
+                                    </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tempat
                                     Lahir Ibu Kandung</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                        <input value="{{ $data->mather->birth_place }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tanggal
                                     Lahir Ibu Kandung</label>
                                     <div class="col-sm-10">
-
-                                        <input type="date" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
+                                        <input value="{{ Date::parse($data->mather->birth_date)->format('j F Y') }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK Ibu
                                     Kandung</label>
                                     <div class="col-sm-10">
-
-                                        <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
+                                        <input value="{{ $data->mather->nik }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                                     Lengkap Orang Tua</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        required placeholder="Enter Facebook">
+                                        <input value="{{ $data->parent->address }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                                     Kontak Orang Tua</label>
                                     <div class="col-sm-10">
-
-                                        <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
+                                        <input value="{{ $data->parent->phone }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                                     KPS/KKS/PKH (jika ada)</label>
                                     <div class="col-sm-10">
-
-                                        <input type="number" name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <input value="{{ $data->parent->kps_no }}"
+                                        class="form-control" readonly>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                                     Terakhir Ayah</label>
                                 <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Tidak Tamat">Tidak Tamat
-                                        </option>
-                                        <option value="SD">SD</option>
-                                        <option value="SMP">SMP</option>
-                                        <option value="SMA">SMA</option>
-                                        <option value="D1">D1</option>
-                                        <option value="D2">D2</option>
-                                        <option value="D4">D4</option>
-                                        <option value="S1">S1</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
-                                    </select>
+                                    <div class="col-sm-10">
+                                        <input value="{{ $data->father->education }}"
+                                        class="form-control" readonly>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                                     Terakhir Ibu</label>
-                                <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Tidak Tamat">Tidak Tamat
-                                        </option>
-                                        <option value="SD">SD</option>
-                                        <option value="SMP">SMP</option>
-                                        <option value="SMA">SMA</option>
-                                        <option value="D1">D1</option>
-                                        <option value="D2">D2</option>
-                                        <option value="D4">D4</option>
-                                        <option value="S1">S1</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
-                                    </select>
-                                </div>
+                                    <div class="col-sm-10">
+                                        <input value="{{ $data->mather->education }}"
+                                        class="form-control" readonly>
+                                    </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                                     Ayah</label>
                                 <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option
-                                            value="Pegawai BUMN/PNS (bukan Guru/Dosen, dan bukan Dokter/Bidan/Perawat)">
-                                            Pegawai BUMN/PNS (bukan Guru/Dosen, dan
-                                            bukan Dokter/Bidan/Perawat)</option>
-                                        <option value="Guru/Dosen">Guru/Dosen
-                                        </option>
-                                        <option value="TNI/Polisi">TNI/Polisi
-                                        </option>
-                                        <option value="Pegawai Swasta">Pegawai
-                                            Swasta</option>
-                                        <option value="Sopir/Masinis/Kondektur">
-                                            Sopir/Masinis/Kondektur</option>
-                                        <option value="Petani/Peternak">
-                                            Petani/Peternak</option>
-                                        <option value="Dokter">Dokter</option>
-                                        <option value="Hakim">Hakim</option>
-                                        <option value="Pedagang">Pedagang</option>
-                                        <option value="Nelayan">Nelayan</option>
-                                        <option value="Bidan/Perawat">Bidan/Perawat
-                                        </option>
-                                        <option value="Pengacara/Notaris/Jaksa">
-                                            Pengacara/Notaris/Jaksa</option>
-                                        <option value="Pengusaha/Wiraswata">
-                                            Pengusaha/Wiraswata</option>
-                                        <option value="Pilot/Pramugari">
-                                            Pilot/Pramugari</option>
-                                        <option value="Buruh (Tani/Pabrik/Bangunan)">
-                                            Buruh (Tani/Pabrik/Bangunan)</option>
-                                        <option value="Pensiunan">Pensiunan</option>
-                                    </select>
+                                    <div class="col-sm-10">
+                                        <input value="{{ $data->father->work }}"
+                                        class="form-control" readonly>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                                     Ibu</label>
-                                <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Ibu Rumah Tangga (di Rumah Saja)">
-                                            Ibu Rumah Tangga (di Rumah Saja)
-                                        </option>
-                                        <option
-                                            value="Pegawai BUMN/PNS (bukan Guru/Dosen, dan bukan Dokter/Bidan/Perawat)">
-                                            Pegawai BUMN/PNS (bukan Guru/Dosen, dan
-                                            bukan Dokter/Bidan/Perawat)</option>
-                                        <option value="Guru/Dosen">Guru/Dosen
-                                        </option>
-                                        <option value="TNI/Polisi">TNI/Polisi
-                                        </option>
-                                        <option value="Pegawai Swasta">Pegawai
-                                            Swasta</option>
-                                        <option value="Sopir/Masinis/Kondektur">
-                                            Sopir/Masinis/Kondektur</option>
-                                        <option value="Petani/Peternak">
-                                            Petani/Peternak</option>
-                                        <option value="Dokter">Dokter</option>
-                                        <option value="Hakim">Hakim</option>
-                                        <option value="Pedagang">Pedagang</option>
-                                        <option value="Nelayan">Nelayan</option>
-                                        <option value="Bidan/Perawat">Bidan/Perawat
-                                        </option>
-                                        <option value="Pengacara/Notaris/Jaksa">
-                                            Pengacara/Notaris/Jaksa</option>
-                                        <option value="Pengusaha/Wiraswata">
-                                            Pengusaha/Wiraswata</option>
-                                        <option value="Pilot/Pramugari">
-                                            Pilot/Pramugari</option>
-                                        <option value="Buruh (Tani/Pabrik/Bangunan)">
-                                            Buruh (Tani/Pabrik/Bangunan)</option>
-                                        <option value="Pensiunan">Pensiunan</option>
-                                    </select>
-                                </div>
+                                    <div class="col-sm-10">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->mather->work }}"
+                                            class="form-control" readonly>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                                     Ayah</label>
                                 <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Tidak Ada">Tidak Ada</option>
-                                        <option value="< Rp.500.000">
-                                            < Rp.500.000</option> <option value="Rp.500.000 s/d Rp.1.000.000">
-                                                Rp.500.000 s/d Rp.1.000.000
-                                        </option>
-                                        <option value="Rp.1.000.000 s/d Rp.2.000.000">
-                                            Rp.1.000.000 s/d Rp.2.000.000</option>
-                                        <option value="Rp.2.000.000 s/d Rp.3.000.000">
-                                            Rp.2.000.000 s/d Rp.3.000.000</option>
-                                        <option value="Rp.3.000.000 s/d Rp.5.000.000">
-                                            Rp.3.000.000 s/d Rp.5.000.000</option>
-                                        <option value=">Rp.5.000.000">>Rp.5.000.000
-                                        </option>
-                                    </select>
+                                    <div class="col-sm-10">
+                                        <input value="{{ $data->father->income }}"
+                                        class="form-control" readonly>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                                     Ibu</label>
-                                <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Tidak Ada">Tidak Ada</option>
-                                        <option value="< Rp.500.000">
-                                            < Rp.500.000</option> <option value="Rp.500.000 s/d Rp.1.000.000">
-                                                Rp.500.000 s/d Rp.1.000.000
-                                        </option>
-                                        <option value="Rp.1.000.000 s/d Rp.2.000.000">
-                                            Rp.1.000.000 s/d Rp.2.000.000</option>
-                                        <option value="Rp.2.000.000 s/d Rp.3.000.000">
-                                            Rp.2.000.000 s/d Rp.3.000.000</option>
-                                        <option value="Rp.3.000.000 s/d Rp.5.000.000">
-                                            Rp.3.000.000 s/d Rp.5.000.000</option>
-                                        <option value=">Rp.5.000.000">>Rp.5.000.000
-                                        </option>
-                                    </select>
-                                </div>
+                                    <div class="col-sm-10">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->father->income }}"
+                                            class="form-control" readonly>
+                                        </div>
+                                    </div>
                             </div>
 
                             {{-- selesai orang tua --}}
@@ -586,88 +472,85 @@
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                     Lengkap Wali</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->cutodian->name }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK
                                     Wali</label>
                                     <div class="col-sm-10">
-
-                                        <input type="number" name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->nik }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Hubungan
                                     Siswa Sebagai</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->homeroom }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                                     Tempat Tinggal Wali</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->address }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                                     Kontak Wali (Telp. Rumah/HP)</label>
                                     <div class="col-sm-10">
-
-                                        <input type="number" name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->phone }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                                     Terakhir Wali</label>
-                                <div class="col-sm-10">
-                                    <select required class="form-select" aria-label="Default select example">
-                                        <option selected>--Pilih--</option>
-                                        <option value="Tidak Tamat">Tidak Tamat
-                                        </option>
-                                        <option value="SD">SD</option>
-                                        <option value="SMP">SMP</option>
-                                        <option value="SMA">SMA</option>
-                                        <option value="D1">D1</option>
-                                        <option value="D2">D2</option>
-                                        <option value="D4">D4</option>
-                                        <option value="S1">S1</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
-                                    </select>
-                                </div>
+                                    <div class="col-sm-10">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->education }}"
+                                            class="form-control" readonly>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                                     Wali</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->work }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             <div class="mb-3 row">
                                 <label for="example-text-input-sm" class="col-sm-2 col-form-label">Rata -
                                     Rata Penghasilan Perbulan Wali</label>
                                     <div class="col-sm-10">
-
-                                        <input type="text" name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                        <div class="col-sm-10">
+                                            <input value="{{ $data->custodian->income }}"
+                                            class="form-control" readonly>
+                                        </div>
                                     </div>
                             </div>
                             {{-- selesai wali --}}
 
-                            <h5 class="text-center">Pernyataan orang Tua</h5>
+                            <h5 class="text-center" style="color: red">Pernyataan orang Tua</h5>
                             <div class="mb-3 row">
                                 <label class="mb-3 form-label d-flex">Dengan
                                     mempertimbangkan penghasilan orangtua/wali &
