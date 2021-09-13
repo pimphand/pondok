@@ -101,7 +101,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
         Route::get('/ra', [RegisterController::class, 'ra'])->name('ra.index');
         Route::get('/sd', [RegisterController::class, 'sd'])->name('sd.index');
         Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
-        Route::get('/smp', [RegisterController::class, 'smp'])->name('smp.index');
+        Route::get('/sma', [RegisterController::class, 'sma'])->name('sma.index');
         // Route::get('/sma', [RegisterController::class, 'rederect'])->name('rederect');
         Route::get('/daftar-detail/{id}', [RegisterController::class, 'show'])->name('detail');
         Route::get('/daftar-edit/{id}', [RegisterController::class, 'edit'])->name('edit');

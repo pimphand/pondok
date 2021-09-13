@@ -9,6 +9,26 @@
 <link href="{{ asset('admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
 <!-- App Css-->
 <link href="{{ asset('admin') }}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+<style>
+    #form1 {
+        width: 310px;
+        padding: 10px;
+        display: none;
+    }
+</style>
+@endsection
+
+@section('js')
+<script>
+    $("#form1show").click(function(e){
+        $('#form1').show();
+        });
+        
+        $('#hideall').click(function(e){
+        $('#form1').hide();
+        });
+</script>
 @endsection
 
 @section('content')

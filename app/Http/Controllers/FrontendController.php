@@ -205,6 +205,10 @@ class FrontendController extends Controller
     public function enter(Request $request)
     {
         $pas = $request->password;
+        if($pas == null)
+        {
+            return back()->withMessages('password tidak boleh kosong');
+        }
         if($pas)
         {
             $pass = Tingkatan::where('password',$pas)->first();
