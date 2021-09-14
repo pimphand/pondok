@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\User\Register;
 
+use App\Models\ReffRegister\Custodian;
 use App\Models\ReffRegister\Father;
 use App\Models\ReffRegister\Mother;
 use App\Models\ReffRegister\ReffParent;
@@ -36,13 +37,17 @@ class Register extends Component
     // Parent
     public $p_address,$p_phone,$p_kps_no;
     // father 
-    public $f_parent_id,$f_name,$f_country,$f_birth_date,$f_birth_place,$f_nik,$f_education,$f_work,$f_income;
+    public $f_parent_id,$f_name,$f_country,$f_birth_date,$f_birth_place,
+            $f_nik,$f_education,$f_work,$f_income;
     // mother
-    public $m_parent_id,$m_name,$m_country,$m_birth_date,$m_birth_place,$m_nik,$m_education,$m_work,$m_income;
+    public $m_parent_id,$m_name,$m_country,$m_birth_date,$m_birth_place,
+            $m_nik,$m_education,$m_work,$m_income;
     // kebutuhnan kusus
     public $s_register_id,$s_special_needs,$s_disease,$s_study_problem,$s_talent;
     // wali / Custodian
     public $c_register_id,$c_name,$c_nik,$c_homeroom,$c_address,$c_phone,$c_education,$c_work,$c_income;
+    // Jenjang sebelumnya
+    public $j_name ,$j_nisn ,$j_year_graduation ,$j_npsn ,$j_address;
 
     // form kebutuhan kusus
     public function formSpecialOpen()
@@ -105,8 +110,8 @@ class Register extends Component
             "distance_to_school" => $this->distance_to_school,
             "vehicle" => $this->vehicle,
             "hobby" => $this->hobby,
-            "spp" => 123,
-            "statement" => "adf",
+            "spp" => $this->spp,
+            "statement" => "$this->statement",
             "goals" => $this->goals,
             "school_from" => $this->school_from,
             "school_address" => $this->school_address,
@@ -129,7 +134,7 @@ class Register extends Component
         ]);
 
         Father::create([
-            "parent_id" => $parent->id,
+            "reff_parent_id" => $parent->id,
             "name" => $this->f_name,
             "country" => $this->f_country,
             "birth_date" => $this->f_birth_date,
@@ -141,7 +146,7 @@ class Register extends Component
         ]);
 
         Mother::create([
-            "parent_id" => $parent->id,
+            "reff_parent_id" => $parent->id,
             "name" => $this->m_name,
             "country" => $this->m_country,
             "birth_date" => $this->m_birth_date,
@@ -150,6 +155,18 @@ class Register extends Component
             "education" => $this->m_education,
             "work" => $this->m_work,
             "income" => $this->m_income,
+        ]);
+
+        Custodian::create([
+            "register_id" => $register->id,
+            "name" => $this->c_name,
+            "nik" => $this->c_nik,
+            "homeroom" => $this->c_homeroom,
+            "address" => $this->c_address,
+            "phone" => $this->c_phone,
+            "education" => $this->c_education,
+            "work" => $this->c_work,
+            "income" => $this->c_income,
         ]);
 
     }

@@ -218,4 +218,6 @@ class FrontendController extends Controller
             return back()->withMessages('passowd salah');
         }
     }
+
+    
 }

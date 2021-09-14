@@ -39,10 +39,10 @@ class CreateRegistersTable extends Migration
             $table->string('hobby');
             $table->integer('spp');
             $table->text('statement');
-            $table->string('goals');
-            $table->string('school_from');
-            $table->string('school_address');
-            $table->string('semester_move');
+            $table->string('goals')->nullable();
+            $table->string('school_from')->nullable();
+            $table->string('school_address')->nullable();
+            $table->string('semester_move')->nullable();
 
             $table->timestamps();
             $table->softDeletes();

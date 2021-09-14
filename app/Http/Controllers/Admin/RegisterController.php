@@ -26,7 +26,7 @@ class RegisterController extends Controller
 
     public function sd()
     {
-        $data = Register::where('education', "SD")->latest();
+        $data = Register::where('education', "SD")->latest()->get();
         return view('admin.register.register',[
             "edu"    => "SD",
             "data"  => $data
@@ -35,7 +35,7 @@ class RegisterController extends Controller
 
     public function smp()
     {
-        $data = Register::where('education', "SMP")->latest();
+        $data = Register::where('education', "smp")->latest()->get();
         return view('admin.register.register',[
             "edu"    => "SMP",
             "data"  => $data
@@ -44,7 +44,7 @@ class RegisterController extends Controller
 
     public function sma()
     {
-        $data = Register::where('education', "SMA")->latest();
+        $data = Register::where('education', "SMA")->latest()->get();
         return view('admin.register.register',[
             "edu"    => "SMA",
             "data"  => $data

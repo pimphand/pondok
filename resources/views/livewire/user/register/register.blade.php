@@ -15,19 +15,17 @@
                             <h5 class="text-center">Biodata Calon Siswa</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
+                                    <label class="form-label">Nama
                                         Lengkap Siswa</label>
-
                                     <input type="text" required wire:model.lazy="fullname" class="form-control"
-                                        id="useremail" placeholder="Enter Facebook">
+                                        placeholder="Enter Facebook">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Jenis
                                         Kelamin</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="gender" required class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="gender" required class="form-select">
                                             <option selected>--Select--</option>
                                             <option value="Laki-Laki">Laki - Laki
                                             </option>
@@ -39,8 +37,7 @@
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
                                         Siswa</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="country" required class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="country" required class="form-select">
                                             <option selected>--Select--</option>
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
@@ -48,44 +45,43 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tempat
+                                    <label class="form-label">Tempat
                                         Lahir</label>
 
-                                    <input type="text" wire:model.lazy="place_birth" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Masukan Tempat Lahir">
+                                    <input type="text" wire:model.lazy="place_birth" class="form-control" required
+                                        placeholder="Masukan Tempat Lahir">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label">Tanggal
                                         Lahir</label>
 
-                                    <input type="date" wire:model.lazy="date_birth" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Masukan Tanggal lahir">
+                                    <input type="date" wire:model.lazy="date_birth" class="form-control" required
+                                        placeholder="Masukan Tanggal lahir">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Anak
+                                    <label class="form-label">Anak
                                         Ke..</label>
-                                    <input wire:model.lazy="child_to" type="number" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="child_to" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Dari ...
+                                    <label class="form-label">Dari ...
                                         Bersaudara</label>
-                                    <input wire:model.lazy="child_from" type="number" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="child_from" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Induk Kependudukan (NIK) Siswa</label>
-                                    <input wire:model.lazy="nik" type="number" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="nik" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Status Siswa
                                         Dalam Keluarga</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="status_student_family" required class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="status_student_family" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Anak Kandung Ayah & Ibu">Anak
                                                 Kandung Ayah & Ibu</option>
@@ -100,17 +96,16 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Kartu Keluarga (KK)</label>
-                                    <input wire:model.lazy="nik_kk" type="number" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="nik_kk" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Status Kepala
                                         Keluarga dalam KK</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="status_head_family" required class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="status_head_family" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Ayah Kandung">Ayah Kandung
                                             </option>
@@ -126,44 +121,43 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
+                                    <label class="form-label">Alamat
                                         Sesuai KK</label>
-                                    <input wire:model.lazy="address" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="address" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Kelurahan
+                                    <label class="form-label">Kelurahan
                                         Sesuai KK</label>
 
-                                    <input wire:model.lazy="Ward" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
-
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Kecamatan
-                                        Sesuai KK</label>
-
-                                    <input wire:model.lazy="district" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="Ward" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Kota/Kabupaten Sesuai KK</label>
-                                    <input wire:model.lazy="city" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <label class="form-label">Kecamatan
+                                        Sesuai KK</label>
+
+                                    <input wire:model.lazy="district" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Provinsi
+                                    <label class="form-label">Kota/Kabupaten Sesuai KK</label>
+                                    <input wire:model.lazy="city" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Provinsi
                                         Sesuai KK</label>
-                                    <input wire:model.lazy="province" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="province" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Tempat
                                         Tinggal Siswa</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="place_address" required class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="place_address" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Ikut Orang Tua">Ikut Orang
                                                 Tua</option>
@@ -178,75 +172,75 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
+                                    <label class="form-label">Alamat
                                         Tempat Tinggal Siswa</label>
-                                    <input wire:model.lazy="student_address" type="text" name="facebook"
-                                        class="form-control" id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="student_address" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Kontak Tempat Tinggal Siswa (Telp.
                                         Rumah/Hp)</label>
-                                    <input wire:model.lazy="phone" type="number" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <input wire:model.lazy="phone" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Perkiraan
+                                    <label class="form-label">Perkiraan
                                         Jarak Tempat Tinggal Siswa (Km)</label>
 
-                                    <input wire:model.lazy="distance_to_school" type="text" required name="facebook"
-                                        class="form-control" id="useremail" placeholder="Enter Facebook">
+                                    <input wire:model.lazy="distance_to_school" type="text" required
+                                        class="form-control" placeholder="Enter Facebook">
 
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Kendaraan
+                                    <label class="form-label">Kendaraan
                                         Siswa Menuju Sekolah</label>
-                                    <input wire:model.lazy="vehicle" type="text" required name="facebook"
-                                        class="form-control" id="useremail" placeholder="Enter Facebook">
+                                    <input wire:model.lazy="vehicle" type="text" required class="form-control"
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Hobi</label>
-                                    <input wire:model.lazy="hobby" type="text" name="facebook" class="form-control"
-                                        id="useremail" required placeholder="Enter Facebook">
+                                    <label class="form-label">Hobi</label>
+                                    <input wire:model.lazy="hobby" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Cita -
+                                    <label class="form-label">Cita -
                                         Cita</label>
-                                    <input wire:model.lazy="goals" type="text" required name="facebook"
-                                        class="form-control" id="useremail" placeholder="Enter Facebook">
+                                    <input wire:model.lazy="goals" type="text" required class="form-control"
+                                        placeholder="Enter Facebook">
                                 </div>
                             </div>
                             <h5 class="text-center">Jenjang Pendidikan Sebelumnya</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
+                                    <label class="form-label">Nama
                                         Lengkap Jenjang Pendidikan Sebelumnya</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                    <input type="text" wire:model.lazy="j_name" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tahun
+                                    <label class="form-label">Tahun
                                         Lulus</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
+                                    <input type="number" wire:model.lazy="j_year_graduation" class="form-control"
+                                        required placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Induk Siswa Nasional (NISN)</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                    <input type="number" wire:model.lazy="j_nisn" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Pokok Sekolah Nasional (NPSN) Jenjang Pendidikan
                                         Sebelumnya</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
+                                    <input type="number" wire:model.lazy="j_npsn" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
+                                    <label class="form-label">Alamat
                                         Jenjang Pendidikan Sebelumnya</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                    <input type="text" wire:model.lazy="j_address" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                             </div>
@@ -254,23 +248,22 @@
                             <h5 class="mt-4 text-center">Khusus Siswa Pindahan</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
+                                    <label class="form-label">Nama
                                         Sekolah Asal Siswa Pindahan</label>
-                                    <input wire:model.lazy="school_from" type="text" name="facebook"
-                                        class="form-control" id="useremail" placeholder="Enter Facebook">
+                                    <input wire:model.lazy="school_from" type="text" class="form-control"
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
+                                    <label class="form-label">Alamat
                                         Sekolah Asal Siswa Pindahan</label>
-                                    <input wire:model.lazy="school_address" type="text" name="facebook"
-                                        class="form-control" id="useremail" placeholder="Enter Facebook">
+                                    <input wire:model.lazy="school_address" type="text" class="form-control"
+                                        placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Masuk di
                                         Kelas</label>
                                     <div class="col-sm-12">
-                                        <select wire:model.lazy="semester_move" class="form-select"
-                                            aria-label="Default select example">
+                                        <select wire:model.lazy="semester_move" class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Kelas 1">Kelas 1</option>
                                             <option value="Kelas 2">Kelas 2</option>
@@ -285,22 +278,22 @@
                             <h5 class="text-center">Riwayat Kebutuhan Khusus Siswa</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Kelainan
+                                    <label class="form-label">Kelainan
                                         Jasmani/Cacat Tubuh</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="s_special_needs" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Penyakit
+                                    <label class="form-label">Penyakit
                                         Kronis yang di Derita</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="s_disease" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Permasalahan
                                         Belajar</label>
                                     <div class="col-sm-12">
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="s_study_problem" class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Tidak Ada">Tidak Ada</option>
                                             <option value="Lamban">Lamban</option>
@@ -309,9 +302,9 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Bakat Luar
+                                    <label class="form-label">Bakat Luar
                                         Biasa</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
+                                    <input wire:model.lazy="s_talent" type="text" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                             </div>
@@ -320,16 +313,38 @@
                             <h5 class="text-center">Data Orang Tua Siswa</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
-                                        Lengkap Ayah Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                    <label class="form-label">Nomor
+                                        KPS/KKS/PKH (jika ada)</label>
+                                    <input wire:model.lazy="p_address" type="number" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Nomor
+                                        Kontak Orang Tua</label>
+                                    <input wire:model.lazy="p_phone" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Alamat
+                                        Lengkap Orang Tua</label>
+                                    <input wire:model.lazy="p_kps_no" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="text-center">Ayah</h5>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Nama
+                                        Lengkap Ayah Kandung</label>
+                                    <input wire:model.lazy="f_name" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Kewarganegaraan
                                         Ayah kandung</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="f_country" required class="form-select">
                                             <option selected>--Select--</option>
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
@@ -337,101 +352,28 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tempat
+                                    <label class="form-label">Tempat
                                         Lahir Ayah Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
+                                    <input wire:model.lazy="f_birth_place" type="text" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tanggal
+                                    <label class="form-label">Tanggal
                                         Lahir Ayah Kandung</label>
-                                    <input type="date" name="facebook" class="form-control" id="useremail" required
+                                    <input wire:model.lazy="f_birth_date" type="date" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">NIK Ayah
+                                    <label class="form-label">NIK Ayah
                                         Kandung</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
-                                        Lengkap Ibu Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="col-sm-6 col-form-label">Kewarganegaraan
-                                        Ibu kandung</label>
-                                    <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
-                                            <option selected>--Select--</option>
-                                            <option value="WNI">WNI</option>
-                                            <option value="WNA">WNA</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tempat
-                                        Lahir Ibu Kandung</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Tanggal
-                                        Lahir Ibu Kandung</label>
-                                    <input type="date" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">NIK Ibu
-                                        Kandung</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
-                                        Lengkap Orang Tua</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
-                                        Kontak Orang Tua</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail" required
-                                        placeholder="Enter Facebook">
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
-                                        KPS/KKS/PKH (jika ada)</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                    <input wire:model.lazy="f_nik" type="number" class="form-control" required
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Pendidikan
                                         Terakhir Ayah</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
-                                            <option selected>--Pilih--</option>
-                                            <option value="Tidak Tamat">Tidak Tamat
-                                            </option>
-                                            <option value="SD">SD</option>
-                                            <option value="SMP">SMP</option>
-                                            <option value="SMA">SMA</option>
-                                            <option value="D1">D1</option>
-                                            <option value="D2">D2</option>
-                                            <option value="D4">D4</option>
-                                            <option value="S1">S1</option>
-                                            <option value="S2">S2</option>
-                                            <option value="S3">S3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="col-sm-6 col-form-label">Pendidikan
-                                        Terakhir Ibu</label>
-                                    <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="f_education" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Tidak Tamat">Tidak Tamat
                                             </option>
@@ -451,7 +393,7 @@
                                     <label class="col-sm-6 col-form-label">Pekerjaan
                                         Ayah</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="f_work" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option
                                                 value="Pegawai BUMN/PNS (bukan Guru/Dosen, dan bukan Dokter/Bidan/Perawat)">
@@ -486,10 +428,88 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
+                                    <label class="col-sm-6 col-form-label">Penghasilan
+                                        Ayah</label>
+                                    <div class="col-sm-12">
+                                        <select wire:model.lazy="f_income" required class="form-select">
+                                            <option selected>--Pilih--</option>
+                                            <option value="1">Tidak Ada</option>
+                                            <option value="2">
+                                                < Rp.500.000</option> <option value="3">Rp.500.000 s/d Rp.1.000.000
+                                            </option>
+                                            <option value="4">
+                                                Rp.1.000.000 s/d Rp.2.000.000</option>
+                                            <option value="5">
+                                                Rp.2.000.000 s/d Rp.3.000.000</option>
+                                            <option value="6">
+                                                Rp.3.000.000 s/d Rp.5.000.000</option>
+                                            <option value="7">>Rp.5.000.000
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <h5 class="text-center mt-3">Ibu</h5>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Nama
+                                        Lengkap Ibu Kandung</label>
+                                    <input wire:model.lazy="m_name" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="col-sm-6 col-form-label">Kewarganegaraan
+                                        Ibu kandung</label>
+                                    <div class="col-sm-12">
+                                        <select wire:model.lazy="m_country" required class="form-select">
+                                            <option selected>--Select--</option>
+                                            <option value="WNI">WNI</option>
+                                            <option value="WNA">WNA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Tempat
+                                        Lahir Ibu Kandung</label>
+
+                                    <input wire:model.lazy="m_birth_place" type="text" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">Tanggal
+                                        Lahir Ibu Kandung</label>
+                                    <input wire:model.lazy="m_birth_date" type="date" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="form-label">NIK Ibu
+                                        Kandung</label>
+                                    <input wire:model.lazy="m_nik" type="number" class="form-control" required
+                                        placeholder="Enter Facebook">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <label class="col-sm-6 col-form-label">Pendidikan
+                                        Terakhir Ibu</label>
+                                    <div class="col-sm-12">
+                                        <select wire:model.lazy="m_education" required class="form-select">
+                                            <option selected>--Pilih--</option>
+                                            <option value="Tidak Tamat">Tidak Tamat
+                                            </option>
+                                            <option value="SD">SD</option>
+                                            <option value="SMP">SMP</option>
+                                            <option value="SMA">SMA</option>
+                                            <option value="D1">D1</option>
+                                            <option value="D2">D2</option>
+                                            <option value="D4">D4</option>
+                                            <option value="S1">S1</option>
+                                            <option value="S2">S2</option>
+                                            <option value="S3">S3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Pekerjaan
                                         Ibu</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="m_work" required class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Ibu Rumah Tangga (di Rumah Saja)">
                                                 Ibu Rumah Tangga (di Rumah Saja)
@@ -528,44 +548,22 @@
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Penghasilan
-                                        Ayah</label>
-                                    <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
-                                            <option selected>--Pilih--</option>
-                                            <option value="Tidak Ada">Tidak Ada</option>
-                                            <option value="< Rp.500.000">
-                                                < Rp.500.000</option> <option value="Rp.500.000 s/d Rp.1.000.000">
-                                                    Rp.500.000 s/d Rp.1.000.000
-                                            </option>
-                                            <option value="Rp.1.000.000 s/d Rp.2.000.000">
-                                                Rp.1.000.000 s/d Rp.2.000.000</option>
-                                            <option value="Rp.2.000.000 s/d Rp.3.000.000">
-                                                Rp.2.000.000 s/d Rp.3.000.000</option>
-                                            <option value="Rp.3.000.000 s/d Rp.5.000.000">
-                                                Rp.3.000.000 s/d Rp.5.000.000</option>
-                                            <option value=">Rp.5.000.000">>Rp.5.000.000
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 col-sm-6">
-                                    <label class="col-sm-6 col-form-label">Penghasilan
                                         Ibu</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="m_income" required class="form-select">
                                             <option selected>--Pilih--</option>
-                                            <option value="Tidak Ada">Tidak Ada</option>
-                                            <option value="< Rp.500.000">
-                                                < Rp.500.000</option> <option value="Rp.500.000 s/d Rp.1.000.000">
+                                            <option value="1">Tidak Ada</option>
+                                            <option value="2">
+                                                < Rp.500.000</option> <option value="3">
                                                     Rp.500.000 s/d Rp.1.000.000
                                             </option>
-                                            <option value="Rp.1.000.000 s/d Rp.2.000.000">
+                                            <option value="4">
                                                 Rp.1.000.000 s/d Rp.2.000.000</option>
-                                            <option value="Rp.2.000.000 s/d Rp.3.000.000">
+                                            <option value="5">
                                                 Rp.2.000.000 s/d Rp.3.000.000</option>
-                                            <option value="Rp.3.000.000 s/d Rp.5.000.000">
+                                            <option value="6">
                                                 Rp.3.000.000 s/d Rp.5.000.000</option>
-                                            <option value=">Rp.5.000.000">>Rp.5.000.000
+                                            <option value="7">>Rp.5.000.000
                                             </option>
                                         </select>
                                     </div>
@@ -577,40 +575,40 @@
                             <h5 class="text-center">Identitas Wali Siswa</h5>
                             <div class="row">
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nama
+                                    <label class="form-label">Nama
                                         Lengkap Wali</label>
-                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="c_name" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">NIK
+                                    <label class="form-label">NIK
                                         Wali</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                    <input type="number" wire:model.lazy="c_nik" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Hubungan
+                                    <label class="form-label">Hubungan
                                         Siswa Sebagai</label>
-                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="c_homeroom" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Alamat
+                                    <label class="form-label">Alamat
                                         Tempat Tinggal Wali</label>
-                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="c_address" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Nomor
+                                    <label class="form-label">Nomor
                                         Kontak Wali (Telp. Rumah/HP)</label>
-                                    <input type="number" name="facebook" class="form-control" id="useremail"
+                                    <input type="number" wire:model.lazy="c_phone" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Pendidikan
                                         Terakhir Wali</label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="c_education" class="form-select">
                                             <option selected>--Pilih--</option>
                                             <option value="Tidak Tamat">Tidak Tamat
                                             </option>
@@ -627,15 +625,15 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Pekerjaan
+                                    <label class="form-label">Pekerjaan
                                         Wali</label>
-                                    <input type="text" required name="facebook" class="form-control" id="useremail"
+                                    <input type="text" wire:model.lazy="c_work" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Rata -
+                                    <label class="form-label">Rata -
                                         Rata Penghasilan Perbulan Wali</label>
-                                    <input type="text" name="facebook" class="form-control" id="useremail"
+                                    <input wire:model.lazy="c_income" type="text" class="form-control"
                                         placeholder="Enter Facebook">
                                 </div>
                             </div>
@@ -651,26 +649,26 @@
                                         yang In syaa Allah menjadi amal jariyah, maka
                                         dipilih nominal SPP </label>
                                     <div class="col-sm-12">
-                                        <select required class="form-select" aria-label="Default select example">
+                                        <select wire:model.lazy="spp" required class="form-select">
                                             <option>--Pilih--</option>
-                                            <option value="Rp.150.000">Rp.150.000
+                                            <option value="150000">Rp.150.000
                                             </option>
-                                            <option value="Rp.135.000">Rp.135.000
+                                            <option value="135000">Rp.135.000
                                             </option>
-                                            <option value="Rp.120.000">Rp.120.000
+                                            <option value="120000">Rp.120.000
                                             </option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
-                                    <label class="form-label" for="useremail">Silakan
+                                    <label class="form-label">Silakan
                                         diketik ulang "Kami orangtua/wali siswa mengisi
                                         formulir di atas sesuai keadaan sebenarnya,
                                         dengan ini kami siap berkerjasama dan mematuhi
                                         seluruh peraturan serta kebijakan
                                         sekolah</label>
-                                    <input type="text" required name="facebook" class="form-control" id="useremail"
-                                        placeholder="Enter Facebook">
+                                    <textarea wire:model.lazy="statement" required class="form-control" placeholder="">
+                                    </textarea>
                                 </div>
 
                                 <div class="mb-3 col-sm-6">

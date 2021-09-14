@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Father extends Model
 {
     use HasFactory;
-    protected $fillable = ["parent_id","name","country","birth_date","birth_place","nik","education","work","income"];
+    protected $fillable = ["reff_parent_id","name","country","birth_date","birth_place","nik","education","work","income"];
 }

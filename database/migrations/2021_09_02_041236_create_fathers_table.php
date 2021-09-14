@@ -15,7 +15,7 @@ class CreateFathersTable extends Migration
     {
         Schema::create('fathers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('parent_id')->constrained();
+            $table->foreignId('reff_parent_id')->constrained();
             $table->string('name');
             $table->string('country');
             $table->date('birth_date');

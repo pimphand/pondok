@@ -43,7 +43,7 @@ Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
 Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
-Route::get('/pendaftaran', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
+Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
 Route::get('/guru', [FrontendController::class, "guru"])->name('guru');
 Route::get('/kalender-akademik', [FrontendController::class, "kalender"])->name('kalender');
 Route::get('/kegiatan-putri', [FrontendController::class, "kegiatanputri"])->name('kegiatanputri');
