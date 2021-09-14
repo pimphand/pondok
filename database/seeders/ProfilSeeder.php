@@ -20,6 +20,7 @@ class ProfilSeeder extends Seeder
             "logo" => "55f67a64-0d40-4758-9770-8e50dcc1449b",
             "mission" => "mission",
             "vision" => "vision",
+            "history"=> "history"
         ]);
     }
 }

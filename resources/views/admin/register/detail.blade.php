@@ -498,7 +498,7 @@
                                 Kontak Wali (Telp. Rumah/HP)</label>
                             <div class="col-sm-10">
                                 <div class="col-sm-10">
-                                    <input value="{{ $data->custodian->phone }}" class="form-control" readonly>
+                                    <input value="{{ $data->custodians->phone }}" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>

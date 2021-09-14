@@ -59,6 +59,26 @@
                 <li class="menu-title">Informasi</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Pendaftaran</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="{{route('ra')}}" class=" waves-effect">RA</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('sd') }}">SD</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('smp') }}">SMP</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('sma') }}">SMA</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-newspaper"></i>
                         <span>Berita</span>
                     </a>

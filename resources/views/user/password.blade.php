@@ -38,7 +38,7 @@
                         <div class="pt-10 my-10 account-pages">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-12 col-lg-12 col-xl-12">
+                                    <div class="col-md-10 col-lg-8">
                                         <div class="overflow-hidden card">
                                             <div class="bg-primary">
                                                 <div class="p-4 text-center text-primary">
@@ -46,10 +46,10 @@
                                                 </div>
                                             </div>
                                             <div class="p-4 card-body">
-                                                <div class="p-3">
-                                                    <h5 class="text-center">Biodata Calon Siswa</h5>
+                                                <div class="p-3 text-center">
+                                                    <h5 class="text-center">Masukkan Kata Sandi Anda</h5>
                                                     @if ($message = Session::get('messages'))
-                                                    <div class="alert alert-danger alert-dismissible fade show"
+                                                    <div class="alert alert-danger alert-dismissible fade show col-12"
                                                         role="alert">
                                                         {{ $message }}
                                                         <button type="button" class="btn-close" data-bs-dismiss="alert"
@@ -60,13 +60,13 @@
                                                     <form action="{{ route('enter') }}" method="get">
                                                         <div class="row">
                                                             @csrf
-                                                            <div class="mb-3 col-8">
+                                                            <div class="mb-3">
                                                                 <input type="text" name="password" class="form-control"
                                                                     id="useremail" placeholder="Masukan Password">
                                                             </div>
-                                                            <div class="col-4">
+                                                            <div class="mb-3 col-12">
                                                                 <button type="submit"
-                                                                    class="btn btn-info btn-circle">Masuk</button>
+                                                                    class="btn btn-info btn-lg w-100 waves-effect waves-light">Masuk</button>
                                                             </div>
                                                         </div>
                                                     </form>

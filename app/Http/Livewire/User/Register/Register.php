@@ -8,6 +8,7 @@ use App\Models\ReffRegister\Mother;
 use App\Models\ReffRegister\ReffParent;
 use App\Models\ReffRegister\SpecialNeed;
 use App\Models\Register as ModelsRegister;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class Register extends Component
@@ -36,7 +37,7 @@ class Register extends Component
 
     // Parent
     public $p_address,$p_phone,$p_kps_no;
-    // father 
+    // father
     public $f_parent_id,$f_name,$f_country,$f_birth_date,$f_birth_place,
             $f_nik,$f_education,$f_work,$f_income;
     // mother
@@ -83,8 +84,68 @@ class Register extends Component
     }
 
 
-    public function simpan()
+    public function simpan(Request $request)
     {
+        $request->validate([
+            "nik" => "required",
+            "education" => "required",
+            "nik_kk" => "required",
+            "fullname" => "required",
+            "gender" => "required",
+            "country" => "required",
+            "place_birth" => "required",
+            "date_birth" => "required",
+            "child_to" => "required",
+            "child_from" => "required",
+            "status_student_family" => "required",
+            "status_head_family" => "required",
+            "address" => "required",
+            "province" => "required",
+            "city" => "required",
+            "district" => "required",
+            "Ward" => "required",
+            "place_address" => "required",
+            "student_address" => "required",
+            "phone" => "required",
+            "distance_to_school" => "required",
+            "vehicle" => "required",
+            "hobby" => "required",
+            "spp" => "required",
+            "statement" => "required",
+            "goals" => "required",
+            "s_special_needs" => "required",
+            "s_disease" => "required",
+            "disease" => "required",
+            "s_study_problem" => "required",
+            "s_talent" => "required",
+            "p_address" => "required",
+            "p_phone" => "required",
+            "p_kps_no" => "required",
+            "f_name" => "required",
+            "f_country" => "required",
+            "f_birth_date" => "required",
+            "f_birth_place" => "required",
+            "f_nik" => "required",
+            "f_education" => "required",
+            "f_work" => "required",
+            "f_income" => "required",
+            "m_name" => "required",
+            "m_country" => "required",
+            "m_birth_date" => "required",
+            "m_birth_place" => "required",
+            "m_nik" => "required",
+            "m_education" => "required",
+            "m_work" => "required",
+            "m_income" => "required",
+            "c_name" => "required",
+            "c_nik" => "required",
+            "c_homeroom" => "required",
+            "c_address" => "required",
+            "c_phone" => "required",
+            "c_education" => "required",
+            "c_work" => "required",
+            "c_income" => "required",
+        ]);
        $register=  ModelsRegister::create([
             "nik" => $this->nik,
             "education" => "smp",
@@ -170,7 +231,7 @@ class Register extends Component
         ]);
 
     }
-    
+
     public function render()
     {
         return view('livewire.user.register.register');

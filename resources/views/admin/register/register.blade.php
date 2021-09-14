@@ -42,9 +42,6 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Tabel Pendaftar {{ $edu }}</h4><br>
-                        <a href="/news/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal"
-                            data-bs-target="#CreateAdd"><i class="fas fa-plus-square"> Tambah Data</i></a>
-                        <hr>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 

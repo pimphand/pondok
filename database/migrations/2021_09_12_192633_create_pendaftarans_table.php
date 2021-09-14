@@ -18,7 +18,6 @@ class CreatePendaftaransTable extends Migration
             $table->integer('tingkatan_id')->nullable();
             $table->text('description');
             $table->string('image');
-            $table->string('link');
             $table->timestamps();
         });
     }

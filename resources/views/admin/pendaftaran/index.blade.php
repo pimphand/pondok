@@ -48,18 +48,20 @@
                                                 @enderror
                                             </div>
                                         <br>
-                                        <img src="{{asset('storage/browsur')}}/{{$data->image}}" width="600">
+                                        <img src="{{asset('storage/browsur')}}/{{$data->image}}" width="350">
                                     </div>
                                 </div>
                                 <div class="mb-3 col-6">
-                                    <label class="form-label">Link Pendaftaran</label>
+                                    <label class="form-label">Password</label>
                                     <div>
-                                        <input type="text" name="link" class="form-control" value="{{$data->link}}">
-                                        <div class="text-danger">
-                                            @error('link')
-                                                {{$message}}
-                                            @enderror
-                                        </div>
+                                        <input type="text" name="password" class="form-control" data-parsley-minlength="6"
+                                            placeholder="Masukkan Password" value="{{$pass->password}}">
+                                            <div class="text-danger">
+                                                @error('password')
+                                                    {{$message}}
+                                                @enderror
+                                            </div>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
@@ -67,11 +69,11 @@
                                 <label class="form-label">Deskripsi</label>
                                 <div>
                                     <textarea type="text" id="elm1" name="description" class="form-control" required
-                                        data-parsley-min="6"
-                                        placeholder="Enter Description">{{$data->description}}</textarea>
+                                    data-parsley-min="6"
+                                    placeholder="Enter Description">{{$data->description}}</textarea>
                                     <div class="text-danger">
                                         @error('description')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>

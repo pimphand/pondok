@@ -83,16 +83,16 @@
                                 <a href="" class="sf-with-ul-pre">Pendaftaran</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ route('ra') }}">Raudhathul Athfal</a>
+                                        <a href="{{ route('daftar-ra') }}">Raudhathul Athfal</a>
                                     </li>
                                     <li class="menu-item" data-size="60">
-                                        <a href="{{ route('sd') }}">Madrasah Salafiyah Ula Setara SD</a>
+                                        <a href="{{ route('daftar-sd') }}">Madrasah Salafiyah Ula Setara SD</a>
                                     </li>
                                     <li class="menu-item" data-size="60">
-                                        <a href="{{ route('smp') }}">Madrasah Salafiyah Wustha Setara SMP</a>
+                                        <a href="{{ route('daftar-smp') }}">Madrasah Salafiyah Wustha Setara SMP</a>
                                     </li>
                                     <li class="menu-item" data-size="60">
-                                        <a href="{{ route('sma') }}">Madrasah Salafiyah Ulya Setara SMA</a>
+                                        <a href="{{ route('daftar-sma') }}">Madrasah Salafiyah Ulya Setara SMA</a>
                                     </li>
                                 </ul>
                             </li>
