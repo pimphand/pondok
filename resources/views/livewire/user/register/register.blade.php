@@ -35,11 +35,11 @@
                                             </option>
                                             <option value="Perempuan">Perempuan</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('gender')
+                                        <div class="text-danger">
+                                            @error('gender')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -51,11 +51,11 @@
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('country')
+                                        <div class="text-danger">
+                                            @error('country')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -129,11 +129,11 @@
                                             </option>
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('status_student_family')
+                                        <div class="text-danger">
+                                            @error('status_student_family')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -164,11 +164,11 @@
                                             <option value="Bibik">Bibik</option>
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('status_head_family')
+                                        <div class="text-danger">
+                                            @error('status_head_family')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -242,11 +242,11 @@
                                             </option>
                                             <option value="Kost">Kost</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('place_address')
+                                        <div class="text-danger">
+                                            @error('place_address')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -383,12 +383,23 @@
                                         Sekolah Asal Siswa Pindahan</label>
                                     <input wire:model.lazy="school_from" type="text" class="form-control"
                                         placeholder="Masukkan Nama Sekolah Asal Siswa Pindahan">
+                                    <div class="text-danger">
+                                        @error('school_from')
+                                            {{$message}}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label">Alamat
                                         Sekolah Asal Siswa Pindahan</label>
                                     <input wire:model.lazy="school_address" type="text" class="form-control"
                                         placeholder="Masukkan Alamat Sekolah Asal Siswa Pindahan">
+                                    <div class="text-danger">
+                                        @error('school_address')
+                                            {{$message}}
+                                        @enderror
+                                    </div>
+                                </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Masuk di
                                         Kelas</label>
@@ -402,6 +413,11 @@
                                             <option value="Kelas 5">Kelas 5</option>
                                             <option value="Kelas 6">Kelas 6</option>
                                         </select>
+                                        <div class="text-danger">
+                                            @error('semester_move')
+                                            {{$message}}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -439,11 +455,11 @@
                                             <option value="Lamban">Lamban</option>
                                             <option value="Sulit">Sulit</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('s_study_problem')
+                                        <div class="text-danger">
+                                            @error('s_study_problem')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -476,7 +492,7 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label">Nomor
                                         Kontak Orang Tua</label>
-                                    <input wire:model.lazy="p_phone" type="text" class="form-control" required
+                                    <input wire:model.lazy="p_phone" type="number" class="form-control" required
                                         placeholder="Masukkan Nomor Kontak Orang Tua">
                                     <div class="text-danger">
                                         @error('p_phone')
@@ -519,11 +535,11 @@
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('f_country')
+                                        <div class="text-danger">
+                                            @error('f_country')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -577,11 +593,11 @@
                                             <option value="S2">S2</option>
                                             <option value="S3">S3</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('f_education')
+                                        <div class="text-danger">
+                                            @error('f_education')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -620,11 +636,11 @@
                                                 Buruh (Tani/Pabrik/Bangunan)</option>
                                             <option value="Pensiunan">Pensiunan</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('f_work')
+                                        <div class="text-danger">
+                                            @error('f_work')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -646,11 +662,11 @@
                                             <option value="7">>Rp.5.000.000
                                             </option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('f_income')
+                                        <div class="text-danger">
+                                            @error('f_income')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <h5 class="mt-3 text-center">Ibu</h5>
@@ -674,11 +690,11 @@
                                             <option value="WNI">WNI</option>
                                             <option value="WNA">WNA</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('m_country')
+                                        <div class="text-danger">
+                                            @error('m_country')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -732,11 +748,11 @@
                                             <option value="S2">S2</option>
                                             <option value="S3">S3</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('m_education')
+                                        <div class="text-danger">
+                                            @error('m_education')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -778,11 +794,11 @@
                                                 Buruh (Tani/Pabrik/Bangunan)</option>
                                             <option value="Pensiunan">Pensiunan</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('m_work')
+                                        <div class="text-danger">
+                                            @error('m_work')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -805,11 +821,11 @@
                                             <option value="7">>Rp.5.000.000
                                             </option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('m_income')
+                                        <div class="text-danger">
+                                            @error('m_income')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -890,11 +906,11 @@
                                             <option value="S2">S2</option>
                                             <option value="S3">S3</option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('c_education')
+                                        <div class="text-danger">
+                                            @error('c_education')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
@@ -911,7 +927,7 @@
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label">Rata -
                                         Rata Penghasilan Perbulan Wali</label>
-                                    <input wire:model.lazy="c_income" type="text" class="form-control"
+                                    <input wire:model.lazy="c_income" type="number" class="form-control"
                                         placeholder="Masukkan Rata - Rata Penghasilan Perbulan Wali">
                                     <div class="text-danger">
                                         @error('c_income')
@@ -941,11 +957,11 @@
                                             <option value="120000">Rp.120.000
                                             </option>
                                         </select>
-                                    </div>
-                                    <div class="text-danger">
-                                        @error('spp')
+                                        <div class="text-danger">
+                                            @error('spp')
                                             {{$message}}
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
