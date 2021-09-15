@@ -105,6 +105,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
         // Route::get('/sma', [RegisterController::class, 'rederect'])->name('rederect');
         Route::get('/daftar-detail/{id}', [RegisterController::class, 'show'])->name('detail');
         Route::get('/daftar-edit/{id}', [RegisterController::class, 'edit'])->name('edit');
+        Route::post('/daftar-update/{id}', [RegisterController::class, 'update'])->name('update');
         Route::delete('/daftar-hapus/{id}', [RegisterController::class, 'destroy'])->name('daftar');
     });
 

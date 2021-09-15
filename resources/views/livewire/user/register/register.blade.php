@@ -192,7 +192,6 @@
                                             {{$message}}
                                         @enderror
                                     </div>
-
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="form-label">Kecamatan

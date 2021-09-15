@@ -5,6 +5,7 @@ namespace App\Http\Livewire\User\Register;
 use App\Models\ReffRegister\Custodian;
 use App\Models\ReffRegister\Father;
 use App\Models\ReffRegister\Mother;
+use App\Models\ReffRegister\PreviousLevel;
 use App\Models\ReffRegister\ReffParent;
 use App\Models\ReffRegister\SpecialNeed;
 use App\Models\Register as ModelsRegister;
@@ -181,6 +182,7 @@ class Register extends Component
         ]);
 
         SpecialNeed::create([
+            "id" => $register->id,
             "register_id" => $register->id,
             "special_needs" => $this->s_special_needs,
             "disease" => $this->s_disease,
@@ -189,6 +191,7 @@ class Register extends Component
         ]);
 
         $parent = ReffParent::create([
+            "id" => $register->id,
             "register_id" => $register->id,
             "address" => $this->p_address,
             "phone" => $this->p_phone,
@@ -196,6 +199,7 @@ class Register extends Component
         ]);
 
         Father::create([
+            "id" => $register->id,
             "reff_parent_id" => $parent->id,
             "name" => $this->f_name,
             "country" => $this->f_country,
@@ -208,6 +212,7 @@ class Register extends Component
         ]);
 
         Mother::create([
+            "id" => $register->id,
             "reff_parent_id" => $parent->id,
             "name" => $this->m_name,
             "country" => $this->m_country,
@@ -220,6 +225,7 @@ class Register extends Component
         ]);
 
         Custodian::create([
+            "id" => $register->id,
             "register_id" => $register->id,
             "name" => $this->c_name,
             "nik" => $this->c_nik,
@@ -231,6 +237,17 @@ class Register extends Component
             "income" => $this->c_income,
         ]);
 
+        PreviousLevel::create([
+            "id" => $register->id,
+            "register_id" => $register->id,
+            "name" => $this->j_name,
+            "nisn" => $this->j_nisn,
+            "year_graduation" => $this->j_year_graduation,
+            "npsn" => $this->j_npsn,
+            "address" => $this->j_address,
+        ]);
+
+        return redirect(route('home'));
     }
 
     public function render()

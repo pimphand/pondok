@@ -19,26 +19,26 @@
                         <h4 class="card-title">{{$title}} {{$data->education}}</h4>
                         <div class="float-end">
                             <div>
-                                @if ($data->education == "RA")
+                                @if ($data->education == "ra")
                                 <a href="{{ route('ra.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
                                         class="fas fa-undo"> Back</i></a>
                                 @endif
-                                @if ($data->education == "SD")
+                                @if ($data->education == "sd")
                                 <a href="{{ route('sd.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
                                         class="fas fa-undo"> Back</i></a>
                                 @endif
-                                @if ($data->education == "SMP")
+                                @if ($data->education == "smp")
                                 <a href="{{ route('smp.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
                                         class="fas fa-undo"> Back</i></a>
                                 @endif
-                                @if ($data->education == "SMA")
+                                @if ($data->education == "sma")
                                 <a href="{{ route('sma.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
                                         class="fas fa-undo"> Back</i></a>
                                 @endif
                             </div>
                         </div>
                         <br><br>
-                        <h5 class="text-center">Biodata Calon Siswa</h5>
+                        <h5 class="text-center" style="color: red">Biodata Calon Siswa</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Nama Lengkap</label>
                             <div class="col-sm-10">
@@ -95,9 +95,8 @@
                             <label for="example-date-input" class="col-sm-2 col-form-label">Status Siswa
                                 Dalam Keluarga</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{$data->status_family}}" class="form-control" readonly>
-                                </div>
+                                <input value="{{$data->status_family}}" class="form-control" readonly>
+
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -111,9 +110,7 @@
                             <label for="example-week-input" class="col-sm-2 col-form-label">Status Kepala
                                 Keluarga dalam KK</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{$data->status_head_family}}" class="form-control" readonly>
-                                </div>
+                                <input value="{{$data->status_head_family}}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -201,28 +198,26 @@
                                 <input value="{{$data->goals}}" class="form-control" readonly>
                             </div>
                         </div>
-                        <h5 class="text-center " style="color: red">Jenjang Pendidikan Sebelumnya</h5>
+                        <h5 class="text-center" style="color: red">Jenjang Pendidikan Sebelumnya</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                 Lengkap Jenjang Pendidikan Sebelumnya</label>
                             <div class="col-sm-10">
-                                <input value="" class="form-control" readonly>
+                                <input value="{{$data->previous->name}}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Tahun
                                 Lulus</label>
                             <div class="col-sm-10">
-                                <input type="number" name="facebook" class="form-control" id="useremail" required
-                                    placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->previous->year_graduation}}" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nomor
                                 Induk Siswa Nasional (NISN)</label>
                             <div class="col-sm-10">
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
-                                    placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->previous->nisn}}" readonly>
                             </div>
                         </div>
 
@@ -231,19 +226,18 @@
                                 Pokok Sekolah Nasional (NPSN) Jenjang Pendidikan
                                 Sebelumnya</label>
                             <div class="col-sm-10">
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
-                                    placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->previous->npsn}}" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                                 Jenjang Pendidikan Sebelumnya</label>
                             <div class="col-sm-10">
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
-                                    placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->previous->address}}" readonly>
                             </div>
                         </div>
-                        <h5 class="text-center">Riwayat Kebutuhan Khusus Siswa</h5>
+                        @if (!$data->need == null)
+                        <h5 class="text-center" style="color: red">Riwayat Kebutuhan Khusus Siswa</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Kelainan
                                 Jasmani/Cacat Tubuh</label>
@@ -272,41 +266,33 @@
                                 <input value="{{$data->need->talent}}" class="form-control" readonly>
                             </div>
                         </div>
+                        @endif
 
+                        @if (!$data->semester_move == null)
                         <h5 class="mt-4 text-center" style="color: red">Khusus Siswa Pindahan</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                 Sekolah Asal Siswa Pindahan</label>
                             <div class="col-sm-10">
-                                <input name="school_from" type="text" required name="facebook" class="form-control"
-                                    id="useremail" required placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->school_from}}" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                                 Sekolah Asal Siswa Pindahan</label>
                             <div class="col-sm-10">
-                                <input name="school_address" type="text" required name="facebook" class="form-control"
-                                    id="useremail" required placeholder="Enter Facebook">
+                                <input class="form-control" value="{{$data->school_address}}" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Masuk di
                                 Kelas</label>
-                            <div class="col-sm-10">
-                                <select name="semester_move" required class="form-select"
-                                    aria-label="Default select example">
-                                    <option selected>--Pilih--</option>
-                                    <option value="Kelas 1">Kelas 1</option>
-                                    <option value="Kelas 2">Kelas 2</option>
-                                    <option value="Kelas 3">Kelas 3</option>
-                                    <option value="Kelas 4">Kelas 4</option>
-                                    <option value="Kelas 5">Kelas 5</option>
-                                    <option value="Kelas 6">Kelas 6</option>
-                                </select>
-                            </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control" value="{{$data->semester_move}}" readonly>
+                                </div>
                         </div>
-                        <h5 class="text-center">Data Orang Tua Siswa</h5>
+                        @endif
+                        <h5 class="text-center" style="color: red">Data Orang Tua Siswa</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                 Lengkap Ayah Kandung</label>
@@ -405,9 +391,7 @@
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                                 Terakhir Ayah</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->parent->father->education }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->parent->father->education }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -421,42 +405,35 @@
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                                 Ayah</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->parent->father->work }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->parent->father->work }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
                                 Ibu</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->parent->mother->work }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->parent->mother->work }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                                 Ayah</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->parent->father->income }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->parent->father->income }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Penghasilan
                                 Ibu</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->parent->father->income }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->parent->father->income }}" class="form-control" readonly>
                             </div>
                         </div>
 
                         {{-- selesai orang tua --}}
 
-                        <h5 class="text-center">Identitas Wali Siswa</h5>
+                        @if (!$data->custodian == null)
+                        <h5 class="text-center" style="color: red">Identitas Wali Siswa</h5>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Nama
                                 Lengkap Wali</label>
@@ -470,27 +447,21 @@
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">NIK
                                 Wali</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->custodian->nik }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->custodian->nik }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Hubungan
                                 Siswa Sebagai</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->custodian->homeroom }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->custodian->homeroom }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Alamat
                                 Tempat Tinggal Wali</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->custodian->address }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->custodian->address }}" class="form-control" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -498,18 +469,16 @@
                                 Kontak Wali (Telp. Rumah/HP)</label>
                             <div class="col-sm-10">
                                 <div class="col-sm-10">
-                                    <input value="{{ $data->custodians->phone }}" class="form-control" readonly>
+                                    <input value="{{ $data->custodian->phone }}" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pendidikan
                                 Terakhir Wali</label>
-                            <div class="col-sm-10">
                                 <div class="col-sm-10">
                                     <input value="{{ $data->custodian->education }}" class="form-control" readonly>
                                 </div>
-                            </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Pekerjaan
@@ -524,11 +493,10 @@
                             <label for="example-text-input-sm" class="col-sm-2 col-form-label">Rata -
                                 Rata Penghasilan Perbulan Wali</label>
                             <div class="col-sm-10">
-                                <div class="col-sm-10">
-                                    <input value="{{ $data->custodian->income }}" class="form-control" readonly>
-                                </div>
+                                <input value="{{ $data->custodian->income }}" class="form-control" readonly>
                             </div>
                         </div>
+                        @endif
                         {{-- selesai wali --}}
 
                         <h5 class="text-center" style="color: red">Pernyataan orang Tua</h5>
@@ -540,8 +508,8 @@
                                 yang In syaa Allah menjadi amal jariyah, maka
                                 dipilih nominal SPP </label>
                             <div class="col-sm-12">
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
-                                    placeholder="{{ $data->spp }}" readonly>
+                                <input class="form-control"
+                                    value="{{ $data->spp }}" readonly>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -553,8 +521,8 @@
                                 sekolah"</label>
                             <div class="col-sm-12">
 
-                                <input type="text" required name="facebook" class="form-control" id="useremail"
-                                    placeholder="{{ $data->statement }}" readonly>
+                                <input class="form-control"
+                                    value="{{ $data->statement }}" readonly>
                             </div>
                         </div>
                     </div>

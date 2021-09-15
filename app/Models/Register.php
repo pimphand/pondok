@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\ReffRegister\Custodian;
 use App\Models\ReffRegister\Father;
+use App\Models\ReffRegister\PreviousLevel;
 use App\Models\ReffRegister\ReffParent;
 use App\Models\ReffRegister\SpecialNeed;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -59,6 +60,11 @@ class Register extends Model
     public function custodian()
     {
         return $this->hasOne(Custodian::class);
+    }
+
+    public function previous()
+    {
+        return $this->hasOne(PreviousLevel::class);
     }
 
 }

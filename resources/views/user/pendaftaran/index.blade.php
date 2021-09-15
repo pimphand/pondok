@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<a href="https://api.whatsapp.com/send?phone=+6287797043975&text=Assalamualaikum Warahmatullahi Wabarakatuh"
+<a href="https://api.whatsapp.com/send?phone=+6287797043975&text=Assalamualaikum%0Warahmatullahi%0Wabarakatuh"
     class="whatsapp" target="_blank">
     <i class="fa fa-whatsapp my-whatsapp"></i>
 </a>
