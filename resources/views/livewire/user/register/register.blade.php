@@ -21,7 +21,7 @@
                                         placeholder="Masukkan Nama Lengkap Siswa">
                                     <div class="text-danger">
                                         @error('fullname')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                         placeholder="Masukkan Tempat Lahir">
                                     <div class="text-danger">
                                         @error('place_birth')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                         placeholder="Masukkan Masukan Tanggal lahir">
                                     <div class="text-danger">
                                         @error('date_birth')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@
                                         placeholder="Masukkan Anak Ke">
                                     <div class="text-danger">
                                         @error('child_to')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                         placeholder="Masukkan Berapa Saudara">
                                     <div class="text-danger">
                                         @error('child_from')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                                         placeholder="Masukkan Nomor Induk Kependudukan (NIK) Siswa">
                                     <div class="text-danger">
                                         @error('nik')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                         placeholder="Masukkan Nomor Kartu Keluarga (KK)">
                                     <div class="text-danger">
                                         @error('nik_kk')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
                                         placeholder="Masukkan Alamat Sesuai KK">
                                     <div class="text-danger">
                                         @error('address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                                         placeholder="Masukkan Kelurahan Sesuai KK">
                                     <div class="text-danger">
                                         @error('Ward')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@
                                         placeholder="Masukkan Kecamatan Sesuai KK">
                                     <div class="text-danger">
                                         @error('district')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -210,7 +210,7 @@
                                         placeholder="Masukkan Kota/Kabupaten Sesuai KK">
                                     <div class="text-danger">
                                         @error('city')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@
                                         placeholder="Masukkan Provinsi Sesuai KK">
                                     <div class="text-danger">
                                         @error('province')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@
                                         placeholder="Masukkan Alamat Tempat Tinggal Siswa">
                                     <div class="text-danger">
                                         @error('student_address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -267,7 +267,7 @@
                                         placeholder="Masukkan Nomor Kontak Tempat Tinggal Siswa (Telp.Rumah/Hp)">
                                     <div class="text-danger">
                                         @error('phone')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -275,10 +275,11 @@
                                     <label class="form-label">Perkiraan
                                         Jarak Tempat Tinggal Siswa (Km)</label>
                                     <input wire:model.lazy="distance_to_school" type="text" required
-                                        class="form-control" placeholder="Masukkan Perkiraan Jarak Tempat Tinggal Siswa (Km)">
+                                        class="form-control"
+                                        placeholder="Masukkan Perkiraan Jarak Tempat Tinggal Siswa (Km)">
                                     <div class="text-danger">
                                         @error('distance_to_school')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -289,7 +290,7 @@
                                         placeholder="Masukkan Kendaraan Siswa Menuju Sekolah">
                                     <div class="text-danger">
                                         @error('vehicle')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -299,7 +300,7 @@
                                         placeholder="Masukkan Hobi">
                                     <div class="text-danger">
                                         @error('hobby')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -310,7 +311,7 @@
                                         placeholder="Masukkan Cita - Cita">
                                     <div class="text-danger">
                                         @error('goals')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -324,7 +325,7 @@
                                         placeholder="Masukkan Nama Lengkap Jenjang Pendidikan Sebelumnya">
                                     <div class="text-danger">
                                         @error('j_name')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -335,7 +336,7 @@
                                         required placeholder="Masukkan Tahun Lulus">
                                     <div class="text-danger">
                                         @error('j_year_graduation')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -346,7 +347,7 @@
                                         placeholder="Masukkan Nomor Induk Siswa Nasional (NISN)">
                                     <div class="text-danger">
                                         @error('j_nisn')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -358,7 +359,7 @@
                                         placeholder="Masukkan Nomor Pokok Sekolah Nasional (NPSN) Jenjang Pendidikan Sebelumnya">
                                     <div class="text-danger">
                                         @error('j_npsn')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -369,7 +370,7 @@
                                         placeholder="Masukkan Alamat Jenjang Pendidikan Sebelumnya">
                                     <div class="text-danger">
                                         @error('j_address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -384,7 +385,7 @@
                                         placeholder="Masukkan Nama Sekolah Asal Siswa Pindahan">
                                     <div class="text-danger">
                                         @error('school_from')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -395,7 +396,7 @@
                                         placeholder="Masukkan Alamat Sekolah Asal Siswa Pindahan">
                                     <div class="text-danger">
                                         @error('school_address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -429,7 +430,7 @@
                                         placeholder="Masukkan Kelainan Jasmani/Cacat Tubuh">
                                     <div class="text-danger">
                                         @error('s_special_needs')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -438,11 +439,11 @@
                                         Kronis yang di Derita</label>
                                     <input type="text" wire:model.lazy="s_disease" class="form-control"
                                         placeholder="Masukkan Penyakit Kronis yang di Derita">
-                                        <div class="text-danger">
-                                            @error('s_disease')
-                                                {{$message}}
-                                            @enderror
-                                        </div>
+                                    <div class="text-danger">
+                                        @error('s_disease')
+                                        {{$message}}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="mb-3 col-sm-6">
                                     <label class="col-sm-6 col-form-label">Permasalahan
@@ -468,7 +469,7 @@
                                         placeholder="Masukkan Bakat Luar Biasa">
                                     <div class="text-danger">
                                         @error('s_talent')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -484,7 +485,7 @@
                                         placeholder="Masukkan Nomor KPS/KKS/PKH (jika ada)">
                                     <div class="text-danger">
                                         @error('p_address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -495,7 +496,7 @@
                                         placeholder="Masukkan Nomor Kontak Orang Tua">
                                     <div class="text-danger">
                                         @error('p_phone')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -506,7 +507,7 @@
                                         placeholder="Masukkan Alamat Lengkap Orang Tua">
                                     <div class="text-danger">
                                         @error('p_kps_no')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -520,7 +521,7 @@
                                         placeholder="Masukkan Nama Lengkap Ayah Kandung">
                                     <div class="text-danger">
                                         @error('f_name')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -548,7 +549,7 @@
                                         placeholder="Masukkan Tempat Lahir Ayah Kandung">
                                     <div class="text-danger">
                                         @error('f_birth_place')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -559,7 +560,7 @@
                                         placeholder="Masukkan Tanggal Lahir Ayah Kandung">
                                     <div class="text-danger">
                                         @error('f_birth_date')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -570,7 +571,7 @@
                                         placeholder="Masukkan NIK Ayah Kandung">
                                     <div class="text-danger">
                                         @error('f_nik')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -676,7 +677,7 @@
                                         placeholder="Masukkan Nama Lengkap Ibu Kandung">
                                     <div class="text-danger">
                                         @error('m_name')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -703,7 +704,7 @@
                                         placeholder="Masukkan Tempat Lahir Ibu Kandung">
                                     <div class="text-danger">
                                         @error('m_birth_place')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -714,7 +715,7 @@
                                         placeholder="Masukkan Tanggal Lahir Ibu Kandung">
                                     <div class="text-danger">
                                         @error('m_birth_date')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -725,7 +726,7 @@
                                         placeholder="Masukkan NIK Ibu Kandung">
                                     <div class="text-danger">
                                         @error('m_nik')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -840,7 +841,7 @@
                                         placeholder="Masukkan Nama Lengkap Wali">
                                     <div class="text-danger">
                                         @error('c_name')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -851,7 +852,7 @@
                                         placeholder="Masukkan NIK Wali">
                                     <div class="text-danger">
                                         @error('c_nik')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -862,7 +863,7 @@
                                         placeholder="Masukkan Hubungan Siswa Sebagai">
                                     <div class="text-danger">
                                         @error('c_homeroom')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -873,7 +874,7 @@
                                         placeholder="Masukkan Alamat Tempat Tinggal Wali">
                                     <div class="text-danger">
                                         @error('c_address')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -883,7 +884,7 @@
                                         placeholder="Masukkan Nomor Kontak Wali (Telp. Rumah/HP)">
                                     <div class="text-danger">
                                         @error('c_phone')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -919,7 +920,7 @@
                                         placeholder="Masukkan Pekerjaan Wali">
                                     <div class="text-danger">
                                         @error('c_work')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -930,7 +931,7 @@
                                         placeholder="Masukkan Rata - Rata Penghasilan Perbulan Wali">
                                     <div class="text-danger">
                                         @error('c_income')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>
@@ -974,7 +975,7 @@
                                     </textarea>
                                     <div class="text-danger">
                                         @error('statement')
-                                            {{$message}}
+                                        {{$message}}
                                         @enderror
                                     </div>
                                 </div>

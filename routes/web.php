@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\VisionMisionController;
 use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfilController;
-use App\Http\Controllers\Admin\FacilityController;
+use App\Http\Controllers\DashboardController as tst;
 use App\Http\Controllers\Admin\CalendarAcademicController;
 use App\Http\Controllers\Admin\Hostel\GalleryController;
 use App\Http\Controllers\Admin\PendaftaranController;
@@ -43,7 +43,7 @@ Route::get('/asrama-putra', [FrontendController::class, "male"])->name('male');
 Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
-Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
+Route::get('/{id}/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
 Route::get('/guru', [FrontendController::class, "guru"])->name('guru');
 Route::get('/kalender-akademik', [FrontendController::class, "kalender"])->name('kalender');
 Route::get('/kegiatan-putri', [FrontendController::class, "kegiatanputri"])->name('kegiatanputri');
@@ -63,7 +63,8 @@ Route::get('/test', function () {
 
 // Auth::routes(['register' => false]);
 
-Route::post('/test', [BuildingController::class, 'store'])->name('test');
+Route::post('/test', [tst::class, 'simpan'])->name('test');
+// Route::post('/test', [BuildingController::class, 'store'])->name('test');
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');

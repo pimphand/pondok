@@ -9,6 +9,7 @@ use App\Models\ReffRegister\PreviousLevel;
 use App\Models\ReffRegister\ReffParent;
 use App\Models\ReffRegister\SpecialNeed;
 use App\Models\Register as ModelsRegister;
+use App\Models\Tingkatan;
 use Illuminate\Http\Request;
 use Livewire\Component;
 
@@ -30,7 +31,7 @@ class Register extends Component
     ];
 
     // Register
-    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,
+    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,$education,
     $date_birth,$child_to,$child_from,$status_student_family, $status_head_family,$country,
     $province,$city,$district,$Ward,$address,$place_address,
     $student_address,$phone,$distance_to_school,$vehicle,$hobby,
@@ -150,7 +151,7 @@ class Register extends Component
 
        $register=  ModelsRegister::create([
             "nik" => $this->nik,
-            "education" => "smp",
+            "education" => $this->education,
             "nik_kk" => $this->nik_kk,
             "fullname" => $this->fullname,
             "gender" => $this->gender,

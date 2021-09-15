@@ -18,6 +18,7 @@ use Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response as HttpResponse;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Response as FacadesResponse;
 
 class FrontendController extends Controller
@@ -120,10 +121,13 @@ class FrontendController extends Controller
         ]);
     }
 
-    public function pendaftaran()
+    public function pendaftaran($id)
     {
+        $decrypted = Crypt::decryptString($id);
+        $p = Pendaftaran::find($decrypted);
         return view('user.pendaftaran.daftar',[
-            "title" => "Form Pendfaftaran"
+            "title" => "Form Pendfaftaran",
+            "p" => $p
         ]);
     }
 
@@ -213,7 +217,7 @@ class FrontendController extends Controller
         {
             $pass = Tingkatan::where('password',$pas)->first();
             if(!$pass == null){
-                return redirect(route('pendaftaran'));
+                return redirect(route('pendaftaran',Crypt::encryptString($pass->id)));
             }
             return back()->withMessages('passowd salah');
         }
