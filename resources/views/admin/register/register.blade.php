@@ -41,7 +41,13 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Tabel Pendaftar {{ $edu }}</h4><br>
+                        <h4 class="card-title">Tabel Pendaftar {{ $edu }}</h4>
+                        <div class="float-end">
+                            <a href="{{ route('register.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
+                                class="fas fa-undo"> Kembali</i></a>
+                        </div>
+                            <br><br>
+                            <br>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 

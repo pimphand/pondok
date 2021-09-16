@@ -33,8 +33,16 @@ use App\Models\Gallery;
 */
 
 Route::get('/', [FrontendController::class, "home"])->name('home');
+
 Route::get('/pass', [FrontendController::class, "pass"])->name('pass');
 Route::get('/passs', [FrontendController::class, "enter"])->name('enter');
+Route::get('/passd', [FrontendController::class, "passsd"])->name('passsd');
+Route::get('/passsd', [FrontendController::class, "entersd"])->name('entersd');
+Route::get('/passmp', [FrontendController::class, "passsmp"])->name('passsmp');
+Route::get('/passssmp', [FrontendController::class, "entersmp"])->name('entersmp');
+Route::get('/passma', [FrontendController::class, "passsma"])->name('passsma');
+Route::get('/passsma', [FrontendController::class, "entersma"])->name('entersma');
+
 Route::get('/profil',[FrontendController::class, "profil"])->name('profil');
 Route::get('/kontak', [FrontendController::class, "contact"])->name('contact');
 Route::get('/visi-dan-misi', [FrontendController::class, "visionmission"])->name('visionmission');
@@ -44,6 +52,12 @@ Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
 Route::get('/{id}/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
+//Error
+// Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
+Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransd"])->name('pendaftaransd');
+Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransmp"])->name('pendaftaransmp');
+Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransma"])->name('pendaftaransma');
+
 Route::get('/guru', [FrontendController::class, "guru"])->name('guru');
 Route::get('/kalender-akademik', [FrontendController::class, "kalender"])->name('kalender');
 Route::get('/kegiatan-putri', [FrontendController::class, "kegiatanputri"])->name('kegiatanputri');

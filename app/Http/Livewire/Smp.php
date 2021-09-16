@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\User\Register;
+namespace App\Http\Livewire;
 
 use App\Models\ReffRegister\Custodian;
 use App\Models\ReffRegister\Father;
@@ -9,12 +9,12 @@ use App\Models\ReffRegister\PreviousLevel;
 use App\Models\ReffRegister\ReffParent;
 use App\Models\ReffRegister\SpecialNeed;
 use App\Models\Register as ModelsRegister;
-use App\Models\Tingkatan;
-use Illuminate\Http\Request;
+
 use Livewire\Component;
 
-class Register extends Component
+class Smp extends Component
 {
+
     public $currentPage = 1;
     public $success;
     public $special = false, $move = false;
@@ -31,11 +31,11 @@ class Register extends Component
     ];
 
     // Register
-    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,$education,
+    public $nik,$nik_kk,$fullname,$slug,$gender,$place_birth,
     $date_birth,$child_to,$child_from,$status_student_family, $status_head_family,$country,
     $province,$city,$district,$Ward,$address,$place_address,
     $student_address,$phone,$distance_to_school,$vehicle,$hobby,
-    $spp,$statement,$goals,$school_from,$school_address,$semester_move,$educationra;
+    $spp,$statement,$goals,$school_from,$school_address,$semester_move,$educationsmp;
 
     // Parent
     public $p_address,$p_phone,$p_kps_no;
@@ -87,7 +87,7 @@ class Register extends Component
 
     public function mount()
     {
-        $this->educationra = 'ra';
+        $this->educationsmp = 'smp';
     }
 
     protected $rules = [
@@ -156,7 +156,7 @@ class Register extends Component
 
         $register=  ModelsRegister::create([
             "nik" => $this->nik,
-            "education" => $this->educationra,
+            "education" => $this->educationsmp,
             "nik_kk" => $this->nik_kk,
             "fullname" => $this->fullname,
             "gender" => $this->gender,
@@ -256,8 +256,9 @@ class Register extends Component
         return redirect(route('home'));
     }
 
+
     public function render()
     {
-        return view('livewire.user.register.register');
+        return view('livewire.smp');
     }
 }

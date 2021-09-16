@@ -21,19 +21,19 @@
                             <div>
                                 @if ($data->education == "ra")
                                 <a href="{{ route('ra.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
-                                        class="fas fa-undo"> Back</i></a>
+                                        class="fas fa-undo"> Kembali</i></a>
                                 @endif
                                 @if ($data->education == "sd")
                                 <a href="{{ route('sd.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
-                                        class="fas fa-undo"> Back</i></a>
+                                        class="fas fa-undo"> Kembali</i></a>
                                 @endif
                                 @if ($data->education == "smp")
                                 <a href="{{ route('smp.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
-                                        class="fas fa-undo"> Back</i></a>
+                                        class="fas fa-undo"> Kembali</i></a>
                                 @endif
                                 @if ($data->education == "sma")
                                 <a href="{{ route('sma.index') }}" class="btn btn-dark waves-effect waves-light me-1"><i
-                                        class="fas fa-undo"> Back</i></a>
+                                        class="fas fa-undo"> Kembali</i></a>
                                 @endif
                             </div>
                         </div>

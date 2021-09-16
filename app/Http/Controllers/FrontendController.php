@@ -126,10 +126,32 @@ class FrontendController extends Controller
         $decrypted = Crypt::decryptString($id);
         $p = Pendaftaran::find($decrypted);
         return view('user.pendaftaran.daftar',[
-            "title" => "Form Pendfaftaran",
+            "title" => "Form Pendfaftaran RA",
             "p" => $p
         ]);
     }
+
+    public function pendaftaransd()
+    {
+        return view('user.pendaftaran.sd.sd',[
+            "title" => "Form Pendfaftaran SD"
+        ]);
+    }
+
+    public function pendaftaransmp()
+    {
+        return view('user.pendaftaran.smp.smp',[
+            "title" => "Form Pendfaftaran SMP"
+        ]);
+    }
+
+    public function pendaftaransma()
+    {
+        return view('user.pendaftaran.sma.sma',[
+            "title" => "Form Pendfaftaran SMA"
+        ]);
+    }
+
 
     public function guru()
     {
@@ -177,7 +199,7 @@ class FrontendController extends Controller
     public function sd()
     {
         $pendaftar = Pendaftaran::where('tingkatan_id', 2)->first();
-        return view('user.pendaftaran.index',[
+        return view('user.pendaftaran.sd.index',[
             "title"     => "Pendaftaran Madrasah Salafiyah Ula Setara SD",
             "data"      => $pendaftar
         ]);
@@ -186,7 +208,7 @@ class FrontendController extends Controller
     public function smp()
     {
         $pendaftar = Pendaftaran::where('tingkatan_id', 3)->first();
-        return view('user.pendaftaran.index',[
+        return view('user.pendaftaran.smp.index',[
             "title"=> "Pendaftaran Madrasah Salafiyah Wustha Setara SMP",
             "data" => $pendaftar
         ]);
@@ -195,7 +217,7 @@ class FrontendController extends Controller
     public function sma()
     {
         $pendaftar = Pendaftaran::where('tingkatan_id', 4)->first();
-        return view('user.pendaftaran.index',[
+        return view('user.pendaftaran.sma.index',[
             "title"=> "Pendaftaran Madrasah Salafiyah Ulya Setara SMA",
             "data" => $pendaftar
         ]);
@@ -223,5 +245,71 @@ class FrontendController extends Controller
         }
     }
 
-    
+    public function passsd()
+    {
+        return view('user.sd');
+    }
+
+    public function entersd(Request $request)
+    {
+        $pas = $request->password;
+        if($pas == null)
+        {
+            return back()->withMessages('password tidak boleh kosong');
+        }
+        if($pas)
+        {
+            $pass = Tingkatan::where('password',$pas)->first();
+            if(!$pass == null){
+                return redirect(route('pendaftaransd'));
+            }
+            return back()->withMessages('passowd salah');
+        }
+    }
+
+    public function passsmp()
+    {
+        return view('user.smp');
+    }
+
+    public function entersmp(Request $request)
+    {
+        $pas = $request->password;
+        if($pas == null)
+        {
+            return back()->withMessages('password tidak boleh kosong');
+        }
+        if($pas)
+        {
+            $pass = Tingkatan::where('password',$pas)->first();
+            if(!$pass == null){
+                return redirect(route('pendaftaransmp'));
+            }
+            return back()->withMessages('passowd salah');
+        }
+    }
+
+    public function passsma()
+    {
+        return view('user.sma');
+    }
+
+    public function entersma(Request $request)
+    {
+        $pas = $request->password;
+        if($pas == null)
+        {
+            return back()->withMessages('password tidak boleh kosong');
+        }
+        if($pas)
+        {
+            $pass = Tingkatan::where('password',$pas)->first();
+            if(!$pass == null){
+                return redirect(route('pendaftaransma'));
+            }
+            return back()->withMessages('passowd salah');
+        }
+    }
+
+
 }
