@@ -39,7 +39,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Tabel Aktifitas Pria</h4><br>
-                            <a href="/man/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                            <a href="/man/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal" data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Tambah Data</i></a>
                             <hr>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
@@ -106,7 +106,7 @@
                         <div class="mb-12">
                             <label class="form-label">Deskripai</label>
                             <div>
-                                <textarea type="text" id="elm3" name="description" class="form-control" placeholder="Masukkan deskripsi"></textarea>
+                                <textarea type="text" id="elm1" name="description" class="form-control" placeholder="Masukkan deskripsi"></textarea>
                                 <div class="text-danger">
                                     @error('description')
                                         {{$message}}

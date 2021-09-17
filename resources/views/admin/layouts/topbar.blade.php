@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="dropdown d-none d-md-block ms-2">
+            {{-- <div class="dropdown d-none d-md-block ms-2">
                 <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <img class="me-2" src="{{ asset('admin') }}/assets/images/flags/us_flag.jpg" alt="Header Language"
@@ -108,7 +108,7 @@
                             class="me-1" height="12"> <span class="align-middle"> Russian </span>
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="dropdown d-none d-lg-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">

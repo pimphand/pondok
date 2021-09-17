@@ -105,7 +105,7 @@
                         <div class="mb-12">
                             <label class="form-label">Deskripsi</label>
                             <div>
-                                <textarea type="text" id="elm3" name="description" class="form-control" placeholder="Masukkan Deskripsi"></textarea>
+                                <textarea type="text" id="elm1" name="description" class="form-control" placeholder="Masukkan Deskripsi"></textarea>
                                 <div class="text-danger">
                                     @error('description')
                                         {{$message}}
