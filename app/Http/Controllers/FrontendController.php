@@ -131,10 +131,13 @@ class FrontendController extends Controller
         ]);
     }
 
-    public function pendaftaransd()
+    public function pendaftaransd($id)
     {
+        $decrypted = Crypt::decryptString($id);
+        $p = Pendaftaran::find($decrypted);
         return view('user.pendaftaran.sd.sd',[
-            "title" => "Form Pendfaftaran SD"
+            "title" => "Form Pendfaftaran SD",
+            "p" => $p
         ]);
     }
 
@@ -237,7 +240,7 @@ class FrontendController extends Controller
         }
         if($pas)
         {
-            $pass = Tingkatan::where('password',$pas)->first();
+            $pass = Tingkatan::where("name",'Raudhathul Athfal')->where('password',$pas)->first();
             if(!$pass == null){
                 return redirect(route('pendaftaran',Crypt::encryptString($pass->id)));
             }
@@ -259,9 +262,9 @@ class FrontendController extends Controller
         }
         if($pas)
         {
-            $pass = Tingkatan::where('password',$pas)->first();
+            $pass = Tingkatan::where('name', "Madrasah Salafiyah Ula Setara SD")->where('password',$pas)->first();
             if(!$pass == null){
-                return redirect(route('pendaftaransd'));
+                return redirect(route('pendaftaransd',Crypt::encryptString($pass->id)));
             }
             return back()->withMessages('passowd salah');
         }
@@ -281,9 +284,9 @@ class FrontendController extends Controller
         }
         if($pas)
         {
-            $pass = Tingkatan::where('password',$pas)->first();
+            $pass = Tingkatan::where('name', "Madrasah salafiyah Wustha Setara SMP")->where('password',$pas)->first();
             if(!$pass == null){
-                return redirect(route('pendaftaransmp'));
+                return redirect(route('pendaftaransmp',Crypt::encryptString($pass->id)));
             }
             return back()->withMessages('passowd salah');
         }
@@ -303,9 +306,9 @@ class FrontendController extends Controller
         }
         if($pas)
         {
-            $pass = Tingkatan::where('password',$pas)->first();
+            $pass = Tingkatan::where('name', "Madrasah Salafiyah Ulya Setara SMA")->where('password',$pas)->first();
             if(!$pass == null){
-                return redirect(route('pendaftaransma'));
+                return redirect(route('pendaftaransma',Crypt::encryptString($pass->id)));
             }
             return back()->withMessages('passowd salah');
         }

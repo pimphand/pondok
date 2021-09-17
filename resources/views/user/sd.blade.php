@@ -58,8 +58,8 @@
                                                     </div>
                                                     @endif
                                                     <form action="{{ route('entersd') }}" method="get">
+                                                        @csrf
                                                         <div class="row">
-                                                            @csrf
                                                             <div class="mb-3">
                                                                 <input type="text" name="password" class="form-control"
                                                                     id="useremail" placeholder="Masukan Password">

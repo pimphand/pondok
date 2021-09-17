@@ -31,7 +31,8 @@
 
 </head>
 
-<body class="home page-template-default page page-id-6208 gdlr-core-body tribe-no-js kingster-body kingster-body-front kingster-full kingster-with-sticky-navigation kingster-sticky-navigation-no-logo kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
+<body
+    class="home page-template-default page page-id-6208 gdlr-core-body tribe-no-js kingster-body kingster-body-front kingster-full kingster-with-sticky-navigation kingster-sticky-navigation-no-logo kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
 
     @include('user.layouts.mobile')
 
@@ -189,6 +190,7 @@
         }
     </script>
 
+    @yield('js')
     @livewireScripts
 </body>
 
