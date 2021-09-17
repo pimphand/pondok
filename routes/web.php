@@ -52,8 +52,6 @@ Route::get('/video', [FrontendController::class, "video"])->name('video');
 Route::get('/photo', [FrontendController::class, "photo"])->name('photo');
 Route::get('/sejarah', [FrontendController::class, "sejarah"])->name('sejarah');
 Route::get('/{id}/M8EzhMUO6Opsi1ZCY0SEchp0SEchpkW22vkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
-//Error
-// Route::get('/M8EzhMUO6Opsi1ZCY0SEchpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaran"])->name('pendaftaran');
 Route::get('/{id}/M8EzhMUO6Opsi10SEchpkW22vZCY02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransd"])->name('pendaftaransd');
 Route::get('/{id}/M8EzhMUO6Opsi1ZCY0SEc0SEchpkW22vhpkW22v02202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransmp"])->name('pendaftaransmp');
 Route::get('/{id}/M8EzhMUO6Opsi1ZCY0SEchpkW22v020SEchpkW22v202201zb1zb1zbVYoc2201zbSEchpkEzhMUOWVYY0SEchocc2201', [FrontendController::class, "pendaftaransma"])->name('pendaftaransma');
