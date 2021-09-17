@@ -57,7 +57,7 @@
                                         <input type="file" name="logo" class="form-control" ata-parsley-maxlength="6"
                                             placeholder="Max 6 chars.">
                                         <br>
-                                        <img src="{{asset('storage/profil')}}/{{$data->logo}}" width="200">
+                                        <img src="{{asset('storage/profil')}}/{{$data->logo}}" width="100">
                                     </div>
                                 </div>
                             </div>

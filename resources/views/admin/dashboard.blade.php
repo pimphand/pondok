@@ -32,7 +32,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Pendaftaran Siswa</h6>
+                    <h6 class="page-title">Dashboard Profil Nashrus Sunnah</h6>
                 </div>
             </div>
         </div>
@@ -48,6 +48,15 @@
                             <h5 class="font-size-16 text-uppercase text-white-50">RA</h5>
                             <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['ra'] }}</h4>
                         </div>
+                        {{-- <div class="pt-2">
+                            <a href="{{ route('ra.index') }}" class="text-white-50">
+                                <div class="float-end">
+                                    <i class="mdi mdi-arrow-right h5"></i>
+                                </div>
+
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
+                            </a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -61,6 +70,15 @@
                             <h5 class="font-size-16 text-uppercase text-white-50">SD</h5>
                             <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['sd'] }}</h4>
                         </div>
+                        {{-- <div class="pt-2">
+                            <a href="{{ route('sd.index') }}" class="text-white-50">
+                                <div class="float-end">
+                                    <i class="mdi mdi-arrow-right h5"></i>
+                                </div>
+
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
+                            </a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -74,6 +92,15 @@
                             <h5 class="font-size-16 text-uppercase text-white-50">SMP</h5>
                             <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['smp'] }}</h4>
                         </div>
+                        {{-- <div class="pt-2">
+                            <a href="{{ route('smp.index') }}" class="text-white-50">
+                                <div class="float-end">
+                                    <i class="mdi mdi-arrow-right h5"></i>
+                                </div>
+
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
+                            </a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -87,6 +114,15 @@
                             <h5 class="font-size-16 text-uppercase text-white-50">SMA</h5>
                             <h4 class="fw-medium font-size-18">Pendaftar : {{ $count['sma'] }} </h4>
                         </div>
+                        {{-- <div class="pt-2">
+                            <a href="{{ route('sma.index') }}" class="text-white-50">
+                                <div class="float-end">
+                                    <i class="mdi mdi-arrow-right h5"></i>
+                                </div>
+
+                                <p class="mt-1 mb-0 text-white-50">Detail Pendaftar</p>
+                            </a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
