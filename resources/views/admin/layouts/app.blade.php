@@ -33,8 +33,7 @@
                         <div class="col-12">
                             © <script>
                                 document.write(new Date().getFullYear())
-                            </script> Veltrix<span class="d-none d-sm-inline-block"> - Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+                            </script> Sistem Informasi Profil Nashrus Sunnah
                         </div>
                     </div>
                 </div>

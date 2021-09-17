@@ -128,6 +128,13 @@ class PendaftaranController extends Controller
             FileController::pendaftar($request->file('image'), $gambar, $daftar->image);
             $daftar->image = $gambar;
         }
+
+        // if ($request->hasFile('image')) {
+        //     $file       = $request->image;
+        //     $fileimg = $file->getClientOriginalName();
+        //     $file       ->move(public_path('storage/browsur'),$fileimg);
+        //     $daftar->image = $fileimg;
+        // }
         $daftar->save();
 
         $pass = Tingkatan::findOrFail($id);

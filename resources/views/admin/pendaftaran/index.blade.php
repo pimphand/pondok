@@ -48,7 +48,7 @@
                                                 @enderror
                                             </div>
                                         <br>
-                                        <img src="{{asset('storage/browsur')}}/{{$data->image}}" width="350">
+                                        <img src="{{ asset('storage/browsur/'. $data->image) }}" width="350">
                                     </div>
                                 </div>
                                 <div class="mb-3 col-6">

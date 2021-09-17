@@ -227,6 +227,7 @@
                                     <label class="form-label">Video</label>
                                     <div>
                                         <input type="file" name="video" class="form-control">
+                                        <small>Ukuran Video Maksimal 2MB</small>
                                         <div class="text-danger">
                                             @error('video')
                                             {{$message}}

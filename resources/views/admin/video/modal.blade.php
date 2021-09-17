@@ -49,7 +49,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Update News
+                <h5 class="modal-title" id="staticBackdropLabel">Update Video
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
@@ -73,12 +73,16 @@
                         <label class="form-label">Video</label>
                         <div>
                             <input type="file" name="video" class="form-control" placeholder="Enter File" accept="png/jpg/jpeg" value="{{$item->image}}">
+                            <small>Ukuran Video Maksimal 2MB</small>
                             <div class="text-danger">
                                 @error('video')
                                     {{$message}}
                                 @enderror
                             </div><br>
-                            <img src="{{asset('storage/video')}}/{{$item->video}}" width="300px">
+                            <video width="150px" height="150px" controls>
+                                <source src="{{ asset('storage/video') }}/{{ $item->video }}"
+                                    type="video/mp4">
+                            </video>
                         </div><br>
                     </div>
                     <div class="modal-footer">

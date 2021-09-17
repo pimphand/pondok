@@ -45,18 +45,17 @@
     </div>
     <div class="kingster-copyright-wrapper">
         <div class="clearfix kingster-copyright-container kingster-container">
-            <div class="kingster-copyright-left kingster-item-pdlr">Copyright All Right Reserved 2020, Max
-                Themes</div>
+            <div class="kingster-copyright-left kingster-item-pdlr">
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Sistem Informasi Profil Nashrus Sunnah
+            </div>
             <div class="kingster-copyright-right kingster-item-pdlr">
                 <div class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align"
                     style="padding-bottom: 0px;">
-                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i
+                    <a href="{{DB::table('contacts')->first()->facebook}}" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i
                             class="fa fa-facebook"></i></a>
-                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i
-                            class="fa fa-linkedin"></i></a>
-                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i
-                            class="fa fa-twitter"></i></a>
-                    <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram"><i
+                    <a href="{{DB::table('contacts')->first()->instagram}}" target="_blank" class="gdlr-core-social-network-icon" title="instagram"><i
                             class="fa fa-instagram"></i></a>
                 </div>
             </div>
