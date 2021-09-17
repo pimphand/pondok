@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Update News
+                <h5 class="modal-title" id="staticBackdropLabel">Update Video
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
@@ -78,12 +78,12 @@
                                 @error('video')
                                     {{$message}}
                                 @enderror
-                            </div><br>
+                            </div>
                             <video width="150px" height="150px" controls>
                                 <source src="{{ asset('storage/video') }}/{{ $item->video }}"
                                     type="video/mp4">
                             </video>
-                        </div><br>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save</button>
