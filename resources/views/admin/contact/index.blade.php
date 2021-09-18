@@ -14,7 +14,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Contact</h6>
+                    <h6 class="page-title">Kontak</h6>
                 </div>
             </div>
         </div>
@@ -23,14 +23,14 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Contact</h4>
+                        <h4 class="card-title">Kontak</h4>
                         <form action="{{route('contact.update', ['contact'=>$data->id])}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             <div class="float-end">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Edit
+                                        <i class="fas fa-edit"></i> Edit
                                     </button>
                                 </div>
                             </div>

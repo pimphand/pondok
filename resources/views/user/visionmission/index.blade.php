@@ -7,7 +7,7 @@
     <div class="kingster-page-title-bottom-gradient"></div>
     <div class="kingster-page-title-container kingster-container">
         <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 505px; padding-bottom: 60px;">
-            <h1 class="kingster-page-title" style="font-size: 48px; font-weight: 700; text-transform: none; letter-spacing: 0px; color: #ffffff;">Vision & Mission</h1>
+            <h1 class="kingster-page-title" style="font-size: 48px; font-weight: 700; text-transform: none; letter-spacing: 0px; color: #ffffff;">Visi & Misi</h1>
         </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
             </span>
             &gt;
             <span property="itemListElement" typeof="ListItem">
-                <span property="name" class="post post-page current-item">Vision & Mission</span><meta property="url" content="index.html" /><meta property="position" content="2" />
+                <span property="name" class="post post-page current-item">Visi & Misi</span><meta property="url" content="index.html" /><meta property="position" content="2" />
             </span>
         </div>
     </div>
@@ -36,7 +36,7 @@
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                             <div class="clearfix gdlr-core-title-item-title-wrap">
-                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 27px; font-weight: 700; letter-spacing: 0px; text-transform: none;">Vision</h3>
+                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 27px; font-weight: 700; letter-spacing: 0px; text-transform: none;">Visi</h3>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                     <div class="gdlr-core-pbf-element">
                         <div class="clearfix gdlr-core-title-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                             <div class="clearfix gdlr-core-title-item-title-wrap">
-                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 27px; font-weight: 700; letter-spacing: 0px; text-transform: none;">Mission</h3>
+                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 27px; font-weight: 700; letter-spacing: 0px; text-transform: none;">Misi</h3>
                             </div>
                         </div>
                     </div>

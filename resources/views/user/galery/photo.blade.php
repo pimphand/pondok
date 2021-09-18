@@ -27,7 +27,7 @@
                             style="padding-bottom: 60px;">
                             <div class="clearfix gdlr-core-title-item-title-wrap">
                                 <h3 class="gdlr-core-title-item-title gdlr-core-skin-title"
-                                    style="text-transform: none;">Galery</h3>
+                                    style="text-transform: none;">Photo</h3>
                             </div>
 
                         </div>

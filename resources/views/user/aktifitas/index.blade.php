@@ -40,7 +40,7 @@
                                             <a href="#">{{$items->name}}</a>
                                         </h3>
                                         <div class="clearfix gdlr-core-blog-content">
-                                            {{$items->description}}
+                                            {!!$items->description!!}
                                             <div class="clear"></div>
                                         </div>
                                     </div>

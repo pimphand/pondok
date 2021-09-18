@@ -77,7 +77,7 @@
                                                     class="gdlr-core-blog-thumbnail gdlr-core-media-image gdlr-core-opacity-on-hover">
                                                     <a href="#">
                                                         <img src="{{ asset('storage/gallery/'. $items->image) }}"
-                                                            alt="" />
+                                                            alt=""/>
                                                     </a>
                                                 </div>
                                                 <div

@@ -31,7 +31,7 @@
                             <div class="float-end">
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Edit
+                                        <i class="fas fa-edit"></i> Edit
                                     </button>
                                 </div>
                             </div>

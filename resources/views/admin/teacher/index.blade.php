@@ -32,7 +32,7 @@
         <div class="page-title-box">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h6 class="page-title">Teacher</h6>
+                    <h6 class="page-title">Guru</h6>
                 </div>
             </div>
         </div>
@@ -41,9 +41,9 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Table Teacher</h4><br>
+                        <h4 class="card-title">Tabel Guru</h4><br>
                         <a href="/teacher/create" class="btn btn-info btn-sm pull-right" data-bs-toggle="modal"
-                            data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Add Data</i></a>
+                            data-bs-target="#CreateAdd"><i class="fas fa-plus-square">Tambah Data</i></a>
                         <hr>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">

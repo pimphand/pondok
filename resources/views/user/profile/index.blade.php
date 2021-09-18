@@ -11,7 +11,7 @@
         <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 460px; padding-bottom: 60px;">
             <h1 class="kingster-page-title"
                 style="font-size: 48px; font-weight: 700; text-transform: none; letter-spacing: 0px; color: #ffffff;">
-                Profile</h1>
+                Profil</h1>
         </div>
     </div>
 </div>
@@ -26,7 +26,7 @@
             </span>
             &gt;
             <span property="itemListElement" typeof="ListItem">
-                <span property="name" class="post post-page current-item">Profile</span>
+                <span property="name" class="post post-page current-item">Profil</span>
                 <meta property="url" content="index.html" />
                 <meta property="position" content="2" />
             </span>
